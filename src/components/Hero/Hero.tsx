@@ -24,13 +24,17 @@ import {
                   position: 'absolute',
                   bottom: 1,
                   left: 0,
-                  bg: '#e5542d',
+                  bg: '#000000',
                   zIndex: -1,
                 }}>
-                Personlized
+                  {/* Heading Text was here it has been removed  */}
               </Text>
+              
+              <Text color={'#f13c3b'} as={'span'}>
+              Personlized
+              </Text>{' '}
               <br />{' '}
-              <Text color={'#e5542d'} as={'span'}>
+              <Text color={'#080f7b'} as={'span'}>
                 Learning Systems
               </Text>{' '}
             </Heading>
@@ -53,10 +57,12 @@ import {
         </Flex>
         <Flex flex={1}>
           <Image
+            boxSize='600px'
             alt={'Login Image'}
             objectFit={'cover'}
             src={
-              'https://i.ibb.co/x2jtQXL/Flame-Space-Adventures-transparent-by-Icons8.gif'
+              'https://i.postimg.cc/Jhw8QhLv/Learning.gif'
+            
             }
           />
         </Flex>
