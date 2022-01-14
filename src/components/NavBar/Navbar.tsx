@@ -36,8 +36,17 @@ import {
   import SignUp from '../../components/NavBar/SignUp'
   
   export default function NavBar() {
-    const { isOpen, onToggle, onOpen, onClose } = useDisclosure();
-    
+    const { isOpen, onToggle } = useDisclosure();
+    const { 
+      isOpen: isOpenReportModal, 
+      onOpen: onOpenReportModal, 
+      onClose: onCloseReportModal 
+  } = useDisclosure();
+    const { 
+      isOpen: isOpenSigninModal,  
+      onOpen: onOpenSigninModal, 
+      onClose: onCloseSigninModal 
+  } = useDisclosure();
     return (
       <Box>
         <Flex
@@ -81,19 +90,40 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Button
-              as={'a'}
-              fontSize={'sm'}
+            <Box>
+              {/* SIGN IN START */}
+            <Button onClick={onOpenSigninModal} as={'a'}
+              fontSize={'md'}
               fontWeight={400}
-              variant={'link'}
-              href={'#'}>
-              Sign In
-            </Button>
+              variant={'link'}>Sign In</Button>
+
+            <Modal isOpen={isOpenSigninModal} onClose={onCloseSigninModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
+            <ModalOverlay/>
+            <ModalContent>
+              <ModalHeader> Sign In </ModalHeader>
+              <ModalCloseButton/>
+              <ModalBody>
+              <FormControl id="email" isRequired>
+                <FormLabel>Email </FormLabel>
+                <Input type="email" />
+              </FormControl>
+              <FormControl id="password" isRequired>
+                      <FormLabel>Password</FormLabel>
+                      <Input type="password" />
+                    </FormControl>
+                    <Checkbox>Remember me</Checkbox>
+              </ModalBody>
+              <ModalFooter>
+                <Button colorScheme="blue" mr={160} onClick={onCloseSigninModal }> Sign In </Button>
+              </ModalFooter>
+            </ModalContent>
+            </Modal>
+            </Box>
             <Box>
     
-            <Button onClick={onOpen}>Sign Up</Button>
+            <Button onClick={onOpenReportModal} display={{ base: 'none', md: 'inline-flex' }}>Sign Up</Button>
 
-            <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
+            <Modal isOpen={isOpenReportModal} onClose={onCloseReportModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
             <ModalOverlay/>
             <ModalContent>
               <ModalHeader> Sign Up </ModalHeader>
@@ -114,7 +144,7 @@ import {
                     <Checkbox>Remember me</Checkbox>
               </ModalBody>
               <ModalFooter>
-                <Button colorScheme="blue" mr={160} onClick={onClose}> Sign Up </Button>
+                <Button colorScheme="blue" mr={160} onClick={onCloseReportModal }> Sign Up </Button>
               </ModalFooter>
             </ModalContent>
             </Modal>
