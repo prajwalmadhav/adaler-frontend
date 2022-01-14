@@ -1,4 +1,16 @@
 import {
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+    FormControl,
+    FormLabel,
+    Input,
+    ChakraProvider,
+    Checkbox,
     Box,
     Flex,
     Text,
@@ -21,10 +33,11 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+  import SignUp from '../../components/NavBar/SignUp'
   
   export default function NavBar() {
-    const { isOpen, onToggle } = useDisclosure();
-  
+    const { isOpen, onToggle, onOpen, onClose } = useDisclosure();
+    
     return (
       <Box>
         <Flex
@@ -76,18 +89,36 @@ import {
               href={'#'}>
               Sign In
             </Button>
-            <Button
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'#03294e'}
-              href={'#'}
-              _hover={{
-                bg: 'pink.300',
-              }}>
-              Sign Up
-            </Button>
+            <Box>
+    
+            <Button onClick={onOpen}>Sign Up</Button>
+
+            <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
+            <ModalOverlay/>
+            <ModalContent>
+              <ModalHeader> Sign Up </ModalHeader>
+              <ModalCloseButton/>
+              <ModalBody>
+              <FormControl id="Name" isRequired>
+                      <FormLabel>Name</FormLabel>
+                      <Input type="text" />
+                    </FormControl>
+              <FormControl id="email" isRequired>
+                <FormLabel>Email </FormLabel>
+                <Input type="email" />
+              </FormControl>
+              <FormControl id="password" isRequired>
+                      <FormLabel>Password</FormLabel>
+                      <Input type="password" />
+                    </FormControl>
+                    <Checkbox>Remember me</Checkbox>
+              </ModalBody>
+              <ModalFooter>
+                <Button colorScheme="blue" mr={160} onClick={onClose}> Sign Up </Button>
+              </ModalFooter>
+            </ModalContent>
+            </Modal>
+            </Box>
           </Stack>
         </Flex>
   
