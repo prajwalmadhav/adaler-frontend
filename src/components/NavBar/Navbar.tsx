@@ -33,8 +33,8 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-  import SignUp from '../../components/NavBar/SignUp'
-  
+  import '../../components/NavBar/Navbar.min.css'
+
   export default function NavBar() {
     const { isOpen, onToggle } = useDisclosure();
     const { 
@@ -92,17 +92,14 @@ import {
             spacing={6}>
             <Box>
               {/* SIGN IN START */}
-            <Button onClick={onOpenSigninModal} as={'a'}
-              fontSize={'md'}
-              fontWeight={400}
-              variant={'link'}>Sign In</Button>
-
+            <Button onClick={onOpenSigninModal} as={'a'} className='sign'>
+              Sign In</Button>
             <Modal isOpen={isOpenSigninModal} onClose={onCloseSigninModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
             <ModalOverlay/>
             <ModalContent>
-              <ModalHeader> Sign In </ModalHeader>
+              <ModalHeader className='ModalHeader'> Sign In </ModalHeader>
               <ModalCloseButton/>
-              <ModalBody>
+              <ModalBody className='ModalBody'>
               <FormControl id="email" isRequired>
                 <FormLabel>Email </FormLabel>
                 <Input type="email" />
@@ -113,7 +110,7 @@ import {
                     </FormControl>
                     <Checkbox>Remember me</Checkbox>
               </ModalBody>
-              <ModalFooter>
+              <ModalFooter className='ModalFooter'>
                 <Button colorScheme="blue" mr={160} onClick={onCloseSigninModal }> Sign In </Button>
               </ModalFooter>
             </ModalContent>
@@ -121,14 +118,14 @@ import {
             </Box>
             <Box>
     
-            <Button onClick={onOpenReportModal} display={{ base: 'none', md: 'inline-flex' }}>Sign Up</Button>
+            <Button onClick={onOpenReportModal} display={{ base: 'none', md: 'inline-flex' }} className='sign'>Sign Up</Button>
 
             <Modal isOpen={isOpenReportModal} onClose={onCloseReportModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
             <ModalOverlay/>
             <ModalContent>
-              <ModalHeader> Sign Up </ModalHeader>
+              <ModalHeader className='ModalHeader'> Sign Up </ModalHeader>
               <ModalCloseButton/>
-              <ModalBody>
+              <ModalBody className='ModalBody'>
               <FormControl id="Name" isRequired>
                       <FormLabel>Name</FormLabel>
                       <Input type="text" />
@@ -143,7 +140,7 @@ import {
                     </FormControl>
                     <Checkbox>Remember me</Checkbox>
               </ModalBody>
-              <ModalFooter>
+              <ModalFooter className='ModalFooter'>
                 <Button colorScheme="blue" mr={160} onClick={onCloseReportModal }> Sign Up </Button>
               </ModalFooter>
             </ModalContent>
