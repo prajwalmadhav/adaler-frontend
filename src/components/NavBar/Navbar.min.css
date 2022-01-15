@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.sign{
+    color: rgb(0, 0, 0);
+    box-shadow: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    font-weight: 100;
+    text-align: center;
+}
+
+.sign:hover{
+    color: #F13C38;
+}
+
+
+.ModalHeader{
+    text-align: center;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ModalBody{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: black;
+    font-size: medium;
+}
+.ModalFooter{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
