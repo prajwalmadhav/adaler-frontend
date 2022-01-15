@@ -94,7 +94,7 @@ import {
               rounded={'md'}
               alt={'feature image'}
               src={
-                'https://i.postimg.cc/zB6b7Lns/Online-learning.gif'
+                'https://i.postimg.cc/hjDCv24M/Online-learning-amico.png'
               }
               objectFit={'cover'}
             />

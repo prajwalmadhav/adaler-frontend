@@ -94,7 +94,7 @@ import {
               {/* SIGN IN START */}
             <Button onClick={onOpenSigninModal} as={'a'} className='sign'>
               Sign In</Button>
-            <Modal isOpen={isOpenSigninModal} onClose={onCloseSigninModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
+            <Modal isOpen={isOpenSigninModal} onClose={onCloseSigninModal} blockScrollOnMount={false}   motionPreset='slideInBottom' >
             <ModalOverlay/>
             <ModalContent>
               <ModalHeader className='ModalHeader'> Sign In </ModalHeader>
@@ -118,7 +118,7 @@ import {
             </Box>
             <Box>
     
-            <Button onClick={onOpenReportModal} display={{ base: 'none', md: 'inline-flex' }} className='sign'>Sign Up</Button>
+            <Button onClick={onOpenReportModal} display={{ base: 'none', md: 'inline-flex' }} colorScheme="red" className='sign'>Sign Up</Button>
 
             <Modal isOpen={isOpenReportModal} onClose={onCloseReportModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
             <ModalOverlay/>

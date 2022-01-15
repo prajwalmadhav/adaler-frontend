@@ -57,11 +57,11 @@ import {
         </Flex>
         <Flex flex={1}>
           <Image
-            boxSize='600px'
+            boxSize='650px'
             alt={'Login Image'}
             objectFit={'cover'}
             src={
-              'https://i.postimg.cc/Jhw8QhLv/Learning.gif'
+              'https://i.ibb.co/x2jtQXL/Flame-Space-Adventures-transparent-by-Icons8.gif'
             
             }
           />

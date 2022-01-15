@@ -27,7 +27,7 @@ import {
         <Box
             role={'group'}
             p={6}
-            
+            isInline
             maxW={'330px'}
             w={'full'}
             bg={useColorModeValue('white', 'gray.800')}
@@ -91,7 +91,7 @@ import {
         <Box
             role={'group'}
             p={6}
-            
+            isInline
             maxW={'330px'}
             w={'full'}
             bg={useColorModeValue('white', 'gray.800')}
@@ -160,7 +160,7 @@ import {
             boxShadow={'2xl'}
             rounded={'lg'}
             pos={'relative'}
-            
+            isInline
             zIndex={1}>
             <Box
                 rounded={'lg'}
@@ -224,7 +224,7 @@ import {
             boxShadow={'2xl'}
             rounded={'lg'}
             pos={'relative'}
-            
+            isInline
             zIndex={1}>
             <Box
                 rounded={'lg'}
