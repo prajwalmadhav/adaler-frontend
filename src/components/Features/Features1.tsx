@@ -22,7 +22,7 @@ import {
   export default function ProductSimple() {
     return (
         
-    <HStack spacing={35} pl={35}pt={60} pb={58}> 
+    <HStack spacing={35} pl={35} pt={60} pb={58}> 
         
         <Box
             role={'group'}

@@ -13,10 +13,9 @@ export default function Homepage() {
         <>
             <NavBar />
             <Hero />
-            <Features1 />
+            {/* <Features1 /> */}
             <Features2 />
             <Features3 />
-            
             <Testimonials />
             <Footer />        
         </>
