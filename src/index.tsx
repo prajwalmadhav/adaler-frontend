@@ -4,11 +4,15 @@ import ReactDOM from "react-dom"
 import { App } from "./App"
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
+import { AuthProvider } from "./provider/AuthProvider";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ColorModeScript />
-    <App />
+    <AuthProvider>
+    <ColorModeScript /> 
+        <App />
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById("root"),
 )
