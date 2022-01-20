@@ -36,7 +36,7 @@ import {
   import '../../components/NavBar/Navbar.min.css'
   import React, { useState, useRef } from 'react'
   import 'firebase/compat/auth';
-  import { auth } from "/Users/sumuk/OneDrive/Documents/Projects/New/adaler-frontend/src/firebaseSetup";
+  import { auth } from "../../../src/firebaseSetup";
   import { Col, Container, Form, Navbar } from "react-bootstrap";
 
   export default function NavBar() {
