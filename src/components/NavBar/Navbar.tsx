@@ -34,8 +34,14 @@ import {
     ChevronRightIcon,
   } from '@chakra-ui/icons';
   import '../../components/NavBar/Navbar.min.css'
+  import React, { useState, useRef } from 'react'
+  import 'firebase/compat/auth';
+  import { auth } from "/Users/sumuk/OneDrive/Documents/Projects/New/adaler-frontend/src/firebaseSetup";
+  import { Col, Container, Form, Navbar } from "react-bootstrap";
 
   export default function NavBar() {
+    const emailRef = useRef<HTMLInputElement>(null);
+    const passwordRef = useRef<HTMLInputElement>(null);
     const { isOpen, onToggle } = useDisclosure();
     const { 
       isOpen: isOpenReportModal, 
@@ -47,6 +53,17 @@ import {
       onOpen: onOpenSigninModal, 
       onClose: onCloseSigninModal 
   } = useDisclosure();
+
+  const createAccount = async () => {
+    try {
+      await auth.createUserWithEmailAndPassword(
+        emailRef.current!.value,
+        passwordRef.current!.value,
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  };
     return (
       <Box>
         <Flex
@@ -100,18 +117,25 @@ import {
               <ModalHeader className='ModalHeader'> Sign In </ModalHeader>
               <ModalCloseButton/>
               <ModalBody className='ModalBody'>
-              <FormControl id="email" isRequired>
-                <FormLabel>Email </FormLabel>
-                <Input type="email" />
-              </FormControl>
-              <FormControl id="password" isRequired>
-                      <FormLabel>Password</FormLabel>
-                      <Input type="password" />
-                    </FormControl>
+                <Form className="mt-4">
+              <Form.Group controlId="formEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control ref={emailRef} type="email" placeholder="email" />
+              </Form.Group>
+             
+            <Form.Group controlId="formPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                ref={passwordRef}
+                type="password"
+                placeholder="password"
+              />
+            </Form.Group>
+              </Form>
                     <Checkbox>Remember me</Checkbox>
               </ModalBody>
               <ModalFooter className='ModalFooter'>
-                <Button colorScheme="blue" mr={160} onClick={onCloseSigninModal }> Sign In </Button>
+                <Button colorScheme="blue" mr={160} onClick={createAccount}> Sign In </Button>
               </ModalFooter>
             </ModalContent>
             </Modal>
@@ -154,8 +178,11 @@ import {
         </Collapse>
       </Box>
     );
+    
   }
   
+
+
   const DesktopNav = () => {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
     const linkHoverColor = useColorModeValue('gray.800', 'white');
