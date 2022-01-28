@@ -39,6 +39,7 @@ import {
   import { auth } from "../../../src/firebaseSetup";
   import { Col, Container, Form, Navbar } from "react-bootstrap";
 import SignInModal from '../Modals/SignInModal';
+import LoginModal from '../Modals/LoginModal';
 
   export default function NavBar() {
     
@@ -113,7 +114,7 @@ import SignInModal from '../Modals/SignInModal';
 
             <Modal isOpen={isOpenReportModal} onClose={onCloseReportModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
             <ModalOverlay/>
-            
+            <LoginModal />
             </Modal>
             </Box>
           </Stack>
