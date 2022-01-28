@@ -7,9 +7,11 @@ import Features2 from '../../components/Features/Features2';
 import Features3 from '../../components/Features/Features3';
 import Features4 from '../../components/Features/Features4';
 import Testimonials from './../../components/Testimonials/Testimonials';
+import { BrowserRouter as Router, Route,Link } from 'react-router-dom'
 
 export default function Homepage() {
     return (
+        
         <>
             <NavBar />
             <Hero />

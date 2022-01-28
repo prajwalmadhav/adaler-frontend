@@ -38,10 +38,10 @@ import {
   import 'firebase/compat/auth';
   import { auth } from "../../../src/firebaseSetup";
   import { Col, Container, Form, Navbar } from "react-bootstrap";
+import SignInModal from '../Modals/SignInModal';
 
   export default function NavBar() {
-    const emailRef = useRef<HTMLInputElement>(null);
-    const passwordRef = useRef<HTMLInputElement>(null);
+    
     const { isOpen, onToggle } = useDisclosure();
     const { 
       isOpen: isOpenReportModal, 
@@ -54,16 +54,7 @@ import {
       onClose: onCloseSigninModal 
   } = useDisclosure();
 
-  const createAccount = async () => {
-    try {
-      await auth.createUserWithEmailAndPassword(
-        emailRef.current!.value,
-        passwordRef.current!.value,
-      );
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  
     return (
       <Box>
         <Flex
@@ -113,31 +104,7 @@ import {
               Sign In</Button>
             <Modal isOpen={isOpenSigninModal} onClose={onCloseSigninModal} blockScrollOnMount={false}   motionPreset='slideInBottom' >
             <ModalOverlay/>
-            <ModalContent>
-              <ModalHeader className='ModalHeader'> Sign In </ModalHeader>
-              <ModalCloseButton/>
-              <ModalBody className='ModalBody'>
-                <Form className="mt-4">
-              <Form.Group controlId="formEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control ref={emailRef} type="email" placeholder="email" />
-              </Form.Group>
-             
-            <Form.Group controlId="formPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                ref={passwordRef}
-                type="password"
-                placeholder="password"
-              />
-            </Form.Group>
-              </Form>
-                    <Checkbox>Remember me</Checkbox>
-              </ModalBody>
-              <ModalFooter className='ModalFooter'>
-                <Button colorScheme="blue" mr={160} onClick={createAccount}> Sign In </Button>
-              </ModalFooter>
-            </ModalContent>
+            <SignInModal />
             </Modal>
             </Box>
             <Box>
@@ -146,28 +113,7 @@ import {
 
             <Modal isOpen={isOpenReportModal} onClose={onCloseReportModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
             <ModalOverlay/>
-            <ModalContent>
-              <ModalHeader className='ModalHeader'> Sign Up </ModalHeader>
-              <ModalCloseButton/>
-              <ModalBody className='ModalBody'>
-              <FormControl id="Name" isRequired>
-                      <FormLabel>Name</FormLabel>
-                      <Input type="text" />
-                    </FormControl>
-              <FormControl id="email" isRequired>
-                <FormLabel>Email </FormLabel>
-                <Input type="email" />
-              </FormControl>
-              <FormControl id="password" isRequired>
-                      <FormLabel>Password</FormLabel>
-                      <Input type="password" />
-                    </FormControl>
-                    <Checkbox>Remember me</Checkbox>
-              </ModalBody>
-              <ModalFooter className='ModalFooter'>
-                <Button colorScheme="blue" mr={160} onClick={onCloseReportModal }> Sign Up </Button>
-              </ModalFooter>
-            </ModalContent>
+            
             </Modal>
             </Box>
           </Stack>
