@@ -40,6 +40,7 @@ import {
   import { Col, Container, Form, Navbar } from "react-bootstrap";
 import SignInModal from '../Modals/SignInModal';
 import SignUpModal from '../Modals/SignUpModal';
+import Logo from "../../assets/Images/logoblack.png";
 
   export default function NavBar() {
     
@@ -86,7 +87,7 @@ import SignUpModal from '../Modals/SignUpModal';
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              Logo
+              <img alt='logo' style={{ width: 150 }} src={ Logo } />   {/* logo */}
             </Text>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -283,22 +284,23 @@ import SignUpModal from '../Modals/SignUpModal';
   
   const NAV_ITEMS: Array<NavItem> = [
     {
-      label: 'Inspiration',
+      label: 'About Us',
       children: [
         {
-          label: 'Explore Design Work',
+          label: 'TESTING 1[PG]',
           subLabel: 'Trending Design to inspire you',
-          href: '#',
+          href: '/test',
         },
         {
           label: 'New & Noteworthy',
           subLabel: 'Up-and-coming Designers',
           href: '#',
+          
         },
       ],
     },
     {
-      label: 'Find Work',
+      label: 'Features',
       children: [
         {
           label: 'Job Board',
@@ -313,11 +315,11 @@ import SignUpModal from '../Modals/SignUpModal';
       ],
     },
     {
-      label: 'Learn Design',
+      label: 'Contact Us',
       href: '#',
     },
     {
-      label: 'Hire Designers',
+      label: '',
       href: '#',
     },
   ];
