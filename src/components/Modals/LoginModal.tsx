@@ -30,8 +30,21 @@ import {
   } from '@chakra-ui/react';
   import { Col, Container, Form, Navbar } from "react-bootstrap";
   import { auth } from "../../firebaseSetup";
+  
 
 export default function LoginModal() {
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
+  const signIn = async () => {
+    try {
+      await auth.signInWithEmailAndPassword(
+        emailRef.current!.value,
+        passwordRef.current!.value
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  };
     const { 
         isOpen: isOpenReportModal, 
         onOpen: onOpenReportModal, 
@@ -42,22 +55,22 @@ export default function LoginModal() {
               <ModalHeader className='ModalHeader'> Sign Up </ModalHeader>
               <ModalCloseButton/>
               <ModalBody className='ModalBody'>
-              <FormControl id="Name" isRequired>
-                      <FormLabel>Name</FormLabel>
-                      <Input type="text" />
-                    </FormControl>
-              <FormControl id="email" isRequired>
-                <FormLabel>Email </FormLabel>
-                <Input type="email" />
-              </FormControl>
-              <FormControl id="password" isRequired>
-                      <FormLabel>Password</FormLabel>
-                      <Input type="password" />
-                    </FormControl>
-                    <Checkbox>Remember me</Checkbox>
+              <Form.Group controlId="Name">
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" placeholder="Name" />
+              </Form.Group>
+              <Form.Group controlId="formEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control ref={emailRef} type="email" placeholder="email" />
+              </Form.Group>
+              <Form.Group controlId="formPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control ref={passwordRef} type="password" placeholder="password" />
+                <Checkbox>Remember me</Checkbox>
+              </Form.Group>
               </ModalBody>
               <ModalFooter className='ModalFooter'>
-                <Button colorScheme="blue" mr={160} onClick={onCloseReportModal }> Sign Up </Button>
+                <Button colorScheme="blue" mr={160} onClick={signIn} > Sign Up </Button>
               </ModalFooter>
             </ModalContent>
   )
