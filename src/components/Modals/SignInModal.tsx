@@ -41,8 +41,10 @@ export default function SignInModal() {
         emailRef.current!.value,
         passwordRef.current!.value
       );
+      alert("Logged in");
     } catch (error) {
       console.error(error);
+      alert(error);
     }
   };
     const { 
@@ -66,7 +68,7 @@ export default function SignInModal() {
               </Form.Group>
               </ModalBody>
               <ModalFooter className='ModalFooter'>
-                <Button colorScheme="blue" mr={160} onClick={signIn} > Sign Up </Button>
+                <Button colorScheme="blue" mr={160} onClick={signIn} > Sign In </Button>
               </ModalFooter>
             </ModalContent>
   )
