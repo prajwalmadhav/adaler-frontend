@@ -31,7 +31,7 @@ import {
     AlertDescription,
   } from '@chakra-ui/react';
   import { Col, Container, Form, Navbar } from "react-bootstrap";
-  import { auth } from "../../firebaseSetup";
+  import { auth } from "../../../firebaseSetup";
   import { IoMdCheckmarkCircle } from "react-icons/io";
   
   function Alerts(){

@@ -6,9 +6,9 @@ import {
 
 import Homepage from "./pages/Homepage/Homepage"
 import { BrowserRouter as Router, Route,Link, Routes } from 'react-router-dom'
-import Hero from './components/Hero/Hero';
+import Hero from './components/LandingPage/Hero/Hero';
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Alerts from './components/Modals/Alerts';
+import Alerts from './components/LandingPage/Modals/Alerts';
 
 
 
@@ -17,10 +17,13 @@ export const App = () => (
     <Router>
         
         <Routes>
+
           <Route path='/' element={<Homepage/>} />
-          <Route path='/test' element={<Dashboard/>} />
+
+          <Route path='/home' element={<Dashboard/>} />
           <Route path='/alert' element={<Alerts/>} />
 
+          
         </Routes>
        
     </Router>   
