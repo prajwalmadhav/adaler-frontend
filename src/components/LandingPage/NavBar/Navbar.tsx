@@ -289,7 +289,7 @@ import Logo from "../../../assets/Images/logoblack.png";
         {
           label: 'TESTING 1[PG]',
           subLabel: 'Trending Design to inspire you',
-          href: '/test',
+          href: '/Home',
         },
         {
           label: 'New & Noteworthy',
