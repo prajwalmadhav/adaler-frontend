@@ -55,7 +55,7 @@ export default function SidebarWithHeader({
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
+    <Box bg={useColorModeValue("#fff", "gray.600")}>
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
@@ -74,9 +74,9 @@ export default function SidebarWithHeader({
       </Drawer>
       {/* mobilenav */}
       <MobileNav onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 60 }} p="4">
+      {/* <Box ml={{ base: 0, md: 60 }} p="40">
         {children}
-      </Box>
+      </Box> */}
     </Box>
   );
 }
@@ -157,8 +157,8 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       height="20"
       alignItems="center"
       bg={useColorModeValue('white', 'gray.900')}
-      borderBottomWidth="1px"
-      borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
+      borderBottomWidth="2px"
+      borderBottomColor={useColorModeValue('#9e9e9e', 'gray.700')}
       justifyContent={{ base: 'space-between', md: 'flex-end' }}
       {...rest}>
       <IconButton
@@ -170,11 +170,8 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       />
 
       <Text
-        display={{ base: 'flex', md: 'none' }}
-        fontSize="2xl"
-        fontFamily="monospace"
-        fontWeight="bold">
-        Logo
+        display={{ base: 'flex', md: 'none' }}>
+        <img alt='logo' style={{ width: 150 }} src={ Logo } />
       </Text>
 
       <HStack spacing={{ base: '0', md: '6' }}>
@@ -217,7 +214,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
               borderColor={useColorModeValue('gray.200', 'gray.700')}>
               <MenuItem>Profile</MenuItem>
               <MenuItem>Settings</MenuItem>
-              <MenuItem>Billing</MenuItem>
+              <MenuItem>Subscription</MenuItem>
               <MenuDivider />
               <MenuItem>Sign out</MenuItem>
             </MenuList>

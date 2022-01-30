@@ -9,8 +9,9 @@ export default function Homepage() {
         
         <>
         
-
+            
             <Sidebar children={undefined} />
+            <Home />
 
         </>
     )
