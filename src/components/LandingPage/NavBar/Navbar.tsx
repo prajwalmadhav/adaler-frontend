@@ -33,14 +33,14 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-  import '../../components/NavBar/Navbar.min.css'
+
   import React, { useState, useRef } from 'react'
   import 'firebase/compat/auth';
-  import { auth } from "../../../src/firebaseSetup";
+  import { auth } from "../../../../src/firebaseSetup";
   import { Col, Container, Form, Navbar } from "react-bootstrap";
 import SignInModal from '../Modals/SignInModal';
 import SignUpModal from '../Modals/SignUpModal';
-import Logo from "../../assets/Images/logoblack.png";
+import Logo from "../../../assets/Images/logoblack.png";
 
   export default function NavBar() {
     
