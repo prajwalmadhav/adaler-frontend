@@ -27,12 +27,30 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    useToast,
   } from '@chakra-ui/react';
   import { Col, Container, Form, Navbar } from "react-bootstrap";
   import { auth } from "../../../firebaseSetup";
+  import Toast from '../../ToastMessages/Toast'
   
-
 export default function SignInModal() {
+   const successToast = useToast({
+    title: 'Logged In',
+    description: "Waiting for developers to build redirect pages",
+    status: 'success',
+    duration: 5000,
+    isClosable: true,
+    position: "top-right",
+  })
+  const errorToast = useToast({
+    title: 'Invalid Login',
+    description: "Please enter a valid login",
+    status: 'error',
+    duration: 5000,
+    isClosable: true,
+    position: "top-right",
+  })
+
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const signIn = async () => {
@@ -41,10 +59,11 @@ export default function SignInModal() {
         emailRef.current!.value,
         passwordRef.current!.value
       );
-      alert("Logged in");
+      
+      successToast();
     } catch (error) {
       console.error(error);
-      alert(error);
+      errorToast();
     }
   };
     const { 
@@ -68,7 +87,11 @@ export default function SignInModal() {
               </Form.Group>
               </ModalBody>
               <ModalFooter className='ModalFooter'>
-                <Button colorScheme="blue" mr={160} onClick={signIn} > Sign In </Button>
+                <Button colorScheme="blue" mr={160} onClick={()=>{
+                signIn()
+                //toast();
+                }}>
+                Sign In </Button>
               </ModalFooter>
             </ModalContent>
   )

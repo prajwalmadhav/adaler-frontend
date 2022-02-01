@@ -29,6 +29,7 @@ import {
     useBreakpointValue,
     useDisclosure,
     AlertDescription,
+    useToast,
   } from '@chakra-ui/react';
   import { Col, Container, Form, Navbar } from "react-bootstrap";
   import { auth } from "../../../firebaseSetup";
@@ -79,6 +80,22 @@ import {
 
 
   export default function SignUpModal() {
+    const successToast = useToast({
+      title: 'Account Created',
+      description: "Happy Learning",
+      status: 'success',
+      duration: 5000,
+      isClosable: true,
+      position: "bottom",
+    })
+    const errorToast = useToast({
+      title: 'Error',
+      description: "Error Error Error",
+      status: 'error',
+      duration: 5000,
+      isClosable: true,
+      position: "bottom",
+    })
       const emailRef = useRef<HTMLInputElement>(null);
       const passwordRef = useRef<HTMLInputElement>(null);
       
@@ -88,10 +105,10 @@ import {
               emailRef.current!.value,
               passwordRef.current!.value,
             );
-            alert("Success");
+            successToast();
           } catch (error) {
             console.error(error);
-            alert(error);
+            errorToast();
           }
           
         };
