@@ -104,7 +104,7 @@ import Logo from "../../../assets/Images/logoblack.png";
               {/* SIGN IN START */}
             <Button onClick={onOpenSigninModal} as={'a'} className='sign'>
               Sign In</Button>
-            <Modal isOpen={isOpenSigninModal} onClose={onCloseSigninModal} blockScrollOnMount={false}   motionPreset='slideInBottom' >
+            <Modal isOpen={isOpenSigninModal} size='sm' onClose={onCloseSigninModal} blockScrollOnMount={false}   motionPreset='slideInBottom' >
             <ModalOverlay/>
             <SignInModal />
             </Modal>
@@ -113,7 +113,7 @@ import Logo from "../../../assets/Images/logoblack.png";
     
             <Button onClick={onOpenReportModal} display={{ base: 'none', md: 'inline-flex' }} colorScheme="red" className='sign'>Sign Up</Button>
 
-            <Modal isOpen={isOpenReportModal} onClose={onCloseReportModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
+            <Modal isOpen={isOpenReportModal} size='sm' onClose={onCloseReportModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
             <ModalOverlay/>
             <SignUpModal />
             </Modal>
