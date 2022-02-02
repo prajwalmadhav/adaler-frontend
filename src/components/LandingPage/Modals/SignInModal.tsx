@@ -32,6 +32,8 @@ import {
   import { Col, Container, Form, Navbar } from "react-bootstrap";
   import { auth } from "../../../firebaseSetup";
   import Toast from '../../ToastMessages/Toast'
+  import 'C:/FYP/adaler-frontend/src/components/LandingPage/Modals/SignInModal.min.css'
+import { ClassNames } from '@emotion/react';
   
 export default function SignInModal() {
    const successToast = useToast({
@@ -72,27 +74,31 @@ export default function SignInModal() {
         onClose: onCloseReportModal 
     } = useDisclosure();
   return (
-    <ModalContent>
+    <ModalContent className='ModalContent' >
               <ModalHeader className='ModalHeader'> Sign In </ModalHeader>
               <ModalCloseButton/>
               <ModalBody className='ModalBody'>
+              <br></br>
               <Form.Group controlId="formEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control ref={emailRef} type="email" placeholder="email" />
+              <Form.Control className='Forms' ref={emailRef} type="email" placeholder="Enter Email" />
               </Form.Group>
+              <br></br>
               <Form.Group controlId="formPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control ref={passwordRef} type="password" placeholder="password" />
-                <Checkbox>Remember me</Checkbox>
+              <Form.Control className='Forms' ref={passwordRef} type="password" placeholder="Enter Password" />
+              <br></br>
+                <Checkbox className='Checkbox'>Remember me</Checkbox>
               </Form.Group>
               </ModalBody>
               <ModalFooter className='ModalFooter'>
-                <Button colorScheme="blue" mr={160} onClick={()=>{
+                <Button className='Button' mr={160} onClick={()=>{
                 signIn()
                 //toast();
+                
                 }}>
                 Sign In </Button>
               </ModalFooter>
-            </ModalContent>
+    </ModalContent>  
   )
 }

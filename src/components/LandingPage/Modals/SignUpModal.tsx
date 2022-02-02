@@ -121,29 +121,31 @@ import {
 
         
   return (
-    <ModalContent>
+    <ModalContent className='ModalContent'>
     <ModalHeader className='ModalHeader'> Sign Up </ModalHeader>
     <ModalCloseButton/>
     <ModalBody className='ModalBody'>
       <Form className="mt-4">
     <Form.Group controlId="formEmail">
       <Form.Label>Email</Form.Label>
-      <Form.Control ref={emailRef} type="email" placeholder="email" />
+      <Form.Control ref={emailRef} type="email" placeholder="Please Enter Email" />
     </Form.Group>
-   
+   <br></br>
   <Form.Group controlId="formPassword">
     <Form.Label>Password</Form.Label>
     <Form.Control
       ref={passwordRef}
       type="password"
-      placeholder="password"
+      placeholder="Please Enter Password"
     />
   </Form.Group>
     </Form>
-          <Checkbox>Remember me</Checkbox>
+    <br></br>
+          <Checkbox className='Checkbox'>Remember me</Checkbox>
     </ModalBody>
     <ModalFooter className='ModalFooter'>
-      <Button colorScheme="blue" mr={160} onClick={() => {
+    <br></br>
+      <Button className='Button' colorScheme="blue" mr={160} onClick={() => {
           createAccount();
           onCloseReportModal();
           console.log('lol')

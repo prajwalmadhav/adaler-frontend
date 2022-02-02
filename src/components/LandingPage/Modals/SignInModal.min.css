@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.ModalContent{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600 !important; 
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.ModalHeader{
+    color: #ffffff !important;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 700;
+    text-align: center;
+    background:  #080F7B;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    
+    
+    
+}
+
+.form-control{
+   border-radius: .7rem !important;
+   border-color:rgb(77, 77, 77) !important;
+   border-width: 1px !important;
+
+}
+
+.ModalBody{
+    background-color: rgb(255, 255, 255);
+    color: #080F7B !important;
+
+}
+
+.ModalFooter{
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    color: #080F7B !important;
+    
+}
+
+.Checkbox{
+    border-color: rgb(185, 185, 185);
+}
+
+.Button{
+    color: #fdfdfd !important;
+    background-color: #080F7B !important;
+}
