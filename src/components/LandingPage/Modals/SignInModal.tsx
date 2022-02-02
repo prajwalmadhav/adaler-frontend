@@ -32,8 +32,10 @@ import {
   import { Col, Container, Form, Navbar } from "react-bootstrap";
   import { auth } from "../../../firebaseSetup";
   import Toast from '../../ToastMessages/Toast'
-  import 'C:/FYP/adaler-frontend/src/components/LandingPage/Modals/SignInModal.min.css'
-import { ClassNames } from '@emotion/react';
+  //import 'C:/FYP/adaler-frontend/src/components/LandingPage/Modals/SignInModal.min.css'
+  import './SignInModal.min.css';
+  import { ClassNames } from '@emotion/react';
+
   
 export default function SignInModal() {
    const successToast = useToast({
