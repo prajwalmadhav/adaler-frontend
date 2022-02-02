@@ -57,7 +57,7 @@ export default function SignInModal() {
     isClosable: true,
     position: "top-right",
   })
-
+  
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const signIn = async () => {
@@ -78,6 +78,7 @@ export default function SignInModal() {
         onOpen: onOpenReportModal, 
         onClose: onCloseReportModal 
     } = useDisclosure();
+
   return (
     <ModalContent className='ModalContent2' >
               <ModalHeader className='ModalHeader2'> Sign In </ModalHeader>
@@ -104,8 +105,10 @@ export default function SignInModal() {
               <br></br>
               <ModalFooter className='ModalFooter2'>
               </ModalFooter>
-              <Link className='Link2'>New User? Sign Up Here
-              <SignUpModal/>
+              <Link className='Link2' onClick={()=>{
+                <SignUpModal/>
+
+              }}>New User? Sign Up Here
                </Link>
                <br></br>
     </ModalContent>  
