@@ -20,6 +20,7 @@ import {
     Stack,
     Collapse,
     Icon,
+    Link,
     Popover,
     PopoverTrigger,
     PopoverContent,
@@ -31,7 +32,7 @@ import {
   import { Col, Container, Form, Navbar } from "react-bootstrap";
   import { auth } from "../../../firebaseSetup";
   import Toast from '../../ToastMessages/Toast';
-  import {Link} from "react-router-dom";
+  //import {Link} from "react-router-dom";
   //import 'C:/FYP/adaler-frontend/src/components/LandingPage/Modals/SignInModal.min.css'
   import './SignInModal.min.css';
   import './SignInModal';
@@ -103,7 +104,8 @@ export default function SignInModal() {
               <br></br>
               <ModalFooter className='ModalFooter2'>
               </ModalFooter>
-              <Link to="/SignUpModal" className='Link2'>New User? Sign Up Here
+              <Link className='Link2'>New User? Sign Up Here
+              <SignUpModal/>
                </Link>
                <br></br>
     </ModalContent>  
