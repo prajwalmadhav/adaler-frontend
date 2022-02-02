@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
 
 
-.ModalContent2{
+.ModalContent1{
     background-color: #d1d2f1 !important;
     font-family: 'Poppins', sans-serif;
     font-weight: 500 !important; 
@@ -10,10 +10,11 @@
     border-bottom-left-radius: 25px !important;
     border-bottom-right-radius: 25px !important;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    line-height: 25px;
 
 }
 
-.ModalHeader2{
+.ModalHeader1{
     color: #080F7B !important;
     font-family: 'Poppins', sans-serif; 
     font-weight: 900;
@@ -38,14 +39,14 @@
    font-family: 'Poppins', sans-serif;
 }
 
-.ModalBody2{
+.ModalBody1{
     background-color: #d1d2f1 !important;
     color: #080F7B !important;
     justify-content: center !important;
-
+    margin-top: 0px !important;
 }
 
-.ModalFooter2{
+.ModalFooter1{
     background-color: #d1d2f1 !important;
     border-bottom-left-radius: 25px !important;
     border-bottom-right-radius: 25px !important;
@@ -63,20 +64,20 @@
     
 }
 
-.Checkbox2{
+.Checkbox1{
     border-color: #e6e7eb !important; 
 }
 
-.Button2{
+.Button1{
     color: #fdfdfd !important;
     background-color: #080F7B !important;
-    padding-left: 140px !important;
+    padding-left: 130px !important;
     padding-right: 140px !important;
     margin-left: 1px !important;
     margin-right: 1px !important;
 }
 
-.Link2{
+.Link1{
     font-size: 15px;
     text-align: center;
 

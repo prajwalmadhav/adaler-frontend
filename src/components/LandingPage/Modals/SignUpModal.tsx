@@ -34,6 +34,7 @@ import {
   import { Col, Container, Form, Navbar } from "react-bootstrap";
   import { auth } from "../../../firebaseSetup";
   import { IoMdCheckmarkCircle } from "react-icons/io";
+  import './SignUpModal.min.css';
   
   function Alerts(){
     return (
@@ -121,38 +122,52 @@ import {
 
         
   return (
-    <ModalContent className='ModalContent'>
-    <ModalHeader className='ModalHeader'> Sign Up </ModalHeader>
+    <ModalContent className='ModalContent1'>
+    <ModalHeader className='ModalHeader1'> Sign Up </ModalHeader>
     <ModalCloseButton/>
-    <ModalBody className='ModalBody'>
-      <Form className="mt-4">
-    <Form.Group controlId="formEmail">
-      <Form.Label>Email</Form.Label>
-      <Form.Control ref={emailRef} type="email" placeholder="Please Enter Email" />
+    <ModalBody className='ModalBody1'>
+    <Form className="mt-4">
+    <Form.Group controlId="Name">
+      <Form.Label></Form.Label>
+      <Form.Control type="text" placeholder="Enter your name" />
     </Form.Group>
-   <br></br>
+    <Form.Group controlId="formEmail">
+      <Form.Label></Form.Label>
+      <Form.Control ref={emailRef} type="email" placeholder=" Enter Email" />
+    </Form.Group>
   <Form.Group controlId="formPassword">
-    <Form.Label>Password</Form.Label>
+    <Form.Label></Form.Label>
     <Form.Control
       ref={passwordRef}
       type="password"
-      placeholder="Please Enter Password"
-    />
+      placeholder=" Enter Password"/>
   </Form.Group>
+  <Form.Group controlId="formPassword">
+    <Form.Label></Form.Label>
+    <Form.Control
+      ref={passwordRef}
+      type="password"
+      placeholder=" Re-Enter Password"/>
+  </Form.Group>
+  <br></br>
     </Form>
-    <br></br>
-          <Checkbox className='Checkbox'>Remember me</Checkbox>
+          <Checkbox className='Checkbox1'>Remember me</Checkbox>
+          <br></br>
+          <br></br>
+          <Button className='Button1' mr={160} onClick={()=>{
+           createAccount();
+           onCloseReportModal();
+           console.log('lol')
+           //Alerts();
+           console.log('lol121')
+          }}>
+                Sign Up </Button>
     </ModalBody>
-    <ModalFooter className='ModalFooter'>
     <br></br>
-      <Button className='Button' colorScheme="blue" mr={160} onClick={() => {
-          createAccount();
-          onCloseReportModal();
-          console.log('lol')
-          //Alerts();
-          console.log('lol121')
-        }}> Sign Up </Button>
+    <ModalFooter className='ModalFooter1'> 
     </ModalFooter>
+    <Link className='Link1'>Already a User? Sign In</Link>
+    <br></br>
   </ModalContent>
   
   )

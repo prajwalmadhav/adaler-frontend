@@ -20,7 +20,6 @@ import {
     Stack,
     Collapse,
     Icon,
-    Link,
     Popover,
     PopoverTrigger,
     PopoverContent,
@@ -31,10 +30,13 @@ import {
   } from '@chakra-ui/react';
   import { Col, Container, Form, Navbar } from "react-bootstrap";
   import { auth } from "../../../firebaseSetup";
-  import Toast from '../../ToastMessages/Toast'
+  import Toast from '../../ToastMessages/Toast';
+  import {Link} from "react-router-dom";
   //import 'C:/FYP/adaler-frontend/src/components/LandingPage/Modals/SignInModal.min.css'
   import './SignInModal.min.css';
+  import './SignInModal';
   import { ClassNames } from '@emotion/react';
+  import SignUpModal from './SignUpModal';
 
   
 export default function SignInModal() {
@@ -76,31 +78,34 @@ export default function SignInModal() {
         onClose: onCloseReportModal 
     } = useDisclosure();
   return (
-    <ModalContent className='ModalContent' >
-              <ModalHeader className='ModalHeader'> Sign In </ModalHeader>
+    <ModalContent className='ModalContent2' >
+              <ModalHeader className='ModalHeader2'> Sign In </ModalHeader>
               <ModalCloseButton/>
-              <ModalBody className='ModalBody'>
-              <br></br>
+              <ModalBody className='ModalBody2'>
               <Form.Group controlId="formEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control className='Forms' ref={emailRef} type="email" placeholder="Enter Email" />
+              <Form.Control className='Forms2' ref={emailRef} type="email" placeholder="Enter Email" />
               </Form.Group>
               <br></br>
               <Form.Group controlId="formPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control className='Forms' ref={passwordRef} type="password" placeholder="Enter Password" />
+              <Form.Control className='Forms2' ref={passwordRef} type="password" placeholder="Enter Password" />
               <br></br>
-                <Checkbox className='Checkbox'>Remember me</Checkbox>
+                <Checkbox className='Checkbox2'>Remember me</Checkbox>
               </Form.Group>
-              </ModalBody>
-              <ModalFooter className='ModalFooter'>
-                <Button className='Button' mr={160} onClick={()=>{
+              <br></br>
+              <Button className='Button2' mr={160} onClick={()=>{
                 signIn()
                 //toast();
-                
                 }}>
                 Sign In </Button>
+              </ModalBody>
+              <br></br>
+              <ModalFooter className='ModalFooter2'>
               </ModalFooter>
+              <Link to="/SignUpModal" className='Link2'>New User? Sign Up Here
+               </Link>
+               <br></br>
     </ModalContent>  
   )
 }
