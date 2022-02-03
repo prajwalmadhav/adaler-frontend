@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef,useEffect,useState} from 'react';
 import {
     Modal,
     ModalOverlay,
@@ -35,52 +35,10 @@ import {
   import { auth } from "../../../firebaseSetup";
   import { IoMdCheckmarkCircle } from "react-icons/io";
   import './SignUpModal.min.css';
-  
-  function Alerts(){
-    return (
-      <Flex
-        w="full"
-        bg="gray.600"
-        p={50}
-        alignItems="center"
-        justifyContent="center"
-      >
-        <Flex
-          maxW="sm"
-          w="full"
-          mx="auto"
-          bg={useColorModeValue("white", "gray.800")}
-          shadow="md"
-          rounded="lg"
-          overflow="hidden"
-        >
-          <Flex justifyContent="center" alignItems="center" w={12} bg="green.500">
-            <Icon as={IoMdCheckmarkCircle} color="white" boxSize={6} />
-          </Flex>
-  
-          <Box mx={-3} py={2} px={4}>
-            <Box mx={3}>
-              <chakra.span
-                color={useColorModeValue("green.500", "green.400")}
-                fontWeight="bold"
-              >
-                Success
-              </chakra.span>
-              <chakra.p
-                color={useColorModeValue("gray.600", "gray.200")}
-                fontSize="sm"
-              >
-                Your account was registered!
-              </chakra.p>
-            </Box>
-          </Box>
-        </Flex>
-      </Flex>
-    );
-  }
+  import firebase from 'firebase/compat/app';
 
-
-  export default function SignUpModal() {
+  
+export default function SignUpModal() {
     const successToast = useToast({
       title: 'Account Created',
       description: "Happy Learning",
@@ -106,25 +64,34 @@ import {
       position: "bottom",
     })
       const emailRef = useRef<HTMLInputElement>(null);
+      const nameRef = useRef<HTMLInputElement>(null);
       const passwordRef = useRef<HTMLInputElement>(null);
       const ConfirmpasswordRef = useRef<HTMLInputElement>(null);
+      const [name, setName] = useState("");
+      const [email, setEmail] = useState("");
       
       const createAccount = async () => {
         if (passwordRef.current?.value !== ConfirmpasswordRef.current?.value){
           PassErrorToast();
         }
+        else{
           try {
             await auth.createUserWithEmailAndPassword(
               emailRef.current!.value,
               passwordRef.current!.value,
             );
+            const ref = firebase.firestore().collection("person")
+            ref.doc().set({name,email}).catch((err)=>{
+                alert(err);
+            })
             successToast();
           } catch (error) {
             console.error(error);
             errorToast();
           }
-          
+        }
         };
+        
         const { 
           isOpen: isOpenReportModal, 
           onOpen: onOpenReportModal, 
@@ -141,7 +108,7 @@ import {
     <Form className="mt-4">
     <Form.Group controlId="Name">
       <Form.Label></Form.Label>
-      <Form.Control type="text" placeholder="Enter your name" />
+      <Form.Control ref={nameRef} type="text" placeholder="Enter your name" />
     </Form.Group>
     <Form.Group controlId="formEmail">
       <Form.Label></Form.Label>
@@ -167,7 +134,10 @@ import {
           <br></br>
           <br></br>
           <Button className='Button1' mr={160} onClick={()=>{
+            
            createAccount();
+           setName(nameRef.current!.value)
+           setEmail(emailRef.current!.value)
            onCloseReportModal();
            console.log('lol')
            //Alerts();
