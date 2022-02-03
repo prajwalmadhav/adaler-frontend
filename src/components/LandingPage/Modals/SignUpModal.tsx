@@ -97,10 +97,22 @@ import {
       isClosable: true,
       position: "bottom",
     })
+    const PassErrorToast = useToast({
+      title: 'Password error',
+      description: "Password does not match",
+      status: 'error',
+      duration: 5000,
+      isClosable: true,
+      position: "bottom",
+    })
       const emailRef = useRef<HTMLInputElement>(null);
       const passwordRef = useRef<HTMLInputElement>(null);
+      const ConfirmpasswordRef = useRef<HTMLInputElement>(null);
       
       const createAccount = async () => {
+        if (passwordRef.current?.value !== ConfirmpasswordRef.current?.value){
+          PassErrorToast();
+        }
           try {
             await auth.createUserWithEmailAndPassword(
               emailRef.current!.value,
@@ -145,7 +157,7 @@ import {
   <Form.Group controlId="formPassword">
     <Form.Label></Form.Label>
     <Form.Control
-      ref={passwordRef}
+      ref={ConfirmpasswordRef}
       type="password"
       placeholder=" Re-Enter Password"/>
   </Form.Group>

@@ -20,7 +20,6 @@ import {
     Stack,
     Collapse,
     Icon,
-    Link,
     Popover,
     PopoverTrigger,
     PopoverContent,
@@ -32,15 +31,19 @@ import {
   import { Col, Container, Form, Navbar } from "react-bootstrap";
   import { auth } from "../../../firebaseSetup";
   import Toast from '../../ToastMessages/Toast';
-  //import {Link} from "react-router-dom";
+  import {Link} from "react-router-dom";
   //import 'C:/FYP/adaler-frontend/src/components/LandingPage/Modals/SignInModal.min.css'
   import './SignInModal.min.css';
   import './SignInModal';
+  import './SignOut';
   import { ClassNames } from '@emotion/react';
   import SignUpModal from './SignUpModal';
-
+  import { useNavigate } from "react-router-dom"
   
 export default function SignInModal() {
+  const navigate = useNavigate()
+  
+
    const successToast = useToast({
     title: 'Logged In',
     description: "Waiting for developers to build redirect pages",
@@ -68,6 +71,7 @@ export default function SignInModal() {
       );
       
       successToast();
+      navigate('/SignOut');
     } catch (error) {
       console.error(error);
       errorToast();
@@ -105,10 +109,9 @@ export default function SignInModal() {
               <br></br>
               <ModalFooter className='ModalFooter2'>
               </ModalFooter>
-              <Link className='Link2' onClick={()=>{
-                <SignUpModal/>
-
-              }}>New User? Sign Up Here
+              <Link  to="SignUpModal" className='Link2' onClick={()=>{
+              
+              }}>New User? Sign Up Here 
                </Link>
                <br></br>
     </ModalContent>  
