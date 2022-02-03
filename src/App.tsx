@@ -10,6 +10,8 @@ import Hero from './components/LandingPage/Hero/Hero';
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Alerts from './components/LandingPage/Modals/Alerts';
 import SignOut from './components/LandingPage/Modals/SignOut';
+import Test from './components/Test';
+
 
 
 export const App = () => (
@@ -23,7 +25,7 @@ export const App = () => (
           <Route path='/home' element={<Dashboard/>} />
           <Route path='/alert' element={<Alerts/>} />
           <Route path='/SignOut' element={<SignOut/>} />
-
+          <Route path='/smoke' element={<Test/>} />
           
         </Routes>
        
