@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route,Link, Routes } from 'react-router-dom'
 import Hero from './components/LandingPage/Hero/Hero';
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Alerts from './components/LandingPage/Modals/Alerts';
-
+import SignOut from './components/LandingPage/Modals/SignOut';
 
 
 export const App = () => (
@@ -22,6 +22,7 @@ export const App = () => (
 
           <Route path='/home' element={<Dashboard/>} />
           <Route path='/alert' element={<Alerts/>} />
+          <Route path='/SignOut' element={<SignOut/>} />
 
           
         </Routes>

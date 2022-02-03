@@ -104,7 +104,7 @@ import Logo from "../../../assets/Images/logoblack.png";
               {/* SIGN IN START */}
             <Button onClick={onOpenSigninModal} as={'a'} className='sign'>
               Sign In</Button>
-            <Modal isOpen={isOpenSigninModal} size='sm' onClose={onCloseSigninModal} blockScrollOnMount={false}   motionPreset='slideInBottom' >
+            <Modal isOpen={isOpenSigninModal} size='sm' onClose={onCloseSigninModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
             <ModalOverlay/>
             <SignInModal />
             </Modal>
