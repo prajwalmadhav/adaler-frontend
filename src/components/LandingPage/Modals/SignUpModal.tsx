@@ -80,10 +80,15 @@ export default function SignUpModal() {
               emailRef.current!.value,
               passwordRef.current!.value,
             );
-            const ref = firebase.firestore().collection("person")
+            const user = firebase.auth().currentUser;
+            await user?.updateProfile({
+              displayName: nameRef.current?.value
+            })
+            console.log(user?.displayName)
+            /* const ref = firebase.firestore().collection("person")
             ref.doc().set({name,email}).catch((err)=>{
                 alert(err);
-            })
+            }) */
             successToast();
           } catch (error) {
             console.error(error);

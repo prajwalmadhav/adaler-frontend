@@ -50,7 +50,7 @@ export default function SignInModal() {
     status: 'success',
     duration: 5000,
     isClosable: true,
-    position: "top-right",
+    position: "bottom-right",
   })
   const errorToast = useToast({
     title: 'Invalid Login',
@@ -69,9 +69,9 @@ export default function SignInModal() {
         emailRef.current!.value,
         passwordRef.current!.value
       );
-      
+      //alert(auth.currentUser?.displayName)
       successToast();
-      navigate('/SignOut');
+      navigate('/home');
     } catch (error) {
       console.error(error);
       errorToast();
