@@ -35,6 +35,7 @@ import {
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
 import Logo from "../../assets/Images/logoblack.png";
+import { auth } from "../../firebaseSetup";
 
 interface LinkItemProps {
   name: string;
@@ -191,7 +192,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                 <Avatar
                   size={'sm'}
                   src={
-                    'https://avatars.githubusercontent.com/u/48212565?v=4'
+                    'https://joeschmoe.io/api/v1/random'
                   }
                 />
                 <VStack
@@ -199,9 +200,9 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                   alignItems="flex-start"
                   spacing="1px"
                   ml="2">
-                  <Text fontSize="sm">Sumukh Gey</Text>
+                  <Text fontSize="sm">{auth.currentUser?.displayName}</Text>
                   <Text fontSize="xs" color="gray.600">
-                    Student/Noobda
+                    Student
                   </Text>
                 </VStack>
                 <Box display={{ base: 'none', md: 'flex' }}>
