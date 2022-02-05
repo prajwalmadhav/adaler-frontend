@@ -13,7 +13,7 @@ export default function Homepage() {
     return (
         
         <>
-            <NavBar />
+            <NavBar />  
             <Hero />
             {/* <Features1 /> */}
             <Features2 />
