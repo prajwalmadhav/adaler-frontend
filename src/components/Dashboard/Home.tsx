@@ -7,310 +7,851 @@ import {
   useColorModeValue,
   Link,
   Icon,
+  VStack,
+  SimpleGrid,
 } from "@chakra-ui/react";
-import { MdHeadset, MdEmail, MdLocationOn} from "react-icons/md";
-import { TimeIcon,CalendarIcon, InfoIcon, EditIcon } from '@chakra-ui/icons'
-
+import { MdHeadset, MdEmail, MdLocationOn } from "react-icons/md";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 
-const Ma = () => {
+
+const Home = () => {
   return (
     <>      
-      {/* All box */}
-    <Flex
-      ml = {{ base: 0, md: 20, lg: 12 }}
+      {/* cards */} 
+      <Flex
+      ml = {{ base: 0, md: 20, lg: '230px' }}
       justifyContent = {{ base: "", lg: "center" }}
       px = {4}
+      direction={{ base: "column", md: "column", lg: "row" }}
+      py = {{ base: 4, md: 4, lg: 4 }}
       >   
-      <Flex
-        bg={("#FFFFFF")}
-        p={50}
-        w="80%"
-        h = ""
-        alignItems="center"
-        justifyContent="center"
-        direction={{ base: "column", md: "column", lg: "row" }}
-        py = {{ base: 4, md: 4, lg: 4 }}
-        px = {10}
-        //pos={'absolute'}
-        right = "20px"
-      >
-        {/* CARD 1 */}
+        {/* box 1 */}
+            
+          <Box
+            w="360px"
+            h="410px"
+            mr="50px"
+            mb="35px"
+            bg={useColorModeValue("white", "gray.800")}
+            shadow="lg"
+            rounded="lg"
+            overflow="hidden"
+
+          >
+            <Image
+              w="full"
+              h={40}
+              fit="cover"
+              objectPosition="center"
+              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              alt="avatar"
+            />
+
+            <Flex alignItems="center" px={6} py={3} bg="gray.900">
+              <Icon as={MdHeadset} h={6} w={6} color="white" />
+
+              <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
+                Basics Of Programming 
+              </chakra.h1>
+            </Flex>
+
+            <Box py={4} px={6}>
+              <chakra.h1
+                fontSize="xl"
+                fontWeight="bold"
+                color={useColorModeValue("gray.800", "white")}
+              >
+                Patterson johnson
+              </chakra.h1>
+
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
+                Full Stack maker & UI / UX Designer , love hip hop music Author of
+                Building UI.
+              </chakra.p>
+
+              
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon
+                    as={BsFillBriefcaseFill}
+                    
+                    h={6}
+                    w={6}
+                    mr={2}
+                  />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  Time taken 
+                  </chakra.h1>
+                </Flex>
+
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  difficulty level
+                  </chakra.h1>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdEmail} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  tests
+                  </chakra.h1>
+                </Flex>
+              
+            </Box>
+          </Box>
         
-        <Box
-          w="sm"
-          mx="auto"
-          bg={useColorModeValue("white", "gray.800")}
-          shadow="lg"
-          rounded="lg"
-          overflow="hidden"
-          height = "22rem"
-          width = "18rem"
-        >
-          <Image
-            h="8rem"
-            w = "18rem"
-            fit="fill"
-            objectPosition="center"
-            src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
-            alt="avatar"
-
-          />
-
-          <Flex alignItems="center" px={5} py={3} bg="gray.900" height = '2rem'>
-            <Icon as={CalendarIcon} h={4} w={6} color="white" />
-
-            <chakra.h1 mx={2} color="white" fontWeight="bold" fontSize="md">
-              2 Weeks
-            </chakra.h1>
-          </Flex>
-
-          <Box
-          py={2}
-          px={6}
-          overflow="visible"  
-          >
-            <chakra.h1
-              fontSize="xl"
-              fontWeight="bold"
-              color={useColorModeValue("gray.800", "white")}
-            >
-              Introduction to Programming
-            </chakra.h1>
-
-            <chakra.p py={2} lineHeight="1.2" color={useColorModeValue("gray.700", "gray.400")}>
-              Get started with basics of programming and learn to code
-            </chakra.p>
-
-            <Flex
-              alignItems="center"
-              mt={1}
-              color={useColorModeValue("gray.700", "gray.200")}
-            >
-              <Icon
-                as={BsFillBriefcaseFill}
-                h={4}
-                w={4}
-                mr={1}
-              />
-
-              <chakra.h1 px={2} py = {-1} fontSize="sm">
-               Beginner
-              </chakra.h1>
-            </Flex>
-
-            <Flex
-              alignItems="center"
-              mt={2}
-              color={useColorModeValue("gray.700", "gray.200")}
-            >
-              <Icon as={TimeIcon} h={4} w={4} mr={1} />
-
-              <chakra.h1 px={2} fontSize="sm">
-                5 Modules
-              </chakra.h1>
-            </Flex>
-            <Flex
-              alignItems="center"
-              mt={2}
-              color={useColorModeValue("gray.700", "gray.200")}
-            >
-              <Icon as={EditIcon} h={4} w={4} mr={1} />
-
-              <chakra.h1 px={2} fontSize="sm">
-                20 Tests
-              </chakra.h1>
-            </Flex>
-          </Box>
-        </Box>
-        <br />
-        {/* CARD 2 */}
-        <Box
-          w="sm"
-          mx="auto"
-          bg={useColorModeValue("white", "gray.800")}
-          shadow="lg"
-          rounded="lg"
-          overflow="hidden"
-          height = "22rem"
-          width = "18rem"
-        >
-          <Image
-            h="8rem"
-            w = "18rem"
-            fit="fill"
-            objectPosition="center"
-            src="https://files.realpython.com/media/python-beginner-tips.50f5f0c4e739.jpg"
-            alt="avatar"
-
-          />
-
-          <Flex alignItems="center" px={5} py={3} bg="gray.900" height = '2rem'>
-            <Icon as={CalendarIcon} h={4} w={6} color="white" />
-
-            <chakra.h1 mx={2} color="white" fontWeight="bold" fontSize="md">
-              2 Weeks
-            </chakra.h1>
-          </Flex>
-
-          <Box
-          py={2}
-          px={6}
-          overflow="visible"  
-          >
-            <chakra.h1
-              fontSize="xl"
-              fontWeight="bold"
-              color={useColorModeValue("gray.800", "white")}
-            >
-              Advanced Python
-            </chakra.h1>
-
-            <chakra.p py={2} lineHeight="1.2" color={useColorModeValue("gray.700", "gray.400")}>
-              Get started with basics of programming and learn to code
-            </chakra.p>
-
-            <Flex
-              alignItems="center"
-              mt={1}
-              color={useColorModeValue("gray.700", "gray.200")}
-            >
-              <Icon
-                as={BsFillBriefcaseFill}
-                h={4}
-                w={4}
-                mr={1}
-              />
-
-              <chakra.h1 px={2} py = {-1} fontSize="sm">
-               Beginner
-              </chakra.h1>
-            </Flex>
-
-            <Flex
-              alignItems="center"
-              mt={2}
-              color={useColorModeValue("gray.700", "gray.200")}
-            >
-              <Icon as={TimeIcon} h={4} w={4} mr={1} />
-
-              <chakra.h1 px={2} fontSize="sm">
-                5 Modules
-              </chakra.h1>
-            </Flex>
-            <Flex
-              alignItems="center"
-              mt={2}
-              color={useColorModeValue("gray.700", "gray.200")}
-            >
-              <Icon as={EditIcon} h={4} w={4} mr={1} />
-
-              <chakra.h1 px={2} fontSize="sm">
-                20 Tests
-              </chakra.h1>
-            </Flex>
-          </Box>
-        </Box>
-        <br />
-        {/* CARD 3 */}
-        <Box
-          w="sm"
-          mx="auto"
-          bg={useColorModeValue("white", "gray.800")}
-          shadow="lg"
-          rounded="lg"
-          overflow="hidden"
-          height = "22rem"
-          width = "18rem"
-        >
-          <Image
-            h="8rem"
-            w = "18rem"
-            fit="fill"
-            objectPosition="center"
-            src="https://content.techgig.com/thumb/msid-79468180,width-860,resizemode-4/7-Hacks-to-become-a-better-Java-problem-solver.jpg?77507"
-            alt="avatar"
-
-          />
-
-          <Flex alignItems="center" px={5} py={3} bg="gray.900" height = '2rem'>
-            <Icon as={CalendarIcon} h={4} w={6} color="white" />
-
-            <chakra.h1 mx={2} color="white" fontWeight="bold" fontSize="md">
-              2 Weeks
-            </chakra.h1>
-          </Flex>
-
-          <Box
-          py={2}
-          px={6}
-          overflow="visible"  
-          >
-            <chakra.h1
-              fontSize="xl"
-              fontWeight="bold"
-              color={useColorModeValue("gray.800", "white")}
-            >
-              Advanced Java
-            </chakra.h1>
-
-            <chakra.p py={2} lineHeight="1.2" color={useColorModeValue("gray.700", "gray.400")}>
-              Lorem ipsum dolor sit amet, consectetur adip elit 
-            </chakra.p>
-
-            <Flex
-              alignItems="center"
-              mt={1}
-              color={useColorModeValue("gray.700", "gray.200")}
-            >
-              <Icon
-                as={BsFillBriefcaseFill}
-                h={4}
-                w={4}
-                mr={1}
-              />
-
-              <chakra.h1 px={2} py = {-1} fontSize="sm">
-               Beginner
-              </chakra.h1>
-            </Flex>
-
-            <Flex
-              alignItems="center"
-              mt={2}
-              color={useColorModeValue("gray.700", "gray.200")}
-            >
-              <Icon as={TimeIcon} h={4} w={4} mr={1} />
-
-              <chakra.h1 px={2} fontSize="sm">
-                5 Modules
-              </chakra.h1>
-            </Flex>
-            <Flex
-              alignItems="center"
-              mt={2}
-              color={useColorModeValue("gray.700", "gray.200")}
-            >
-              <Icon as={EditIcon} h={4} w={4} mr={1} />
-
-              <chakra.h1 px={2} fontSize="sm">
-                20 Tests
-              </chakra.h1>
-            </Flex>
-          </Box>
-        </Box>
+        {/* box 2 */}
         
+          <Box
+            w="360px"
+            h="410px"
+            mr="50px"
+            mb="35px"
+            bg={useColorModeValue("white", "gray.800")}
+            shadow="lg"
+            rounded="lg"
+            overflow="hidden"
+
+          >
+            <Image
+              w="full"
+              h={40}
+              fit="cover"
+              objectPosition="center"
+              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              alt="avatar"
+            />
+
+            <Flex alignItems="center" px={6} py={3} bg="gray.900">
+              <Icon as={MdHeadset} h={6} w={6} color="white" />
+
+              <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
+                Basics Of Programming 
+              </chakra.h1>
+            </Flex>
+
+            <Box py={4} px={6}>
+              <chakra.h1
+                fontSize="xl"
+                fontWeight="bold"
+                color={useColorModeValue("gray.800", "white")}
+              >
+                Patterson johnson
+              </chakra.h1>
+
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
+                Full Stack maker & UI / UX Designer , love hip hop music Author of
+                Building UI.
+              </chakra.p>
+
+              
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon
+                    as={BsFillBriefcaseFill}
+                    
+                    h={6}
+                    w={6}
+                    mr={2}
+                  />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  Time taken 
+                  </chakra.h1>
+                </Flex>
+
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  difficulty level
+                  </chakra.h1>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdEmail} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  tests
+                  </chakra.h1>
+                </Flex>
+              
+            </Box>
+          </Box>
+
+          {/* box 3 */}
+
+          <Box
+            w="360px"
+            h="410px"
+            mr="0px"
+            mb="35px"
+            bg={useColorModeValue("white", "gray.800")}
+            shadow="lg"
+            rounded="lg"
+            overflow="hidden"
+
+          >
+            <Image
+              w="full"
+              h={40}
+              fit="cover"
+              objectPosition="center"
+              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              alt="avatar"
+            />
+
+            <Flex alignItems="center" px={6} py={3} bg="gray.900">
+              <Icon as={MdHeadset} h={6} w={6} color="white" />
+
+              <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
+                Basics Of Programming 
+              </chakra.h1>
+            </Flex>
+
+            <Box py={4} px={6}>
+              <chakra.h1
+                fontSize="xl"
+                fontWeight="bold"
+                color={useColorModeValue("gray.800", "white")}
+              >
+                Patterson johnson
+              </chakra.h1>
+
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
+                Full Stack maker & UI / UX Designer , love hip hop music Author of
+                Building UI.
+              </chakra.p>
+
+              
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon
+                    as={BsFillBriefcaseFill}
+                    
+                    h={6}
+                    w={6}
+                    mr={2}
+                  />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  Time taken 
+                  </chakra.h1>
+                </Flex>
+
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  difficulty level
+                  </chakra.h1>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdEmail} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  tests
+                  </chakra.h1>
+                </Flex>
+              
+            </Box>
+          </Box>
+
       </Flex>
-    </Flex> 
-  
+
+      {/* cards row 2 */}
+      <Flex
+      ml = {{ base: 0, md: 20, lg: '230px' }}
+      justifyContent = {{ base: "", lg: "center" }}
+      px = {4}
+      direction={{ base: "column", md: "column", lg: "row" }}
+      py = {{ base: 4, md: 4, lg: 4 }}
+      >   
+        {/* box 1 */}
+            
+          <Box
+            w="360px"
+            h="410px"
+            mr="50px"
+            mb="35px"
+            bg={useColorModeValue("white", "gray.800")}
+            shadow="lg"
+            rounded="lg"
+            overflow="hidden"
+
+          >
+            <Image
+              w="full"
+              h={40}
+              fit="cover"
+              objectPosition="center"
+              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              alt="avatar"
+            />
+
+            <Flex alignItems="center" px={6} py={3} bg="gray.900">
+              <Icon as={MdHeadset} h={6} w={6} color="white" />
+
+              <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="mg">
+                2 weeks 
+              </chakra.h1>
+            </Flex>
+
+            <Box py={4} px={6}>
+              <chakra.h1
+                fontSize="xl"
+                fontWeight="bold"
+                color={useColorModeValue("gray.800", "white")}
+              >
+                Introduction to programming
+              </chakra.h1>
+
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
+                Full Stack maker & UI / UX Designer , love hip hop music Author of
+                Building UI.
+              </chakra.p>
+
+              
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon
+                    as={BsFillBriefcaseFill}
+                    
+                    h={6}
+                    w={6}
+                    mr={2}
+                  />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  Time taken 
+                  </chakra.h1>
+                </Flex>
+
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  difficulty level
+                  </chakra.h1>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdEmail} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  tests
+                  </chakra.h1>
+                </Flex>
+              
+            </Box>
+          </Box>
+        
+        {/* box 2 */}
+        
+          <Box
+            w="360px"
+            h="410px"
+            mr="50px"
+            mb="35px"
+            bg={useColorModeValue("white", "gray.800")}
+            shadow="lg"
+            rounded="lg"
+            overflow="hidden"
+
+          >
+            <Image
+              w="full"
+              h={40}
+              fit="cover"
+              objectPosition="center"
+              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              alt="avatar"
+            />
+
+            <Flex alignItems="center" px={6} py={3} bg="gray.900">
+              <Icon as={MdHeadset} h={6} w={6} color="white" />
+
+              <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
+                Basics Of Programming 
+              </chakra.h1>
+            </Flex>
+
+            <Box py={4} px={6}>
+              <chakra.h1
+                fontSize="xl"
+                fontWeight="bold"
+                color={useColorModeValue("gray.800", "white")}
+              >
+                Patterson johnson
+              </chakra.h1>
+
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
+                Full Stack maker & UI / UX Designer , love hip hop music Author of
+                Building UI.
+              </chakra.p>
+
+              
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon
+                    as={BsFillBriefcaseFill}
+                    
+                    h={6}
+                    w={6}
+                    mr={2}
+                  />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  Time taken 
+                  </chakra.h1>
+                </Flex>
+
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  difficulty level
+                  </chakra.h1>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdEmail} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  tests
+                  </chakra.h1>
+                </Flex>
+              
+            </Box>
+          </Box>
+
+          {/* box 3 */}
+
+          <Box
+            w="360px"
+            h="410px"
+            mr="0px"
+            mb="35px"
+            bg={useColorModeValue("white", "gray.800")}
+            shadow="lg"
+            rounded="lg"
+            overflow="hidden"
+
+          >
+            <Image
+              w="full"
+              h={40}
+              fit="cover"
+              objectPosition="center"
+              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              alt="avatar"
+            />
+
+            <Flex alignItems="center" px={6} py={3} bg="gray.900">
+              <Icon as={MdHeadset} h={6} w={6} color="white" />
+
+              <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
+                Basics Of Programming 
+              </chakra.h1>
+            </Flex>
+
+            <Box py={4} px={6}>
+              <chakra.h1
+                fontSize="xl"
+                fontWeight="bold"
+                color={useColorModeValue("gray.800", "white")}
+              >
+                Patterson johnson
+              </chakra.h1>
+
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
+                Full Stack maker & UI / UX Designer , love hip hop music Author of
+                Building UI.
+              </chakra.p>
+
+              
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon
+                    as={BsFillBriefcaseFill}
+                    
+                    h={6}
+                    w={6}
+                    mr={2}
+                  />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  Time taken 
+                  </chakra.h1>
+                </Flex>
+
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  difficulty level
+                  </chakra.h1>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdEmail} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  tests
+                  </chakra.h1>
+                </Flex>
+              
+            </Box>
+          </Box>
+
+      </Flex>
+
+      {/* cards row 3 */}
+      <Flex
+      ml = {{ base: 0, md: 20, lg: '230px' }}
+      justifyContent = {{ base: "", lg: "center" }}
+      px = {4}
+      direction={{ base: "column", md: "column", lg: "row" }}
+      py = {{ base: 4, md: 4, lg: 4 }}
+      >   
+        {/* box 1 */}
+            
+          <Box
+            w="360px"
+            h="410px"
+            mr="50px"
+            mb="35px"
+            bg={useColorModeValue("white", "gray.800")}
+            shadow="lg"
+            rounded="lg"
+            overflow="hidden"
+
+          >
+            <Image
+              w="full"
+              h={40}
+              fit="cover"
+              objectPosition="center"
+              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              alt="avatar"
+            />
+
+            <Flex alignItems="center" px={6} py={3} bg="gray.900">
+              <Icon as={MdHeadset} h={6} w={6} color="white" />
+
+              <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
+                Basics Of Programming 
+              </chakra.h1>
+            </Flex>
+
+            <Box py={4} px={6}>
+              <chakra.h1
+                fontSize="xl"
+                fontWeight="bold"
+                color={useColorModeValue("gray.800", "white")}
+              >
+                Patterson johnson
+              </chakra.h1>
+
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
+                Full Stack maker & UI / UX Designer , love hip hop music Author of
+                Building UI.
+              </chakra.p>
+
+              
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon
+                    as={BsFillBriefcaseFill}
+                    
+                    h={6}
+                    w={6}
+                    mr={2}
+                  />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  Time taken 
+                  </chakra.h1>
+                </Flex>
+
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  difficulty level
+                  </chakra.h1>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdEmail} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  tests
+                  </chakra.h1>
+                </Flex>
+              
+            </Box>
+          </Box>
+        
+        {/* box 2 */}
+        
+          <Box
+            w="360px"
+            h="410px"
+            mr="50px"
+            mb="35px"
+            bg={useColorModeValue("white", "gray.800")}
+            shadow="lg"
+            rounded="lg"
+            overflow="hidden"
+
+          >
+            <Image
+              w="full"
+              h={40}
+              fit="cover"
+              objectPosition="center"
+              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              alt="avatar"
+            />
+
+            <Flex alignItems="center" px={6} py={3} bg="gray.900">
+              <Icon as={MdHeadset} h={6} w={6} color="white" />
+
+              <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
+                Basics Of Programming 
+              </chakra.h1>
+            </Flex>
+
+            <Box py={4} px={6}>
+              <chakra.h1
+                fontSize="xl"
+                fontWeight="bold"
+                color={useColorModeValue("gray.800", "white")}
+              >
+                Patterson johnson
+              </chakra.h1>
+
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
+                Full Stack maker & UI / UX Designer , love hip hop music Author of
+                Building UI.
+              </chakra.p>
+
+              
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon
+                    as={BsFillBriefcaseFill}
+                    
+                    h={6}
+                    w={6}
+                    mr={2}
+                  />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  Time taken 
+                  </chakra.h1>
+                </Flex>
+
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  difficulty level
+                  </chakra.h1>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdEmail} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  tests
+                  </chakra.h1>
+                </Flex>
+              
+            </Box>
+          </Box>
+
+          {/* box 3 */}
+
+          <Box
+            w="360px"
+            h="410px"
+            mr="0px"
+            mb="35px"
+            bg={useColorModeValue("white", "gray.800")}
+            shadow="lg"
+            rounded="lg"
+            overflow="hidden"
+
+          >
+            <Image
+              w="full"
+              h={40}
+              fit="cover"
+              objectPosition="center"
+              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              alt="avatar"
+            />
+
+            <Flex alignItems="center" px={6} py={3} bg="gray.900">
+              <Icon as={MdHeadset} h={6} w={6} color="white" />
+
+              <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
+                Basics Of Programming 
+              </chakra.h1>
+            </Flex>
+
+            <Box py={4} px={6}>
+              <chakra.h1
+                fontSize="xl"
+                fontWeight="bold"
+                color={useColorModeValue("gray.800", "white")}
+              >
+                Patterson johnson
+              </chakra.h1>
+
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
+                Full Stack maker & UI / UX Designer , love hip hop music Author of
+                Building UI.
+              </chakra.p>
+
+              
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon
+                    as={BsFillBriefcaseFill}
+                    
+                    h={6}
+                    w={6}
+                    mr={2}
+                  />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  Time taken 
+                  </chakra.h1>
+                </Flex>
+
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  difficulty level
+                  </chakra.h1>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  mt={4}
+                  color={useColorModeValue("gray.700", "gray.200")}
+                >
+                  <Icon as={MdEmail} h={6} w={6} mr={2} />
+
+                  <chakra.h1 px={2} fontSize="sm">
+                  tests
+                  </chakra.h1>
+                </Flex>
+              
+            </Box>
+          </Box>
+
+      </Flex>
 
 
-    
-      
     </>
   );
 };
 
 
-export default Ma;
-
+export default Home;
