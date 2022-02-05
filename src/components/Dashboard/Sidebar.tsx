@@ -36,6 +36,7 @@ import { IconType } from 'react-icons';
 import { ReactText } from 'react';
 import Logo from "../../assets/Images/logoblack.png";
 import { auth } from "../../firebaseSetup";
+import {signOut} from "firebase/auth";
 
 interface LinkItemProps {
   name: string;
@@ -49,12 +50,14 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Settings', icon: FiSettings },
 ];
 
+
 export default function SidebarWithHeader({
   children,
 }: {
   children: ReactNode;
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  
   return (
     <Box bg={useColorModeValue("#fff", "gray.600")}>
       <SidebarContent
@@ -150,6 +153,9 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
 interface MobileProps extends FlexProps {
   onOpen: () => void;
 }
+const SignOut = async () => {
+  await auth.signOut();
+};
 const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
   return (
     <Flex
@@ -217,7 +223,10 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
               <MenuItem>Settings</MenuItem>
               <MenuItem>Subscription</MenuItem>
               <MenuDivider />
-              <MenuItem>Sign out</MenuItem>
+              <MenuItem  onClick={()=>{
+              SignOut()
+              console.log('DONE')
+              }}>Sign out</MenuItem>
             </MenuList>
           </Menu>
         </Flex>
