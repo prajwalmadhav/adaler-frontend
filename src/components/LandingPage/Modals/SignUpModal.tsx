@@ -74,6 +74,9 @@ export default function SignUpModal() {
         if (passwordRef.current?.value !== ConfirmpasswordRef.current?.value){
           PassErrorToast();
         }
+        if (nameRef == null){
+          errorToast()
+        }
         else{
           try {
             await auth.createUserWithEmailAndPassword(
@@ -113,25 +116,27 @@ export default function SignUpModal() {
     <Form className="mt-4">
     <Form.Group controlId="Name">
       <Form.Label></Form.Label>
-      <Form.Control ref={nameRef} type="text" placeholder="Enter your name" />
+      <Form.Control ref={nameRef} type="text" placeholder="Enter your name"/>
     </Form.Group>
     <Form.Group controlId="formEmail">
       <Form.Label></Form.Label>
-      <Form.Control ref={emailRef} type="email" placeholder=" Enter Email" />
+      <Form.Control ref={emailRef} type="email" placeholder=" Enter Email"/>
     </Form.Group>
   <Form.Group controlId="formPassword">
     <Form.Label></Form.Label>
     <Form.Control
       ref={passwordRef}
       type="password"
-      placeholder=" Enter Password"/>
+      placeholder=" Enter Password"
+      required/>
   </Form.Group>
   <Form.Group controlId="formPassword">
     <Form.Label></Form.Label>
     <Form.Control
       ref={ConfirmpasswordRef}
       type="password"
-      placeholder=" Re-Enter Password"/>
+      placeholder=" Re-Enter Password"
+      required/>
   </Form.Group>
   <br></br>
     </Form>
