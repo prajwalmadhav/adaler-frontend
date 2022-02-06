@@ -16,6 +16,8 @@ import {
   List,
   ListItem,
   Divider,
+  AlertTitle,
+  Alert,
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
@@ -23,6 +25,27 @@ import { MdLocalShipping } from 'react-icons/md';
 export default function Simple() {
   return (
     <Container maxW={'6xl'} ml = {{base:0, md: 20, lg: '290px' }} mt={{base:0, md: 20, lg:-10 }}>
+      {/* <Heading as='h2' size='2xl' 
+      ml = {{ base: '25px', md: 20, lg: '300px' }} 
+      mt = {{ base: 0, md: 20, lg: 3 }}
+      mb = {{ base: 0, md: 20, lg: '-50px' }} >
+         Course Catalog
+         
+      </Heading>
+
+      <Divider orientation='horizontal' color={useColorModeValue('gray.300','gray.600')} mt={{base:2, md: 20, lg:'70px' }} ml={{base:7, md: 20, lg:'325px' }} w={{base:'250px', md: 20, lg:'298px' }}/> */}
+
+      <Alert status='success' variant='left-accent' 
+      ml = {{base:0, md: 20, lg:'-25px' }} 
+      mt={{base:4, md: 20, lg:'70px' }} 
+      mb={{base:0, md: 20, lg:'-50px' }} 
+      w={{base:'240px', md: 20, lg:'360px' }} >
+
+      <AlertTitle my={2} fontSize={{base:'2xl', md: 20, lg:'4xl' }}> 
+        Course Catalog
+      </AlertTitle>
+      </Alert>
+
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
         spacing={{ base: 8, md: 10 }}
