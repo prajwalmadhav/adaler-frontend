@@ -15,6 +15,7 @@ import {
   VisuallyHidden,
   List,
   ListItem,
+  Divider,
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
@@ -159,6 +160,10 @@ export default function Simple() {
         
         </Stack>
       </SimpleGrid>
+
+      <Divider orientation='horizontal' color={useColorModeValue('gray.500', 'gray.600')} ml='0px'/>
+
     </Container>
+    
   );
 }

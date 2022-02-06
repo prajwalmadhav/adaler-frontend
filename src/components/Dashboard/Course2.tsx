@@ -15,6 +15,7 @@ import {
   VisuallyHidden,
   List,
   ListItem,
+  Divider,
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
@@ -31,7 +32,7 @@ export default function Simple() {
             rounded={'md'}
             alt={'product image'}
             src={
-              'https://miro.medium.com/max/875/0*emfQ_cKXSeCdPgb9.jpg'
+              'https://trio.dev/static/6369df5b7db2a14abb4cab9a7fa2fd18/446c81661664c40378e6417a86795930.jpg'
             }
             fit={'cover'}
             align={'center'}
@@ -45,14 +46,14 @@ export default function Simple() {
               lineHeight={1.1}
               fontWeight={600}
               fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-              Basics Of Programming
+              Intermediate Courses
             </Heading>
             <Text
               color={useColorModeValue('gray.900', 'gray.400')}
               fontWeight={300}
               fontSize={{ base: '1xl', sm: '2xl', lg: '2xl' }}
               ml = {{base:0, md: 20, lg: 2 }}>
-              Beginner | 2 weeks | 4 Tests
+              Intermediate | 2 weeks | 4 Tests
             </Text>
           </Box>
 
@@ -159,6 +160,9 @@ export default function Simple() {
         
         </Stack>
       </SimpleGrid>
+
+      <Divider orientation='horizontal' color={useColorModeValue('gray.500', 'gray.600')} ml='0px'/>
+      
     </Container>
   );
 }

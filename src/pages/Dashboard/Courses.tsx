@@ -4,6 +4,8 @@ import Sidebar from '../../components/Dashboard/Sidebar'
 import Home from '../../components/Dashboard/Home'
 import Course1 from '../../components/Dashboard/Course1'
 import Course2 from './../../components/Dashboard/Course2';
+import Course3 from '../../components/Dashboard/Course3'
+import { Divider } from '@chakra-ui/react'
 
 
 export default function Homepage() {
@@ -14,7 +16,8 @@ export default function Homepage() {
             
             <Sidebar children={undefined} />
             <Course1 />
-            
+            <Course2 />
+            <Course3 />
 
             
         </>
