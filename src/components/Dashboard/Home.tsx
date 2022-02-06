@@ -20,10 +20,10 @@ const Home = () => {
   return (
     <>      
       {/* All cards */} 
-      <Heading as='h2' size='2xl' ml = {{ base: '25px', md: 20, lg: '300px' }}                  // margin for sidebar very important
->
+      <Heading as='h2' size='2xl' ml = {{ base: '25px', md: 20, lg: '300px' }} >
          My Courses
       </Heading> 
+      <br/>
       
       {/* course cards row 1 */}
       <Flex
@@ -581,10 +581,10 @@ const Home = () => {
       </Flex>
 
       
-      <Heading as='h2' size='2xl' ml =  {{base:'25px', md: 20, lg: '300px' }}                  // margin for sidebar very important
->
+      <Heading as='h2' size='2xl' ml =  {{base:'25px', md: 20, lg: '300px' }} >
          My Test
       </Heading> 
+      <br/>
       {/* <Divider orientation='horizontal' ml='280px'/> */}
 
       {/* test cards row 3 */}
