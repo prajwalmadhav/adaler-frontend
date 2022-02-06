@@ -137,7 +137,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://files.realpython.com/media/Newbie_Watermarked.a9319218252a.jpg"
+              src="https://miro.medium.com/max/875/0*D9HAiv-jW-9kC76O.jpg"
               alt="avatar"
             />
 
@@ -226,7 +226,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*D9HAiv-jW-9kC76O.jpg"
+              src="https://files.realpython.com/media/Newbie_Watermarked.a9319218252a.jpg"
               alt="avatar"
             />
 
@@ -581,7 +581,7 @@ const Home = () => {
       <Heading as='h2' size='2xl' ml='300px'>
           Test
       </Heading> 
-      
+
       {/* test cards row 3 */}
       <Flex
       ml = {{ base: 0, md: 20, lg: '230px' }}
