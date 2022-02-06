@@ -69,7 +69,7 @@ export default function SignUpModal() {
       const ConfirmpasswordRef = useRef<HTMLInputElement>(null);
       const [name, setName] = useState("");
       const [email, setEmail] = useState("");
-      
+        
       const createAccount = async () => {
         if (passwordRef.current?.value !== ConfirmpasswordRef.current?.value){
           PassErrorToast();
@@ -88,10 +88,10 @@ export default function SignUpModal() {
               displayName: nameRef.current?.value
             })
             console.log(user?.displayName)
-            /* const ref = firebase.firestore().collection("person")
-            ref.doc().set({name,email}).catch((err)=>{
+            const ref = firebase.firestore().collection("person")
+            await ref.doc().set({name,email}).catch((err)=>{
                 alert(err);
-            }) */
+            }) 
             successToast();
           } catch (error) {
             console.error(error);
@@ -145,9 +145,9 @@ export default function SignUpModal() {
           <br></br>
           <Button className='Button1' mr={160} onClick={()=>{
             
-           createAccount();
-           setName(nameRef.current!.value)
-           setEmail(emailRef.current!.value)
+            setName(nameRef.current!.value)
+            setEmail(emailRef.current!.value)
+            createAccount();
            onCloseReportModal();
            console.log('lol')
            //Alerts();
