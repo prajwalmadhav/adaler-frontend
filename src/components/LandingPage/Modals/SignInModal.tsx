@@ -39,6 +39,7 @@ import {
   import { ClassNames } from '@emotion/react';
   import SignUpModal from './SignUpModal';
   import { useNavigate } from "react-router-dom"
+  import { getAuth, setPersistence, signInWithEmailAndPassword, browserSessionPersistence } from "firebase/auth";
   
 export default function SignInModal() {
   const navigate = useNavigate()

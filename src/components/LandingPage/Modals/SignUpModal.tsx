@@ -37,15 +37,18 @@ import {
   import './SignUpModal.min.css';
   import firebase from 'firebase/compat/app';
   import Form from 'react-bootstrap/Form';
+
+
   
 export default function SignUpModal() {
+
     const successToast = useToast({
       title: 'Account Created',
       description: "Happy Learning",
       status: 'success',
       duration: 5000,
       isClosable: true,
-      position: "bottom",
+      position:"top",
     })
     const errorToast = useToast({
       title: 'Error',
@@ -124,7 +127,7 @@ export default function SignUpModal() {
     <ModalBody className='ModalBody1'>
     <Form className="mt-4">
     <Form.Group controlId="Name">
-    <Form.Label>City</Form.Label>
+    <Form.Label></Form.Label>
           <Form.Control type="text"  ref={nameRef} placeholder="Enter your name" required/>
           <Form.Control.Feedback type="invalid">
             Please Enter Name.
