@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Alerts from './components/LandingPage/Modals/Alerts';
 import SignOut from './components/LandingPage/Modals/SignOut';
 import Test from './components/Test';
+import SignUp from './components/LandingPage/Modals/SignUpModal';
 
 
 
@@ -21,7 +22,7 @@ export const App = () => (
         <Routes>
 
           <Route path='/' element={<Homepage/>} />
-
+          <Route path='/signup' element={<SignUp/>} />
           <Route path='/home' element={<Dashboard/>} />
           <Route path='/alert' element={<Alerts/>} />
           <Route path='/SignOut' element={<SignOut/>} />
