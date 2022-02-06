@@ -22,11 +22,6 @@ import {
       onOpen: onOpenReportModal, 
       onClose: onCloseReportModal 
   } = useDisclosure();
-    const { 
-      isOpen: isOpenSigninModal,  
-      onOpen: onOpenSigninModal, 
-      onClose: onCloseSigninModal 
-  } = useDisclosure();
 
     return (
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
@@ -68,12 +63,12 @@ import {
                 _hover={{
                   bg: 'blue.500',
                 }}
-                onClick={onOpenReportModal} display={{ base: 'none', md: 'inline-flex' }} colorScheme="red" className='sign'>
+                onClick={onOpenReportModal} className='GetButton'>
                 Get Started
               </Button>
               <Modal isOpen={isOpenReportModal} size='sm' onClose={onCloseReportModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
-                <ModalOverlay/>
-                <SignUpModal />
+              <ModalOverlay/>
+              <SignUpModal />
               </Modal>
               <Button rounded={'full'}>Try Demo</Button>
             </Stack>

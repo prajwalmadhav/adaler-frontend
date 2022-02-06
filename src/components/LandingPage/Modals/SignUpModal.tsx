@@ -97,7 +97,7 @@ export default function SignUpModal() {
             );
             const user = firebase.auth().currentUser;
             await user?.updateProfile({
-              //displayName: nameRef.current?.value
+              displayName: nameRef.current?.value
             })
             console.log(user?.displayName)
             const ref = firebase.firestore().collection("person")
