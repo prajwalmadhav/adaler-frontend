@@ -78,10 +78,11 @@ export default function SignUpModal() {
       const [name, setName] = useState("");
       const [email, setEmail] = useState("");
       const createAccount = async () => {
+        
         if (passwordRef.current?.value !== ConfirmpasswordRef.current?.value){
           PassErrorToast();
         }
-        if( nameRef != null){
+        if( nameRef.current?.value === ""){
           NameErrorToast();
           console.log("heheheheheh");
         }
