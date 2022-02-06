@@ -1,14 +1,28 @@
 import {
     Button,
     Flex,
+    Modal,
+    ModalOverlay,
     Heading,
     Image,
     Stack,
     Text,
     useBreakpointValue,
+    useDisclosure,
   } from '@chakra-ui/react';
   
+  import SignUpModal from '../Modals/SignUpModal';
+
+  
   export default function Hero() {
+    
+    const { isOpen, onToggle } = useDisclosure();
+    const { 
+      isOpen: isOpenReportModal, 
+      onOpen: onOpenReportModal, 
+      onClose: onCloseReportModal 
+  } = useDisclosure();
+
     return (
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
         <Flex p={8} flex={1} align={'center'} justify={'center'}>
@@ -48,9 +62,14 @@ import {
                 color={'white'}
                 _hover={{
                   bg: 'blue.500',
-                }}>
+                }}
+                onClick={onOpenReportModal} className='GetButton'>
                 Get Started
               </Button>
+              <Modal isOpen={isOpenReportModal} size='sm' onClose={onCloseReportModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
+              <ModalOverlay/>
+              <SignUpModal />
+              </Modal>
               <Button rounded={'full'}>Try Demo</Button>
             </Stack>
           </Stack>

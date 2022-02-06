@@ -13,6 +13,7 @@ import SignOut from './components/LandingPage/Modals/SignOut';
 import Test from './components/Test';
 import Courses from './pages/Dashboard/Courses';
 
+import SignUp from './components/LandingPage/Modals/SignUpModal';
 
 
 
@@ -23,7 +24,7 @@ export const App = () => (
         <Routes>
 
           <Route path='/' element={<Homepage/>} />
-
+          <Route path='/signup' element={<SignUp/>} />
           <Route path='/home' element={<Dashboard/>} />
           <Route path='/alert' element={<Alerts/>} />
           <Route path='/SignOut' element={<SignOut/>} />
