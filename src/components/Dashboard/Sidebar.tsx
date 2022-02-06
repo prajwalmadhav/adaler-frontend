@@ -37,6 +37,7 @@ import { ReactText } from 'react';
 import Logo from "../../assets/Images/logoblack.png";
 import { auth } from "../../firebaseSetup";
 import {signOut} from "firebase/auth";
+import { useNavigate } from "react-router-dom"
 
 interface LinkItemProps {
   name: string;
@@ -157,6 +158,7 @@ const SignOut = async () => {
   await auth.signOut();
 };
 const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
+  const navigate = useNavigate()
   return (
     <Flex
       ml={{ base: 0, md: 60 }}
@@ -226,6 +228,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
               <MenuItem  onClick={()=>{
               SignOut()
               console.log('DONE')
+              navigate('/');
               }}>Sign out</MenuItem>
             </MenuList>
           </Menu>

@@ -31,12 +31,12 @@ import {
     AlertDescription,
     useToast,
   } from '@chakra-ui/react';
-  import { Col, Container, Form, Navbar } from "react-bootstrap";
+  import { Col, Container, Navbar } from "react-bootstrap";
   import { auth } from "../../../firebaseSetup";
   import { IoMdCheckmarkCircle } from "react-icons/io";
   import './SignUpModal.min.css';
   import firebase from 'firebase/compat/app';
-
+  import Form from 'react-bootstrap/Form';
   
 export default function SignUpModal() {
     const successToast = useToast({
@@ -63,19 +63,27 @@ export default function SignUpModal() {
       isClosable: true,
       position: "bottom",
     })
+    const NameErrorToast = useToast({
+      title: 'Name error',
+      description: "Name cannot be blank",
+      status: 'error',
+      duration: 5000,
+      isClosable: true,
+      position: "bottom",
+    })
       const emailRef = useRef<HTMLInputElement>(null);
       const nameRef = useRef<HTMLInputElement>(null);
       const passwordRef = useRef<HTMLInputElement>(null);
       const ConfirmpasswordRef = useRef<HTMLInputElement>(null);
       const [name, setName] = useState("");
       const [email, setEmail] = useState("");
-        
       const createAccount = async () => {
         if (passwordRef.current?.value !== ConfirmpasswordRef.current?.value){
           PassErrorToast();
         }
-        if (nameRef == null){
-          errorToast()
+        if( nameRef != null){
+          NameErrorToast();
+          console.log("heheheheheh");
         }
         else{
           try {
@@ -85,7 +93,7 @@ export default function SignUpModal() {
             );
             const user = firebase.auth().currentUser;
             await user?.updateProfile({
-              displayName: nameRef.current?.value
+              //displayName: nameRef.current?.value
             })
             console.log(user?.displayName)
             const ref = firebase.firestore().collection("person")
@@ -115,8 +123,11 @@ export default function SignUpModal() {
     <ModalBody className='ModalBody1'>
     <Form className="mt-4">
     <Form.Group controlId="Name">
-      <Form.Label></Form.Label>
-      <Form.Control ref={nameRef} type="text" placeholder="Enter your name"/>
+    <Form.Label>City</Form.Label>
+          <Form.Control type="text"  ref={nameRef} placeholder="Enter your name" required/>
+          <Form.Control.Feedback type="invalid">
+            Please Enter Name.
+          </Form.Control.Feedback>
     </Form.Group>
     <Form.Group controlId="formEmail">
       <Form.Label></Form.Label>
