@@ -21,7 +21,7 @@ import { MdLocalShipping } from 'react-icons/md';
 
 export default function Simple() {
   return (
-    <Container maxW={'6xl'} ml =  {{base:0, md: 20, lg: '270px' }}>
+    <Container maxW={'6xl'} ml = {{base:0, md: 20, lg: '290px' }} mt={{base:0, md: 20, lg:-10 }}>
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
         spacing={{ base: 8, md: 10 }}
@@ -31,7 +31,7 @@ export default function Simple() {
             rounded={'md'}
             alt={'product image'}
             src={
-              'https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080'
+              'https://miro.medium.com/max/875/0*emfQ_cKXSeCdPgb9.jpg'
             }
             fit={'cover'}
             align={'center'}
@@ -45,13 +45,14 @@ export default function Simple() {
               lineHeight={1.1}
               fontWeight={600}
               fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-              Automatic Watch
+              Basics Of Programming
             </Heading>
             <Text
               color={useColorModeValue('gray.900', 'gray.400')}
               fontWeight={300}
-              fontSize={'2xl'}>
-              $350.00 USD
+              fontSize={{ base: '1xl', sm: '2xl', lg: '2xl' }}
+              ml = {{base:0, md: 20, lg: 2 }}>
+              Beginner | 2 weeks | 4 Tests
             </Text>
           </Box>
 
@@ -60,63 +61,61 @@ export default function Simple() {
             direction={'column'}
             divider={
               <StackDivider
-                borderColor={useColorModeValue('gray.200', 'gray.600')}
+                borderColor={useColorModeValue('gray.400', 'gray.600')}
               />
             }>
             <VStack spacing={{ base: 4, sm: 6 }}>
               <Text
-                color={useColorModeValue('gray.500', 'gray.400')}
+                color={useColorModeValue('gray.900', 'gray.400')}
                 fontSize={'2xl'}
                 fontWeight={'300'}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore
               </Text>
               <Text fontSize={'lg'}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                aliquid amet at delectus doloribus dolorum expedita hic, ipsum
-                maxime modi nam officiis porro, quae, quisquam quos
-                reprehenderit velit? Natus, totam.
+                {/* MORE DESCRIPTION  */}
+                
               </Text>
             </VStack>
             <Box>
               <Text
                 fontSize={{ base: '16px', lg: '18px' }}
-                color={useColorModeValue('yellow.500', 'yellow.300')}
+                color={useColorModeValue('#080f7b', 'yellow.300')}
                 fontWeight={'500'}
                 textTransform={'uppercase'}
                 mb={'4'}>
-                Features
+                COURSE objectives
               </Text>
 
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                 <List spacing={2}>
-                  <ListItem>Chronograph</ListItem>
-                  <ListItem>Master Chronometer Certified</ListItem>{' '}
-                  <ListItem>Tachymeter</ListItem>
+                  <ListItem>Python Data-Structures</ListItem>
+                  <ListItem>Objective 2</ListItem>{' '}
+                  <ListItem>Objective 3</ListItem>
                 </List>
                 <List spacing={2}>
-                  <ListItem>Anti‑magnetic</ListItem>
-                  <ListItem>Chronometer</ListItem>
-                  <ListItem>Small seconds</ListItem>
+                  <ListItem>Objective 4</ListItem>
+                  <ListItem>Objective 5</ListItem>
+                  <ListItem>Objective 6</ListItem>
                 </List>
               </SimpleGrid>
             </Box>
             <Box>
               <Text
                 fontSize={{ base: '16px', lg: '18px' }}
-                color={useColorModeValue('yellow.500', 'yellow.300')}
+                color={useColorModeValue('#080f7b', 'yellow.300')}
                 fontWeight={'500'}
                 textTransform={'uppercase'}
                 mb={'4'}>
-                Product Details
+                COURSE DETAILS
               </Text>
 
               <List spacing={2}>
                 <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
-                    Between lugs:
+                    Detail 1:
                   </Text>{' '}
-                  20 mm
+                  Detailed description of this detail lol 1
                 </ListItem>
                 <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
@@ -169,16 +168,13 @@ export default function Simple() {
             color={useColorModeValue('white', 'gray.900')}
             textTransform={'uppercase'}
             _hover={{
-              transform: 'translateY(2px)',
+              transform: 'translateY(3px)',
               boxShadow: 'lg',
             }}>
-            Add to cart
+           Start Learning
           </Button>
 
-          <Stack direction="row" alignItems="center" justifyContent={'center'}>
-            <MdLocalShipping />
-            <Text>2-3 business days delivery</Text>
-          </Stack>
+        
         </Stack>
       </SimpleGrid>
     </Container>

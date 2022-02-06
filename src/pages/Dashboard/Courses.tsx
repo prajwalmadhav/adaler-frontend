@@ -14,7 +14,7 @@ export default function Homepage() {
             
             <Sidebar children={undefined} />
             <Course1 />
-            <Course2 />
+            
 
             
         </>
