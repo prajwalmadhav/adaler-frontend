@@ -11,6 +11,8 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Alerts from './components/LandingPage/Modals/Alerts';
 import SignOut from './components/LandingPage/Modals/SignOut';
 import Test from './components/Test';
+import Courses from './pages/Dashboard/Courses';
+
 
 
 
@@ -26,6 +28,7 @@ export const App = () => (
           <Route path='/alert' element={<Alerts/>} />
           <Route path='/SignOut' element={<SignOut/>} />
           <Route path='/smoke' element={<Test/>} />
+          <Route path='/courses' element={<Courses/>} />
           
         </Routes>
        
