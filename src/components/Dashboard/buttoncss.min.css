@@ -1,0 +1,20 @@
+@media (max-width: 600px) {
+    .Learning-button-mob{
+        display: none !important;
+        
+    }
+
+    
+}
+
+@media (min-width: 600px) {
+    .Learning-button-pc{
+        display: none !important;
+        
+    }
+    .divider{
+        display: none !important;
+    }
+}
+
+
