@@ -15,15 +15,13 @@ import Courses from './pages/Dashboard/Courses';
 import Sidebar from './components/Dashboard/Sidebar';
 
 import SignUp from './components/LandingPage/Modals/SignUpModal';
-
-import Course1 from './components/Dashboard/Course1';
-import Course2 from './components/Dashboard/Course2';
-import Course3 from './components/Dashboard/Course3';
-import Course4 from './components/Dashboard/Course4';
-import Course5 from './components/Dashboard/Course5';
-import Course6 from './components/Dashboard/Course6';
-import PreQuestions from './pages/PreQuestions';
-
+import Course1 from './components/Dashboard/CourseOverview/Course1';
+import Course2 from './components/Dashboard/CourseOverview/Course2';
+import Course3 from './components/Dashboard/CourseOverview/Course3';
+import Course4 from './components/Dashboard/CourseOverview/Course4';
+import Course5 from './components/Dashboard/CourseOverview/Course5';
+import Course6 from './components/Dashboard/CourseOverview/Course6';
+import Testpg from "./components/Dashboard/Test/Testpg";
 
 
 export const App = () => {
@@ -37,7 +35,6 @@ export const App = () => {
         
         <Routes>
           <Route path="/" element={<Homepage/>}/>
-          <Route path='/Welcome' element={<PreQuestions/>} />
           <Route path='/home' element={<Dashboard/>} />
           <Route path='/smoke' element={<Test/>} />
 
