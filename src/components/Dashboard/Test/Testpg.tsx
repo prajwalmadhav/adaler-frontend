@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Testpg() {
-  return <div>Hello PG</div>;
+  return <div>Sup nIG</div>;
 }
