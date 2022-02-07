@@ -37,10 +37,17 @@ import {
   import './SignUpModal.min.css';
   import firebase from 'firebase/compat/app';
   import Form from 'react-bootstrap/Form';
+  import { useNavigate } from "react-router-dom"
 
 
   
 export default function SignUpModal() {
+
+  const position  = useBreakpointValue({base: 'top', sm: 'top' ,
+  md: 'top',
+  lg: 'bottom',
+  xl: 'bottom',
+ }) as any;
 
     const successToast = useToast({
       title: 'Account Created',
@@ -48,15 +55,15 @@ export default function SignUpModal() {
       status: 'success',
       duration: 5000,
       isClosable: true,
-      position:"top",
+      position: position,
     })
-    const errorToast = useToast({
-      title: 'Error',
-      description: "Error Error Error",
+    const ExistToast = useToast({
+      title: 'Email Error',
+      description: "Email already in use",
       status: 'error',
       duration: 5000,
       isClosable: true,
-      position: "bottom",
+      position: position,
     })
     const PassErrorToast = useToast({
       title: 'Password error',
@@ -64,7 +71,7 @@ export default function SignUpModal() {
       status: 'error',
       duration: 5000,
       isClosable: true,
-      position: "bottom",
+      position: position,
     })
     const NameErrorToast = useToast({
       title: 'Name error',
@@ -72,7 +79,7 @@ export default function SignUpModal() {
       status: 'error',
       duration: 5000,
       isClosable: true,
-      position: "bottom",
+      position: position,
     })
       const emailRef = useRef<HTMLInputElement>(null);
       const nameRef = useRef<HTMLInputElement>(null);
@@ -85,7 +92,7 @@ export default function SignUpModal() {
         if (passwordRef.current?.value !== ConfirmpasswordRef.current?.value){
           PassErrorToast();
         }
-        if( nameRef.current?.value === ""){
+        else if( nameRef.current?.value === ""){
           NameErrorToast();
           console.log("heheheheheh");
         }
@@ -105,9 +112,10 @@ export default function SignUpModal() {
                 alert(err);
             }) 
             successToast();
+            navigate('/Welcome');
           } catch (error) {
             console.error(error);
-            errorToast();
+            ExistToast();
           }
         }
         };
@@ -118,6 +126,7 @@ export default function SignUpModal() {
           onClose: onCloseReportModal 
       } = useDisclosure();
         
+      const navigate = useNavigate()
 
         
   return (
