@@ -20,7 +20,9 @@ const Home = () => {
   return (
     <>      
       {/* All cards */} 
-      <Heading as='h2' size='2xl' ml = {{ base: '25px', md: 20, lg: '300px' }} >
+      <Heading as='h2' size='xl' 
+      ml = {{ base: '25px', md: 20, lg: '300px' }}
+      mt = {{ base: '15px'}} >
          My Courses
       </Heading> 
       <br/>
@@ -28,6 +30,7 @@ const Home = () => {
       {/* course cards row 1 */}
       <Flex
       ml = {{ base: 0, md: 20, lg: '230px' }}
+      mx = {{ base: 1 }}
       justifyContent = {{ base: "", lg: "center" }}
       px = {4}
       direction={{ base: "column", md: "column", lg: "row" }}
@@ -306,6 +309,7 @@ const Home = () => {
 
       <Flex
       ml = {{ base: 0, md: 20, lg: '230px' }}
+      mx = {{ base: 1 }}
       justifyContent = {{ base: "", lg: "center" }}
       px = {4}
       direction={{ base: "column", md: "column", lg: "row" }}
@@ -589,7 +593,8 @@ const Home = () => {
 
       {/* test cards row 3 */}
       <Flex
-      ml = {{ base: 0, md: 20, lg: '230px' }}                  // margin for sidebar very important
+      ml = {{ base: 0, md: 20, lg: '230px' }}
+      mx = {{ base: 1 }}                 // margin for sidebar very important
       justifyContent = {{ base: "", lg: "center" }}
       px = {4}
       direction={{ base: "column", md: "column", lg: "row" }}
@@ -867,6 +872,7 @@ const Home = () => {
       {/* course cards row 4 */}
       <Flex
       ml = {{ base: 0, md: 20, lg: '230px' }}
+      mx = {{ base: 1 }}
       justifyContent = {{ base: "", lg: "center" }}
       px = {4}
       direction={{ base: "column", md: "column", lg: "row" }}
