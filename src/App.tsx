@@ -22,6 +22,7 @@ import Course4 from './components/Dashboard/courseoverview/Course4';
 import Course5 from './components/Dashboard/courseoverview/Course5';
 import Course6 from './components/Dashboard/courseoverview/Course6';
 import Testpg from "./components/Dashboard/Test/Testpg";
+import PreQuestions from './pages/PreQuestions';
 
 
 export const App = () => {
@@ -36,10 +37,11 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Homepage/>}/>
           <Route path='/home' element={<Dashboard/>} />
+          
           <Route path='/smoke' element={<Test/>} />
 
           <Route path="/" element={<LayoutsWithNavbar />}>
-            
+          <Route path='/Welcome' element={<PreQuestions/>} />
             <Route path='/home' element={<Dashboard/>} />
             <Route path='/home/courses' element={<Courses/>} />
 

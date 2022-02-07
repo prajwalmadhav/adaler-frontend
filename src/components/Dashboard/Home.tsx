@@ -11,6 +11,8 @@ import {
   SimpleGrid,
   Heading,
   Divider,
+  Stack,
+  Center,
 } from "@chakra-ui/react";
 import { MdHeadset, MdEmail, MdLocationOn } from "react-icons/md";
 import { BsFillBriefcaseFill } from "react-icons/bs";
@@ -23,14 +25,18 @@ const Home = () => {
       <Heading as='h2' size='xl' 
       ml = {{ base: '25px', md: 20, lg: '300px' }}
       mt = {{ base: '15px'}} >
-         My Courses
+         | My Courses
       </Heading> 
       <br/>
+      
+    
+      
       
       {/* course cards row 1 */}
       <Flex
       ml = {{ base: 0, md: 20, lg: '230px' }}
       mx = {{ base: 1 }}
+      // my = {{ base : 0, lg : 10 }}
       justifyContent = {{ base: "", lg: "center" }}
       px = {4}
       direction={{ base: "column", md: "column", lg: "row" }}
@@ -585,8 +591,8 @@ const Home = () => {
       </Flex>
 
       
-      <Heading as='h2' size='2xl' ml =  {{base:'25px', md: 20, lg: '300px' }} >
-         My Test
+      <Heading as='h2' size='xl' ml =  {{base:'25px', md: 20, lg: '300px' }} >
+          | My Test
       </Heading> 
       <br/>
       {/* <Divider orientation='horizontal' ml='280px'/> */}
