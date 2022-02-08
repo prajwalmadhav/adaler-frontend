@@ -23,6 +23,7 @@ import Course5 from './components/Dashboard/courseoverview/Course5';
 import Course6 from './components/Dashboard/courseoverview/Course6';
 import Testpg from "./components/Dashboard/Test/Testpg";
 import PreQuestions from './components/WelcomPage/PreQuestions';
+import Courseinfo1 from './components/Dashboard/CourseInfo/Courseinfo1';
 
 
 export const App = () => {
@@ -52,7 +53,7 @@ export const App = () => {
             <Route path='/home/courses/course4' element={<Course4/>} />
             <Route path='/home/courses/course5' element={<Course5/>} />
             <Route path='/home/courses/course6' element={<Course6/>} />
-            <Route path='/pg' element={<Testpg/>} />
+            <Route path='/home/courses/courseinfo1' element={<Courseinfo1/>} />
           </Route>
 
         </Routes>
