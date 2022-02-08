@@ -287,22 +287,6 @@ import Logo from "../../../assets/Images/logoblack.png";
       label: 'About Us',
       children: [
         {
-          label: 'TESTING 1[PG]',
-          subLabel: 'Trending Design to inspire you',
-          href: '/Home',
-        },
-        {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
-          href: '#',
-          
-        },
-      ],
-    },
-    {
-      label: 'Features',
-      children: [
-        {
           label: 'Job Board',
           subLabel: 'Find your dream design job',
           href: '#',
@@ -313,6 +297,27 @@ import Logo from "../../../assets/Images/logoblack.png";
           href: '#',
         },
       ],
+     
+    },
+    {
+      label: 'Features',
+      children: [
+        {
+          label: 'Homepage',
+          subLabel: 'Dashboard-view Courses and Tests',
+          href: '/Home',
+        },
+        {
+          label: 'Course Overview',
+          subLabel: 'View all courses in detail',
+          href: '/Home/Courses',
+        },
+        { 
+          label: 'Testing [PG]',
+          subLabel: 'Testing only for PG',
+          href: '/Home/Courses/Courseinfo1',
+      },
+      ],
     },
     {
       label: 'Contact Us',
@@ -320,6 +325,6 @@ import Logo from "../../../assets/Images/logoblack.png";
     },
     {
       label: '',
-      href: '#',
+      href: '',
     },
   ];

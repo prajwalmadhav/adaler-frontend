@@ -72,7 +72,12 @@ export default function Simple() {
             rounded={'md'}
             alt={'product image'}
             src={courseImage}
-            fit={'cover'}
+            // transform="scale(1.0)"
+            // objectFit="contain"
+            // transition="0.3s ease-in-out"
+            // _hover={{
+            //   transform: 'scale(1.05)',
+            // }}
             align={'center'}
             w={'100%'}
             h={{ base: '100%', sm: '400px', lg: '450px' }}
