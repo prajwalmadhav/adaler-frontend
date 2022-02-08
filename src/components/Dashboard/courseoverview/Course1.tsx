@@ -41,7 +41,7 @@ export default function Simple() {
   const courseDetails3 = 'Detailed description of this detail lol 1'
   const courseDetails4 = 'Less detailed desc lol'
   
-  const courseImage = 'https://miro.medium.com/max/875/0*emfQ_cKXSeCdPgb9.jpg'
+  const courseImage = 'https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2021/11/TNW-Computer-Science-Expert.jpeg'
 
   return (
     
@@ -58,7 +58,7 @@ export default function Simple() {
       
       <Heading as='h2' size='xl' 
       ml = {{ base: '5px', md: 20, lg: '20px' }}
-      mt = {{ base: '55px'}}
+      mt = {{ base: '15px', lg: '55px'}}
       mb = {{ base: 0, md: 20, lg: '-50px' }} >
          |Courses Catalog
       </Heading>
