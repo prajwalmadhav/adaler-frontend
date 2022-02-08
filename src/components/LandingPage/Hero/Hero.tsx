@@ -45,7 +45,7 @@ import {
               </Text>
               
               <Text color={'#f13c3b'} as={'span'}>
-              Personlized
+              Personalized
               </Text>{' '}
               <br />{' '}
               <Text color={'#080f7b'} as={'span'}>
@@ -53,7 +53,7 @@ import {
               </Text>{' '}
             </Heading>
             <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-              A personlized learning environment backed with active learning models.
+              A personalized learning environment backed with active learning models.
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
               <Button
