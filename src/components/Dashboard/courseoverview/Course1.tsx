@@ -25,10 +25,26 @@ import './buttoncss.min.css';
 
 
 export default function Simple() {
-  const courseName = 'Basics Of PG'     //added editable variables
+  const courseTitle = 'Basics Of Programming'     //added editable variables
+  const courseSubscript = 'Beginner | 2 weeks | 4 Tests'
+  const courseDescription = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore'
   
-  return (
+  const courseObj1 = 'Python Data-Structures'
+  const courseObj2 = 'Objective 1'
+  const courseObj3 = 'Objective 2'
+  const courseObj4 = 'Objective 3'
+  const courseObj5 = 'Objective 4'
+  const courseObj6 = 'Objective 5'
 
+  const courseDetails1 = 'Detailed description of this detail lol 1'
+  const courseDetails2 = 'Less detailed desc lol'
+  const courseDetails3 = 'Detailed description of this detail lol 1'
+  const courseDetails4 = 'Less detailed desc lol'
+  
+  const courseImage = 'https://miro.medium.com/max/875/0*emfQ_cKXSeCdPgb9.jpg'
+
+  return (
+    
     <Container maxW={'6xl'} ml = {{base:0, md: 20, lg: '290px' }} mt={{base:0, md: 20, lg:-10 }}>
       {/* <Heading as='h2' size='2xl' 
       ml = {{ base: '25px', md: 20, lg: '300px' }} 
@@ -40,16 +56,12 @@ export default function Simple() {
 
       <Divider orientation='horizontal' color={useColorModeValue('gray.300','gray.600')} mt={{base:2, md: 20, lg:'70px' }} ml={{base:7, md: 20, lg:'325px' }} w={{base:'250px', md: 20, lg:'298px' }}/> */}
       
-      <Alert status='error' variant='left-accent' 
-      ml = {{base:0, md: 20, lg:'-25px' }} 
-      mt={{base:4, md: 20, lg:'70px' }} 
-      mb={{base:0, md: 20, lg:'-50px' }} 
-      w={{base:'240px', md: 20, lg:'360px' }} >
-
-      <AlertTitle my={2} fontSize={{base:'2xl', md: 20, lg:'4xl' }}> 
-        Course Catalog
-      </AlertTitle>
-      </Alert>
+      <Heading as='h2' size='xl' 
+      ml = {{ base: '5px', md: 20, lg: '20px' }}
+      mt = {{ base: '55px'}}
+      mb = {{ base: 0, md: 20, lg: '-50px' }} >
+         |Courses Catalog
+      </Heading>
 
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
@@ -59,9 +71,7 @@ export default function Simple() {
           <Image
             rounded={'md'}
             alt={'product image'}
-            src={
-              'https://miro.medium.com/max/875/0*emfQ_cKXSeCdPgb9.jpg'
-            }
+            src={courseImage}
             fit={'cover'}
             align={'center'}
             w={'100%'}
@@ -117,14 +127,14 @@ export default function Simple() {
               lineHeight={1.1}
               fontWeight={600}
               fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-              {courseName}
+              {courseTitle}
             </Heading>
             <Text
               color={useColorModeValue('gray.900', 'gray.400')}
               fontWeight={300}
               fontSize={{ base: '1xl', sm: '2xl', lg: '2xl' }}
               ml = {{base:0, md: 20, lg: 2 }}>
-              Beginner | 2 weeks | 4 Tests
+              {courseSubscript}
             </Text>
           </Box>
 
@@ -141,8 +151,7 @@ export default function Simple() {
                 color={useColorModeValue('gray.900', 'gray.400')}
                 fontSize={'2xl'}
                 fontWeight={'300'}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore
+                {courseDescription}
               </Text>
               <Text fontSize={'lg'}>
                 {/* MORE DESCRIPTION  */}
@@ -201,14 +210,14 @@ export default function Simple() {
 
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                 <List spacing={2}>
-                  <ListItem>Python Data-Structures</ListItem>
-                  <ListItem>Objective 2</ListItem>{' '}
-                  <ListItem>Objective 3</ListItem>
+                  <ListItem>{courseObj1}</ListItem>
+                  <ListItem>{courseObj2}</ListItem>{' '}
+                  <ListItem>{courseObj3}</ListItem>
                 </List>
                 <List spacing={2}>
-                  <ListItem>Objective 4</ListItem>
-                  <ListItem>Objective 5</ListItem>
-                  <ListItem>Objective 6</ListItem>
+                  <ListItem>{courseObj4}</ListItem>
+                  <ListItem>{courseObj5}</ListItem>
+                  <ListItem>{courseObj6}</ListItem>
                 </List>
               </SimpleGrid>
             </Box>
@@ -227,25 +236,25 @@ export default function Simple() {
                   <Text as={'span'} fontWeight={'bold'}>
                     Detail 1:
                   </Text>{' '}
-                  Detailed description of this detail lol 1
+                  {courseDetails1}
                 </ListItem>
                 <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
                     Detail 2:
                   </Text>{' '}
-                  Less detailed desc lol
+                  {courseDetails2}
                 </ListItem>
                 <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
                     Detail 3:
                   </Text>{' '}
-                  Detailed description of this detail lol 1
+                  {courseDetails3}                  
                 </ListItem>
                 <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
                     Detail 4:
                   </Text>{' '}
-                  Less detailed desc lol
+                  {courseDetails4}
                 </ListItem>
                 
               </List>

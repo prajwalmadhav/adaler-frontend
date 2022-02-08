@@ -25,7 +25,7 @@ const Home = () => {
       <Heading as='h2' size='xl' 
       ml = {{ base: '25px', md: 20, lg: '300px' }}
       mt = {{ base: '15px'}} >
-         | My Courses
+         |My Courses
       </Heading> 
       <br/>
       
@@ -592,7 +592,7 @@ const Home = () => {
 
       
       <Heading as='h2' size='xl' ml =  {{base:'25px', md: 20, lg: '300px' }} >
-          | My Test
+          |My Test
       </Heading> 
       <br/>
       {/* <Divider orientation='horizontal' ml='280px'/> */}
