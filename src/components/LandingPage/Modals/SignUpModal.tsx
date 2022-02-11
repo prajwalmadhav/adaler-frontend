@@ -32,12 +32,13 @@ import {
     useToast,
   } from '@chakra-ui/react';
   import { Col, Container, Navbar } from "react-bootstrap";
-  import { auth } from "../../../firebaseSetup";
+  import { auth, provider } from "../../../firebaseSetup";
   import { IoMdCheckmarkCircle } from "react-icons/io";
   import './SignUpModal.min.css';
   import firebase from 'firebase/compat/app';
   import Form from 'react-bootstrap/Form';
   import { useNavigate } from "react-router-dom"
+import { FcGoogle } from 'react-icons/fc';
 
 
   
@@ -87,6 +88,14 @@ export default function SignUpModal() {
       const ConfirmpasswordRef = useRef<HTMLInputElement>(null);
       const [name, setName] = useState("");
       const [email, setEmail] = useState("");
+      const googleAccount = async() => {
+        auth.signInWithPopup(provider).then(() => {
+          successToast();
+          navigate('/welcome');
+        }).catch((error) => {
+          console.log(error.message)
+        })
+      }
       const createAccount = async () => {
         
         if (passwordRef.current?.value !== ConfirmpasswordRef.current?.value){
@@ -178,6 +187,18 @@ export default function SignUpModal() {
            console.log('lol121')
           }}>
                 Sign Up </Button>
+                
+          <Button    
+            w={'full'}
+            maxW={'md'}
+            marginTop={'10px'}
+            //variant={'outline'}
+            leftIcon={<FcGoogle />}
+            onClick={()=>{
+                googleAccount();
+            }}>
+              <Text>Sign up with Google</Text>
+          </Button>
     </ModalBody>
     <br></br>
     <ModalFooter className='ModalFooter1'> 
