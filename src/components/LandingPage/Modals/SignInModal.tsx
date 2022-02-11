@@ -29,7 +29,7 @@ import {
     useToast,
   } from '@chakra-ui/react';
   import { Col, Container, Form, Navbar } from "react-bootstrap";
-  import { auth } from "../../../firebaseSetup";
+  import { auth, provider } from "../../../firebaseSetup";
   import Toast from '../../ToastMessages/Toast';
   import {Link} from "react-router-dom";
   //import 'C:/FYP/adaler-frontend/src/components/LandingPage/Modals/SignInModal.min.css'
@@ -40,6 +40,7 @@ import {
   import SignUpModal from './SignUpModal';
   import { useNavigate } from "react-router-dom"
   import { getAuth, setPersistence, signInWithEmailAndPassword, browserSessionPersistence } from "firebase/auth";
+import { FcGoogle } from 'react-icons/fc';
   
 export default function SignInModal() {
   const navigate = useNavigate()
@@ -83,6 +84,14 @@ export default function SignInModal() {
         onOpen: onOpenReportModal, 
         onClose: onCloseReportModal 
     } = useDisclosure();
+    const googleAccount = async() => {
+      auth.signInWithPopup(provider).then(() => {
+        successToast();
+        navigate('/home');
+      }).catch((error) => {
+        console.log(error.message)
+      })
+    }
 
   return (
     <ModalContent className='ModalContent2' >
@@ -106,6 +115,17 @@ export default function SignInModal() {
                 //toast();
                 }}>
                 Sign In </Button>
+                <Button    
+                  w={'full'}
+                  maxW={'md'}
+                  marginTop={'10px'}
+                  //variant={'outline'}
+                  leftIcon={<FcGoogle />}
+                  onClick={()=>{
+                      googleAccount();
+                }}>
+              <Text>Sign in with Google</Text>
+          </Button>
               </ModalBody>
               <br></br>
               <ModalFooter className='ModalFooter2'>

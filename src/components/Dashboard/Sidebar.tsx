@@ -59,6 +59,7 @@ export default function SidebarWithHeader({
   children: ReactNode;
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   
   return (
     <Box bg={useColorModeValue("#fff", "gray.600")}>
@@ -160,6 +161,7 @@ const SignOut = async () => {
 };
 const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
   const navigate = useNavigate()
+  const pic = auth.currentUser?.photoURL as any
   return (
     <Flex
       ml={{ base: 0, md: 60 }}
@@ -201,7 +203,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                 <Avatar
                   size={'sm'}
                   src={
-                    'https://joeschmoe.io/api/v1/random'
+                    pic
                   }
                 />
                 <VStack
