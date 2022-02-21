@@ -38,22 +38,22 @@ export const App = () => {
         <Routes>
           {/* Pages without dashboard sidebar */}
           <Route path="/" element={<Homepage/>}/>
-          <Route path='/home' element={<Dashboard/>} />
-          <Route path='/smoke' element={<Test/>} />
-          <Route path='/welcome' element={<PreQuestions/>} />
+          <Route path='home' element={<Dashboard/>} />
+          <Route path='smoke' element={<Test/>} />
+          <Route path='welcome' element={<PreQuestions/>} />
 
           <Route path="/" element={<LayoutsWithNavbar />}>
             {/* Pages with dashboard sidebar */}
-            <Route path='/home' element={<Dashboard/>} />
-            <Route path='/home/courses' element={<Courses/>} />
+            <Route path='home' element={<Dashboard/>} />
+            <Route path='home/courses' element={<Courses/>} />
 
-            <Route path='/home/courses/course1' element={<Course1/>} />
-            <Route path='/home/courses/course2' element={<Course2/>} />
-            <Route path='/home/courses/course3' element={<Course3/>} />
-            <Route path='/home/courses/course4' element={<Course4/>} />
-            <Route path='/home/courses/course5' element={<Course5/>} />
-            <Route path='/home/courses/course6' element={<Course6/>} />
-            <Route path='/home/courses/courseinfo1' element={<Courseinfo1/>} />
+            <Route path='home/courses/course1' element={<Course1/>} />
+            <Route path='home/courses/course2' element={<Course2/>} />
+            <Route path='home/courses/course3' element={<Course3/>} />
+            <Route path='home/courses/course4' element={<Course4/>} />
+            <Route path='home/courses/course5' element={<Course5/>} />
+            <Route path='home/courses/course6' element={<Course6/>} />
+            <Route path='home/courses/courseinfo1' element={<Courseinfo1/>} />
           </Route>
 
         </Routes>

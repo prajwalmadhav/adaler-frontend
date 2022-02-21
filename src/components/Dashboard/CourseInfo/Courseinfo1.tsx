@@ -131,7 +131,7 @@ const ArticleList = () => {
       <Divider marginTop="5" />
       <Wrap spacing="30px" marginTop="5">
         <WrapItem width={{ base: '100%', sm: '45%', md: '45%', lg: '30%' }}>
-          <Box w="100%">
+          {/* <Box w="100%">
             <Box borderRadius="lg" overflow="hidden">
               <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
                 <Image
@@ -165,37 +165,27 @@ const ArticleList = () => {
               name="John Doe"
               date={new Date('2021-04-06T19:01:27Z')}
             />
-          </Box>
+          </Box> */}
         </WrapItem>
       </Wrap>
       <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
-        <Heading as="h2">What we write about</Heading>
+        <Heading as="h2">This is a presentation of the Course</Heading>
         <Text as="p" fontSize="lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
-          pretium condimentum dignissim. Vestibulum ultrices vitae nisi sed
-          imperdiet. Mauris quis erat consequat, commodo massa quis, feugiat
-          sapien. Suspendisse placerat vulputate posuere. Curabitur neque
-          tortor, mattis nec lacus non, placerat congue elit.
+          
         </Text>
         <Text as="p" fontSize="lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
-          pretium condimentum dignissim. Vestibulum ultrices vitae nisi sed
-          imperdiet. Mauris quis erat consequat, commodo massa quis, feugiat
-          sapien. Suspendisse placerat vulputate posuere. Curabitur neque
-          tortor, mattis nec lacus non, placerat congue elit.
+          
         </Text>
         <Text as="p" fontSize="lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
-          pretium condimentum dignissim. Vestibulum ultrices vitae nisi sed
-          imperdiet. Mauris quis erat consequat, commodo massa quis, feugiat
-          sapien. Suspendisse placerat vulputate posuere. Curabitur neque
-          tortor, mattis nec lacus non, placerat congue elit.
+          
         </Text>
       </VStack>
+
+
+      <iframe src="https://onedrive.live.com/embed?cid=6C562715D7B3F900&amp;resid=6C562715D7B3F900%21628&amp;authkey=ALHzfLNQsPMLvFs&amp;em=2&amp;wdAr=1.7777777777777777&amp;wdEaa=0" width="962px" height="565px" frameBorder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
     </Container>
+
+    
   );
 };
 

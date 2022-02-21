@@ -38,16 +38,18 @@ import Logo from "../../assets/Images/logoblack.png";
 import { auth } from "../../firebaseSetup";
 import {signOut} from "firebase/auth";
 import { useNavigate } from "react-router-dom"
+import { link } from 'fs';
 
 interface LinkItemProps {
   name: string;
   icon: IconType;
+  link?:string;
 }
 
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Home', icon: FiHome},
-  { name: 'Course', icon: FiTrendingUp },
-  { name: 'Tests', icon: FiCompass },
+  { name: 'Home', icon: FiHome, link:'home'},
+  { name: 'Course', icon: FiTrendingUp, link:'home/courses' },
+  { name: 'Tests', icon: FiCompass, link:'home/courses/course1'},
   { name: 'Profile', icon: FiStar },
   { name: 'Settings', icon: FiSettings },
 ];
@@ -110,7 +112,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
+        <NavItem key={link.name} icon={link.icon} link={link.link}>
           {link.name}
         </NavItem>
       ))}
@@ -120,11 +122,12 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
 
 interface NavItemProps extends FlexProps {
   icon: IconType;
+  link?: string;
   children: ReactText;
 }
-const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
+const NavItem = ({ icon, children, link, ...rest }: NavItemProps) => {
   return (
-    <Link href="#" style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+    <Link href={link} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
       <Flex
         align="center"
         p="4"

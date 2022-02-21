@@ -68,7 +68,7 @@ const Home = () => {
               <Icon as={MdHeadset} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Programming 
+                Basics Of Python 
               </chakra.h1>
             </Flex>
 
