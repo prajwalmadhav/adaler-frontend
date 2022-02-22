@@ -24,15 +24,12 @@ import Course6 from './components/Dashboard/courseoverview/Course6';
 import Testpg from "./components/Dashboard/Test/Testpg";
 import PreQuestions from './components/WelcomPage/PreQuestions';
 import Courseinfo1 from './components/Dashboard/CourseInfo/Courseinfo1';
+import { auth } from "./firebaseSetup";
 
 
 export const App = () => {
-  const curUrl = window.location.pathname
-  console.log(curUrl)
   return (
-    
     <ChakraProvider theme={theme}>
-      
       <Router>
         
         <Routes>

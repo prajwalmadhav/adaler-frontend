@@ -104,19 +104,13 @@ import Logo from "../../../assets/Images/logoblack.png";
               {/* SIGN IN START */}
             <Button onClick={onOpenSigninModal} as={'a'} className='sign'>
               Sign In</Button>
-            <Modal isOpen={isOpenSigninModal} size='sm' onClose={onCloseSigninModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
-            <ModalOverlay/>
-            <SignInModal />
-            </Modal>
+            <SignInModal isOpen={isOpenSigninModal} onClose={onCloseSigninModal} />
             </Box>
             <Box>
     
             <Button onClick={onOpenReportModal} display={{ base: 'none', md: 'inline-flex' }} colorScheme="red" className='sign'>Sign Up</Button>
 
-            <Modal isOpen={isOpenReportModal} size='sm' onClose={onCloseReportModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
-            <ModalOverlay/>
-            <SignUpModal />
-            </Modal>
+            <SignUpModal isOpen={isOpenReportModal} onClose={onCloseReportModal} />
             </Box>
           </Stack>
         </Flex>
