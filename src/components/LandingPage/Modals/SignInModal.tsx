@@ -30,22 +30,18 @@ import {
   } from '@chakra-ui/react';
   import { Col, Container, Form, Navbar } from "react-bootstrap";
   import { auth, provider } from "../../../firebaseSetup";
-  import Toast from '../../ToastMessages/Toast';
   import {Link} from "react-router-dom";
-  //import 'C:/FYP/adaler-frontend/src/components/LandingPage/Modals/SignInModal.min.css'
   import './SignInModal.min.css';
   import './SignInModal';
   import './SignOut';
-  import { ClassNames } from '@emotion/react';
   import SignUpModal from './SignUpModal';
   import { useNavigate } from "react-router-dom"
-  import { getAuth, setPersistence, signInWithEmailAndPassword, browserSessionPersistence } from "firebase/auth";
-import { FcGoogle } from 'react-icons/fc';
+  import { FcGoogle } from 'react-icons/fc';
+  import GoogleAuth from '../GoogleAuth/GoogleAuth'
   
-export default function SignInModal() {
+export default function SignInModal(props: { isOpen: boolean; onClose: () => void; }) {
   const navigate = useNavigate()
   
-
    const successToast = useToast({
     title: 'Logged In',
     description: "Waiting for developers to build redirect pages",
@@ -79,21 +75,17 @@ export default function SignInModal() {
       errorToast();
     }
   };
+
     const { 
         isOpen: isOpenReportModal, 
         onOpen: onOpenReportModal, 
         onClose: onCloseReportModal 
     } = useDisclosure();
-    const googleAccount = async() => {
-      auth.signInWithPopup(provider).then(() => {
-        successToast();
-        navigate('/home');
-      }).catch((error) => {
-        console.log(error.message)
-      })
-    }
+  
 
   return (
+    <Modal isOpen={props.isOpen} onClose={props.onClose} size="sm" blockScrollOnMount={false} isCentered motionPreset="slideInBottom">
+    <ModalOverlay />
     <ModalContent className='ModalContent2' >
               <ModalHeader className='ModalHeader2'> Sign In </ModalHeader>
               <ModalCloseButton/>
@@ -111,6 +103,7 @@ export default function SignInModal() {
               </Form.Group>
               <br></br>
               <Button className='Button2' mr={160} onClick={()=>{
+
                 signIn()
                 //toast();
                 }}>
@@ -122,7 +115,7 @@ export default function SignInModal() {
                   //variant={'outline'}
                   leftIcon={<FcGoogle />}
                   onClick={()=>{
-                      googleAccount();
+                      GoogleAuth(navigate);
                 }}>
               <Text>Sign in with Google</Text>
           </Button>
@@ -130,11 +123,16 @@ export default function SignInModal() {
               <br></br>
               <ModalFooter className='ModalFooter2'>
               </ModalFooter>
-              <Link  to="SignUpModal" className='Link2' onClick={()=>{
-              
+              <Link to="" className='Link2' onClick={() => {
+                  //onOpenReportModal()
+                  props.onClose()
+
               }}>New User? Sign Up Here 
                </Link>
+               <SignUpModal isOpen={isOpenReportModal} onClose={onCloseReportModal} />
+              
                <br></br>
     </ModalContent>  
+    </Modal>
   )
 }

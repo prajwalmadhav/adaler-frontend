@@ -38,11 +38,12 @@ import {
   import firebase from 'firebase/compat/app';
   import Form from 'react-bootstrap/Form';
   import { useNavigate } from "react-router-dom"
-import { FcGoogle } from 'react-icons/fc';
+  import { FcGoogle } from 'react-icons/fc';
+  import GoogleAuth from '../GoogleAuth/GoogleAuth'
 
 
   
-export default function SignUpModal() {
+export default function SignUpModal(props: { isOpen: boolean; onClose: () => void; }) {
 
   const position  = useBreakpointValue({base: 'top', sm: 'top' ,
   md: 'top',
@@ -88,14 +89,6 @@ export default function SignUpModal() {
       const ConfirmpasswordRef = useRef<HTMLInputElement>(null);
       const [name, setName] = useState("");
       const [email, setEmail] = useState("");
-      const googleAccount = async() => {
-        auth.signInWithPopup(provider).then(() => {
-          successToast();
-          navigate('/welcome');
-        }).catch((error) => {
-          console.log(error.message)
-        })
-      }
       const createAccount = async () => {
         
         if (passwordRef.current?.value !== ConfirmpasswordRef.current?.value){
@@ -139,6 +132,8 @@ export default function SignUpModal() {
 
         
   return (
+    <Modal isOpen={props.isOpen} onClose={props.onClose} size="sm" blockScrollOnMount={false} isCentered motionPreset='slideInBottom' >
+    <ModalOverlay />                                                                              
     <ModalContent className='ModalContent1'>
     <ModalHeader className='ModalHeader1'> Sign Up </ModalHeader>
     <ModalCloseButton/>
@@ -195,7 +190,7 @@ export default function SignUpModal() {
             //variant={'outline'}
             leftIcon={<FcGoogle />}
             onClick={()=>{
-                googleAccount();
+                GoogleAuth(navigate)
             }}>
               <Text>Sign up with Google</Text>
           </Button>
@@ -203,10 +198,12 @@ export default function SignUpModal() {
     <br></br>
     <ModalFooter className='ModalFooter1'> 
     </ModalFooter>
-    <Link className='Link1'>Already a User? Sign In</Link>
+    <Link className='Link1' onClick={()=>{
+                props.onClose()
+            }}>Already a User? Sign In</Link>
     <br></br>
   </ModalContent>
-  
+  </Modal>
   )
 }
 

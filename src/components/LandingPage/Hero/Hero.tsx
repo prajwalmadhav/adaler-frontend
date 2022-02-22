@@ -66,10 +66,7 @@ import {
                 onClick={onOpenReportModal} className='GetButton'>
                 Get Started
               </Button>
-              <Modal isOpen={isOpenReportModal} size='sm' onClose={onCloseReportModal} blockScrollOnMount={false}  isCentered motionPreset='slideInBottom' >
-              <ModalOverlay/>
-              <SignUpModal />
-              </Modal>
+              <SignUpModal isOpen={isOpenReportModal} onClose={onCloseReportModal} />
               <Button rounded={'full'}>Try Demo</Button>
             </Stack>
           </Stack>
