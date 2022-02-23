@@ -7,6 +7,7 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
+    ModalProps,
     FormControl,
     FormLabel,
     Input,
@@ -26,6 +27,7 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    UseDisclosureReturn,
     useToast,
   } from '@chakra-ui/react';
   import { Col, Container, Form, Navbar } from "react-bootstrap";
@@ -39,10 +41,17 @@ import {
   import { FcGoogle } from 'react-icons/fc';
   import GoogleAuth from '../GoogleAuth/GoogleAuth'
   
-export default function SignInModal(props: { isOpen: boolean; onClose: () => void; }) {
+export default function SignInModal({
+      signupModal,
+      onClose,
+      ...props
+    }: Omit<ModalProps, "children"> & {
+      signupModal: UseDisclosureReturn;
+    })
+  {
   const navigate = useNavigate()
   
-   const successToast = useToast({
+  const successToast = useToast({
     title: 'Logged In',
     description: "Waiting for developers to build redirect pages",
     status: 'success',
@@ -67,7 +76,6 @@ export default function SignInModal(props: { isOpen: boolean; onClose: () => voi
         emailRef.current!.value,
         passwordRef.current!.value
       );
-      //alert(auth.currentUser?.displayName)
       successToast();
       navigate('/home');
     } catch (error) {
@@ -76,15 +84,10 @@ export default function SignInModal(props: { isOpen: boolean; onClose: () => voi
     }
   };
 
-    const { 
-        isOpen: isOpenReportModal, 
-        onOpen: onOpenReportModal, 
-        onClose: onCloseReportModal 
-    } = useDisclosure();
   
 
   return (
-    <Modal isOpen={props.isOpen} onClose={props.onClose} size="sm" blockScrollOnMount={false} isCentered motionPreset="slideInBottom">
+    <Modal onClose={onClose} {...props} size="sm" blockScrollOnMount={false} isCentered motionPreset="slideInBottom">
     <ModalOverlay />
     <ModalContent className='ModalContent2' >
               <ModalHeader className='ModalHeader2'> Sign In </ModalHeader>
@@ -124,12 +127,11 @@ export default function SignInModal(props: { isOpen: boolean; onClose: () => voi
               <ModalFooter className='ModalFooter2'>
               </ModalFooter>
               <Link to="" className='Link2' onClick={() => {
-                  //onOpenReportModal()
-                  props.onClose()
+                  signupModal.onOpen();
+                  onClose();
 
               }}>New User? Sign Up Here 
                </Link>
-               <SignUpModal isOpen={isOpenReportModal} onClose={onCloseReportModal} />
               
                <br></br>
     </ModalContent>  
