@@ -45,16 +45,8 @@ import Logo from "../../../assets/Images/logoblack.png";
   export default function NavBar() {
     
     const { isOpen, onToggle } = useDisclosure();
-    const { 
-      isOpen: isOpenReportModal, 
-      onOpen: onOpenReportModal, 
-      onClose: onCloseReportModal 
-  } = useDisclosure();
-    const { 
-      isOpen: isOpenSigninModal,  
-      onOpen: onOpenSigninModal, 
-      onClose: onCloseSigninModal 
-  } = useDisclosure();
+    const signinModal = useDisclosure();
+    const signupModal = useDisclosure();
 
   
     return (
@@ -102,15 +94,15 @@ import Logo from "../../../assets/Images/logoblack.png";
             spacing={6}>
             <Box>
               {/* SIGN IN START */}
-            <Button onClick={onOpenSigninModal} as={'a'} className='sign'>
+            <Button onClick={signinModal.onOpen} as={'a'} className='sign'>
               Sign In</Button>
-            <SignInModal isOpen={isOpenSigninModal} onClose={onCloseSigninModal} />
+            <SignInModal {...signinModal} signupModal={signupModal} />
             </Box>
             <Box>
     
-            <Button onClick={onOpenReportModal} display={{ base: 'none', md: 'inline-flex' }} colorScheme="red" className='sign'>Sign Up</Button>
+            <Button onClick={signupModal.onOpen} display={{ base: 'none', md: 'inline-flex' }} colorScheme="red" className='sign'>Sign Up</Button>
 
-            <SignUpModal isOpen={isOpenReportModal} onClose={onCloseReportModal} />
+            <SignUpModal {...signupModal} signinModal={signinModal} />
             </Box>
           </Stack>
         </Flex>

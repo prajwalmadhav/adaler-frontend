@@ -7,6 +7,7 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
+    ModalProps,
     FormControl,
     FormLabel,
     Input,
@@ -28,6 +29,7 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    UseDisclosureReturn,
     AlertDescription,
     useToast,
   } from '@chakra-ui/react';
@@ -43,13 +45,19 @@ import {
 
 
   
-export default function SignUpModal(props: { isOpen: boolean; onClose: () => void; }) {
+  export default function SignUpModal({
+    signinModal,
+    onClose,
+    ...props
+  }: Omit<ModalProps, "children"> & {
+    signinModal: UseDisclosureReturn;
+  }) {
 
-  const position  = useBreakpointValue({base: 'top', sm: 'top' ,
-  md: 'top',
-  lg: 'bottom',
-  xl: 'bottom',
- }) as any;
+      const position  = useBreakpointValue({base: 'top', sm: 'top' ,
+      md: 'top',
+      lg: 'bottom',
+      xl: 'bottom',
+    }) as any;
 
     const successToast = useToast({
       title: 'Account Created',
@@ -96,7 +104,6 @@ export default function SignUpModal(props: { isOpen: boolean; onClose: () => voi
         }
         else if( nameRef.current?.value === ""){
           NameErrorToast();
-          console.log("heheheheheh");
         }
         else{
           try {
@@ -122,17 +129,11 @@ export default function SignUpModal(props: { isOpen: boolean; onClose: () => voi
         }
         };
         
-        const { 
-          isOpen: isOpenReportModal, 
-          onOpen: onOpenReportModal, 
-          onClose: onCloseReportModal 
-      } = useDisclosure();
-        
       const navigate = useNavigate()
 
         
   return (
-    <Modal isOpen={props.isOpen} onClose={props.onClose} size="sm" blockScrollOnMount={false} isCentered motionPreset='slideInBottom' >
+    <Modal onClose={onClose} {...props} size="sm" blockScrollOnMount={false} isCentered motionPreset='slideInBottom' >
     <ModalOverlay />                                                                              
     <ModalContent className='ModalContent1'>
     <ModalHeader className='ModalHeader1'> Sign Up </ModalHeader>
@@ -176,7 +177,6 @@ export default function SignUpModal(props: { isOpen: boolean; onClose: () => voi
             setName(nameRef.current!.value)
             setEmail(emailRef.current!.value)
             createAccount();
-           onCloseReportModal();
            console.log('lol')
            //Alerts();
            console.log('lol121')
@@ -199,7 +199,8 @@ export default function SignUpModal(props: { isOpen: boolean; onClose: () => voi
     <ModalFooter className='ModalFooter1'> 
     </ModalFooter>
     <Link className='Link1' onClick={()=>{
-                props.onClose()
+               signinModal.onOpen();
+               onClose();
             }}>Already a User? Sign In</Link>
     <br></br>
   </ModalContent>

@@ -17,11 +17,8 @@ import {
   export default function Hero() {
     
     const { isOpen, onToggle } = useDisclosure();
-    const { 
-      isOpen: isOpenReportModal, 
-      onOpen: onOpenReportModal, 
-      onClose: onCloseReportModal 
-  } = useDisclosure();
+    const signinModal = useDisclosure();
+    const signupModal = useDisclosure(); 
 
     return (
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
@@ -63,10 +60,10 @@ import {
                 _hover={{
                   bg: 'blue.500',
                 }}
-                onClick={onOpenReportModal} className='GetButton'>
+                onClick={signupModal.onOpen} className='GetButton'>
                 Get Started
               </Button>
-              <SignUpModal isOpen={isOpenReportModal} onClose={onCloseReportModal} />
+              <SignUpModal {...signupModal} signinModal={signinModal} />
               <Button rounded={'full'}>Try Demo</Button>
             </Stack>
           </Stack>
