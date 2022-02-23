@@ -133,8 +133,8 @@ import {
 
         
   return (
-    <Modal onClose={onClose} {...props} size="sm" blockScrollOnMount={false} isCentered motionPreset='slideInBottom' >
-    <ModalOverlay />                                                                              
+    <Modal initialFocusRef={nameRef} onClose={onClose} {...props} size="sm" isCentered motionPreset='slideInBottom' >
+    <ModalOverlay backdropFilter='blur(3px)'/>                                                                              
     <ModalContent className='ModalContent1'>
     <ModalHeader className='ModalHeader1'> Sign Up </ModalHeader>
     <ModalCloseButton/>

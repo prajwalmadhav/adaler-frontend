@@ -12,6 +12,7 @@ import {
   } from '@chakra-ui/react';
   
   import SignUpModal from '../Modals/SignUpModal';
+  import SignInModal from '../Modals/SignInModal';
 
   
   export default function Hero() {
@@ -64,6 +65,8 @@ import {
                 Get Started
               </Button>
               <SignUpModal {...signupModal} signinModal={signinModal} />
+              <SignInModal {...signinModal} signupModal={signupModal} />
+
               <Button rounded={'full'}>Try Demo</Button>
             </Stack>
           </Stack>
