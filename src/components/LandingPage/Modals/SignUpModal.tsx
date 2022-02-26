@@ -32,6 +32,7 @@ import {
     UseDisclosureReturn,
     AlertDescription,
     useToast,
+    Spinner,
   } from '@chakra-ui/react';
   import { Col, Container, Navbar } from "react-bootstrap";
   import { auth, provider } from "../../../firebaseSetup";
@@ -42,6 +43,7 @@ import {
   import { useNavigate } from "react-router-dom"
   import { FcGoogle } from 'react-icons/fc';
   import GoogleAuth from '../GoogleAuth/GoogleAuth'
+import BeatLoader from 'react-spinners/BeatLoader';
 
 
   
@@ -97,12 +99,16 @@ import {
       const ConfirmpasswordRef = useRef<HTMLInputElement>(null);
       const [name, setName] = useState("");
       const [email, setEmail] = useState("");
+      const [isLoading, setIsLoading] = useState(false);
+      const [isLoadingGoogle, setIsLoadingGoogle] = useState(false);
       const createAccount = async () => {
         
         if (passwordRef.current?.value !== ConfirmpasswordRef.current?.value){
+          setIsLoading(false);
           PassErrorToast();
         }
         else if( nameRef.current?.value === ""){
+          setIsLoading(false);
           NameErrorToast();
         }
         else{
@@ -123,6 +129,7 @@ import {
             successToast();
             navigate('/Welcome');
           } catch (error) {
+            setIsLoading(false);
             console.error(error);
             ExistToast();
           }
@@ -172,25 +179,29 @@ import {
           <Checkbox className='Checkbox1'>Remember me</Checkbox>
           <br></br>
           <br></br>
-          <Button className='Button1' mr={160} onClick={()=>{
-            
+                  
+          <Button isLoading = {isLoading} spinner={<BeatLoader size={8} color='white' />} className='Button1' mr={160} onClick={()=>{
+            setIsLoading(true);
             setName(nameRef.current!.value)
             setEmail(emailRef.current!.value)
+            console.log(name)
             createAccount();
-           console.log('lol')
            //Alerts();
            console.log('lol121')
           }}>
                 Sign Up </Button>
                 
-          <Button    
+          <Button
+            isLoading ={isLoadingGoogle}    
             w={'full'}
             maxW={'md'}
             marginTop={'10px'}
+            spinner={<BeatLoader size={8} color='blue' />}
             //variant={'outline'}
             leftIcon={<FcGoogle />}
             onClick={()=>{
-                GoogleAuth(navigate)
+                setIsLoadingGoogle(true)
+                GoogleAuth(navigate, setIsLoadingGoogle)
             }}>
               <Text>Sign up with Google</Text>
           </Button>

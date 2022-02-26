@@ -3,7 +3,7 @@ import { auth, provider } from "../../../firebaseSetup";
 import { NavigateFunction, useNavigate } from "react-router-dom"
 
 
-const GoogleAuth = async(navigate: NavigateFunction) => {
+const GoogleAuth = async(navigate: NavigateFunction, setIsLoadingGoogle: React.Dispatch<React.SetStateAction<boolean>>) => {
     auth.signInWithPopup(provider).then(() => {
       if (auth.currentUser?.metadata?.creationTime !== auth.currentUser?.metadata?.lastSignInTime)
           {
@@ -14,6 +14,7 @@ const GoogleAuth = async(navigate: NavigateFunction) => {
           }
     }).catch((error) => {
       console.log(error.message)
+      setIsLoadingGoogle(false);
     })
 }
 export default GoogleAuth
