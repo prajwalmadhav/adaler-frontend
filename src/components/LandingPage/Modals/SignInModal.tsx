@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {
     Modal,
     ModalOverlay,
@@ -29,7 +29,10 @@ import {
     useDisclosure,
     UseDisclosureReturn,
     useToast,
+    Spinner,
   } from '@chakra-ui/react';
+
+  import BeatLoader from "react-spinners/BeatLoader";
   import { Col, Container, Form, Navbar } from "react-bootstrap";
   import { auth, provider } from "../../../firebaseSetup";
   import {Link} from "react-router-dom";
@@ -79,12 +82,15 @@ export default function SignInModal({
       successToast();
       navigate('/home');
     } catch (error) {
+      setIsLoading(false);
       console.error(error);
       errorToast();
     }
   };
+  const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingGoogle, setIsLoadingGoogle] = useState(false);
 
-  
+
 
   return (
     <Modal initialFocusRef={emailRef}onClose={onClose} {...props} size="sm" isCentered motionPreset="slideInBottom">
@@ -105,23 +111,29 @@ export default function SignInModal({
                 <Checkbox className='Checkbox2'>Remember me</Checkbox>
               </Form.Group>
               <br></br>
-              <Button className='Button2' mr={160} onClick={()=>{
-
+                  
+              <Button isLoading = {isLoading} spinner={<BeatLoader size={8} color='white' />} className='Button2' mr={160} onClick={()=>{
+                setIsLoading(true);
                 signIn()
                 //toast();
                 }}>
                 Sign In </Button>
-                <Button    
+                <Button
+                  isLoading = {isLoadingGoogle}   
                   w={'full'}
                   maxW={'md'}
                   marginTop={'10px'}
                   //variant={'outline'}
+                  
+                  spinner={<BeatLoader size={8} color='blue' />}
                   leftIcon={<FcGoogle />}
                   onClick={()=>{
-                      GoogleAuth(navigate);
+                      GoogleAuth(navigate, setIsLoadingGoogle);
+                      setIsLoadingGoogle(true);
                 }}>
               <Text>Sign in with Google</Text>
           </Button>
+          
               </ModalBody>
               <br></br>
               <ModalFooter className='ModalFooter2'>
