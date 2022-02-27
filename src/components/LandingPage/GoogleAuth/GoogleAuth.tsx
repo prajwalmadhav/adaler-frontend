@@ -1,15 +1,27 @@
 import React from 'react'
 import { auth, provider } from "../../../firebaseSetup";
 import { NavigateFunction, useNavigate } from "react-router-dom"
+import firebase from 'firebase/compat/app';
 
 
 const GoogleAuth = async(navigate: NavigateFunction, setIsLoadingGoogle: React.Dispatch<React.SetStateAction<boolean>>) => {
-    auth.signInWithPopup(provider).then(() => {
+  const user = firebase.auth().currentUser;  
+  auth.signInWithPopup(provider).then(async () => {
       if (auth.currentUser?.metadata?.creationTime !== auth.currentUser?.metadata?.lastSignInTime)
           {
             navigate('/home');
           }
           else{
+            const name = user?.displayName
+            const email = user?.email
+            console.log(name, email)
+            const uid = user?.uid
+            const x = user?.providerData
+            console.log(x)
+            const ref = firebase.firestore().collection("person")
+            await ref.doc(uid).set({name,email}).catch((err)=>{
+                alert(err);
+            }) 
             navigate('/welcome')
           }
     }).catch((error) => {

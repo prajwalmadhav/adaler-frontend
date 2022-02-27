@@ -97,8 +97,6 @@ import BeatLoader from 'react-spinners/BeatLoader';
       const nameRef = useRef<HTMLInputElement>(null);
       const passwordRef = useRef<HTMLInputElement>(null);
       const ConfirmpasswordRef = useRef<HTMLInputElement>(null);
-      const [name, setName] = useState("");
-      const [email, setEmail] = useState("");
       const [isLoading, setIsLoading] = useState(false);
       const [isLoadingGoogle, setIsLoadingGoogle] = useState(false);
       const createAccount = async () => {
@@ -122,8 +120,11 @@ import BeatLoader from 'react-spinners/BeatLoader';
               displayName: nameRef.current?.value
             })
             console.log(user?.displayName)
+            const name = user?.displayName
+            const email = user?.email
+            const uid = user?.uid
             const ref = firebase.firestore().collection("person")
-            await ref.doc().set({name,email}).catch((err)=>{
+            await ref.doc(uid).set({name,email}).catch((err)=>{
                 alert(err);
             }) 
             successToast();
@@ -182,9 +183,6 @@ import BeatLoader from 'react-spinners/BeatLoader';
                   
           <Button isLoading = {isLoading} spinner={<BeatLoader size={8} color='white' />} className='Button1' mr={160} onClick={()=>{
             setIsLoading(true);
-            setName(nameRef.current!.value)
-            setEmail(emailRef.current!.value)
-            console.log(name)
             createAccount();
            //Alerts();
            console.log('lol121')
