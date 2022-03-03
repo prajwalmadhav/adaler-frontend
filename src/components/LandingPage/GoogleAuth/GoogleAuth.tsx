@@ -14,10 +14,7 @@ const GoogleAuth = async(navigate: NavigateFunction, setIsLoadingGoogle: React.D
           else{
             const name = user?.displayName
             const email = user?.email
-            console.log(name, email)
             const uid = user?.uid
-            const x = user?.providerData
-            console.log(x)
             const ref = firebase.firestore().collection("person")
             await ref.doc(uid).set({name,email}).catch((err)=>{
                 alert(err);
