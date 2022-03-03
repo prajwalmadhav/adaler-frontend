@@ -5,17 +5,25 @@ import { BuzzFeedQuiz } from "react-buzzfeed-quiz";
 //import "react-buzzfeed-quiz/lib/styles.css";
 import "./PreQuestions.min.css"
 
-export default function PreQuestions() {
+export default function Test() {
     const ProfilePhoto = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     const BackgroundImage = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     const FirstResultImage  = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     const SecondResultImage =  "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
-    var showName = auth.currentUser?.displayName as string;
-    showName.substring(0, showName.indexOf(' '))
+    let showName = auth.currentUser?.displayName as string;
+    showName = showName.split(" ")[0]
+
+    let dict = new Map<string|number, string|number>();
+
+    
+    // const ref = firebase.firestore().collection("initialQuestions")
+    // ref.doc().set({employees})
              return (
-               <>
+               <><div>
+                  
+               </div>
                <BuzzFeedQuiz
-                 title={"Welcome " + showName}
+                 title={"Welcome "+ showName}
                  description={"Let's get to know you"}
                  byline={true}
                  autoScroll={true}
@@ -39,18 +47,22 @@ export default function PreQuestions() {
                        {
                          answer: "5-10",
                          resultID: 0,
+                         onAnswerSelection:()=> dict.set(1, "7"),
                        },
                        {
                          answer: "10-15",
                          resultID: 1,
+                         onAnswerSelection:()=> dict.set(1, "12"),
                        },
                        {
                          answer: "15 - 20",
                          resultID: 2,
+                         onAnswerSelection:()=> dict.set(1, "17"),
                        },
                        {
                          answer: "20+",
                          resultID: 3,
+                         onAnswerSelection:()=> dict.set(1, "21"),
                        },
                      ],
                    },
@@ -60,13 +72,42 @@ export default function PreQuestions() {
                        {
                          answer: "Yes",
                          resultID: 0,
+                         onAnswerSelection:()=> dict.set(2, "Yes"),
                        },
                        {
                          answer: "No",
                          resultID: 1,
+                         onAnswerSelection:()=> dict.set(2, "No"),
                        },
                      ],
                    },
+                   {
+                    question: "Have you written any Computer Program?",
+                    answers: [
+                      {
+                        answer: "Yes",
+                        resultID: 0,
+                        onAnswerSelection:()=> dict.set(3, "Yes"),
+                      },
+                      {
+                        answer: "No",
+                        resultID: 1,
+                        onAnswerSelection:()=> dict.set(3, "No"),
+                      },
+                    ],
+                  },
+                  {
+                    question: "Which Programming language do you want to learn",
+                    answerArrangement: "row",
+                    answers: [
+                      {
+                        answer: "Python",
+                        resultID: 0,
+                        onAnswerSelection:()=> dict.set(4, "python"),
+                      },
+                      
+                    ],
+                  },
 
                    {
                      question: "In Programming Variables are",
@@ -75,18 +116,22 @@ export default function PreQuestions() {
                        {
                          answer: "Loreum EPSUM Loreum EPSUM Loreum EPSUM",
                          resultID: 0,
+                         onAnswerSelection:()=> dict.set(5, "null"),
                        },
                        {
                          answer: "Loreum EPSUMLoreum EPSUMLoreum EPSUM",
                          resultID: 1,
+                         onAnswerSelection:()=> dict.set(5, "null"),
                        },
                        {
-                         answer: "Loreum EPSUM Loreum EPSUM Loreum EPSUM",
+                         answer: "Quantity that may have a number of different values",
                          resultID: 2,
+                         onAnswerSelection:()=> dict.set(5, "correct answer"),
                        },
                        {
                          answer: "I don't know",
                          resultID: 3,
+                         onAnswerSelection:()=> dict.set(5, "I don't know"),
                        },
                      ],
                    },
@@ -97,18 +142,22 @@ export default function PreQuestions() {
                        {
                          answer: "Loreum EPSUM Loreum EPSUM Loreum EPSUM",
                          resultID: 0,
+                         onAnswerSelection:()=> dict.set(6, "null"),
                        },
                        {
                          answer: "Integrated Development Environment",
                          resultID: 1,
+                         onAnswerSelection:()=> dict.set(6, "correct"),
                        },
                        {
                          answer: "Loreum EPSUM Loreum EPSUM Loreum EPSUM",
                          resultID: 2,
+                         onAnswerSelection:()=> dict.set(6, "null"),
                        },
                        {
                          answer: "I don't know",
                          resultID: 3,
+                         onAnswerSelection:()=> dict.set(6, "I don't know"),
                        },
                      ],
                    },
@@ -120,14 +169,19 @@ export default function PreQuestions() {
                        {
                          answer: "I'm new to Programming",
                          resultID: 0,
+                         onAnswerSelection:()=> dict.set(7, "I'm new to Programming"),
                        },
                        {
                          answer: "I know Basic Thoery",
                          resultID: 1,
+                         onAnswerSelection:()=> dict.set(7, "I know Basic Thoery"),
+
                        },
                        {
                          answer: "I can code Hello World",
                          resultID: 2,
+                         onAnswerSelection:()=> dict.set(7, "I can code Hello World"),
+
                        },
                      ],
                    },
@@ -139,14 +193,19 @@ export default function PreQuestions() {
                        {
                          answer: "Understand Python",
                          resultID: 0,
+                         onAnswerSelection:()=> dict.set(8, "Understand Python"),
+
                        },
                        {
                          answer: "To Solve Basic DSA Problems",
                          resultID: 1,
+                         onAnswerSelection:()=> dict.set(8, "To Solve Basic DSA Problems"),
                        },
                        {
                          answer: "To build Full fledged applications",
                          resultID: 2,
+                         onAnswerSelection:()=> dict.set(8, "To build Full fledged applications"),
+
                        },
                      ],
                    },
@@ -158,16 +217,27 @@ export default function PreQuestions() {
                          backgroundImageSrc: "https://liberalarts.utexas.edu/southasia/_files/images/kannada.png",
                          //answer: "I'm new to Programming",
                          resultID: 0,
+                         onAnswerSelection:()=> {
+                             dict.set(9, "Kannada")
+                             console.log(dict)
+                            },
                        },
                        {
                          backgroundImageSrc: "https://media.istockphoto.com/vectors/english-language-learning-concept-vector-vector-id1288019626",
                          // answer: "I know Basic Thoery",
                          resultID: 1,
+                         onAnswerSelection:()=> {
+                             dict.set(9, "English")
+                            },
+
                        },
                        {
                          backgroundImageSrc: "https://www.jagranimages.com/images/14_09_2019-hindi_diwas_1_19576338.jpg",
                          //answer: "I can code Hello World",
                          resultID: 2,
+                         onAnswerSelection:()=> {
+                             dict.set(9, "Hindi")
+                            },
                        },
                      ],
                    },
