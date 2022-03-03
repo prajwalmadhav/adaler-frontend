@@ -43,23 +43,17 @@ import {
   import { useNavigate } from "react-router-dom"
   import { FcGoogle } from 'react-icons/fc';
   import GoogleAuth from '../GoogleAuth/GoogleAuth'
-import BeatLoader from 'react-spinners/BeatLoader';
-
+  import BeatLoader from 'react-spinners/BeatLoader';
 
   
-  export default function SignUpModal({
-    signinModal,
-    onClose,
-    ...props
-  }: Omit<ModalProps, "children"> & {
-    signinModal: UseDisclosureReturn;
-  }) {
-
-      const position  = useBreakpointValue({base: 'top', sm: 'top' ,
-      md: 'top',
-      lg: 'bottom',
-      xl: 'bottom',
-    }) as any;
+export default function SignUpModal({signinModal,onClose,...props}: Omit<ModalProps, "children"> & {
+  signinModal: UseDisclosureReturn;
+}) {
+    const position  = useBreakpointValue({base: 'top', sm: 'top' ,
+    md: 'top',
+    lg: 'bottom',
+    xl: 'bottom',
+  }) as any;
 
     const successToast = useToast({
       title: 'Account Created',

@@ -20,6 +20,7 @@
     "framer-motion": "^4.1.17",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.1",
+    "react-buzzfeed-quiz": "^2.0.5",
     "react-dom": "^17.0.2",
     "react-icons": "^3.11.0",
     "react-router-dom": "^6.2.1",
