@@ -22,7 +22,7 @@ import Course4 from './components/Dashboard/courseoverview/Course4';
 import Course5 from './components/Dashboard/courseoverview/Course5';
 import Course6 from './components/Dashboard/courseoverview/Course6';
 import Testpg from "./components/Dashboard/Test/Testpg";
-import PreQuestions from './components/WelcomPage/PreQuestions';
+import PreQuestions from './components/WelcomePage/PreQuestions';
 import Courseinfo1 from './components/Dashboard/CourseInfo/Courseinfo1';
 import { auth } from "./firebaseSetup";
 

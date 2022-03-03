@@ -10,7 +10,8 @@ export default function Test() {
     const BackgroundImage = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     const FirstResultImage  = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     const SecondResultImage =  "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
-    const showName = auth.currentUser?.displayName;
+    var showName = auth.currentUser?.displayName as string;
+    showName.substring(0, showName.indexOf(' '))
              return (
                <>
                <BuzzFeedQuiz
