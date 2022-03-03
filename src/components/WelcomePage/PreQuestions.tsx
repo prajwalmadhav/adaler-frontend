@@ -5,7 +5,7 @@ import { BuzzFeedQuiz } from "react-buzzfeed-quiz";
 //import "react-buzzfeed-quiz/lib/styles.css";
 import "./PreQuestions.min.css"
 
-export default function Test() {
+export default function PreQuestions() {
     const ProfilePhoto = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     const BackgroundImage = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     const FirstResultImage  = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
