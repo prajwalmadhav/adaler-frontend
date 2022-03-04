@@ -11,7 +11,10 @@ export default function Test() {
     const FirstResultImage  = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     const SecondResultImage =  "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     let showName = auth.currentUser?.displayName as string;
-    showName = showName.split(" ")[0]
+    
+    if(showName!==undefined){
+      showName = showName.split(' ')[0];
+    }
 
     let dict = new Map<string|number, string|number>();
 
