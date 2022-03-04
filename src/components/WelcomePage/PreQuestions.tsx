@@ -4,14 +4,17 @@ import { auth } from "../../firebaseSetup";
 import { BuzzFeedQuiz } from "react-buzzfeed-quiz";
 //import "react-buzzfeed-quiz/lib/styles.css";
 import "./PreQuestions.min.css"
+import { useNavigate } from "react-router-dom"
 
 export default function Test() {
+    const navigate = useNavigate();
     const ProfilePhoto = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     const BackgroundImage = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     const FirstResultImage  = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     const SecondResultImage =  "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     let showName = auth.currentUser?.displayName as string;
-    
+    const ref = firebase.firestore().collection("person")
+                  
     if(showName!==undefined){
       showName = showName.split(' ')[0];
     }
@@ -223,14 +226,17 @@ export default function Test() {
                          onAnswerSelection:()=> {
                              dict.set(9, "Kannada")
                              console.log(dict)
+                             navigate("/home");
+
                             },
                        },
                        {
                          backgroundImageSrc: "https://media.istockphoto.com/vectors/english-language-learning-concept-vector-vector-id1288019626",
                          // answer: "I know Basic Thoery",
                          resultID: 1,
-                         onAnswerSelection:()=> {
+                         onAnswerSelection:async ()=> {
                              dict.set(9, "English")
+                              navigate("/home");
                             },
 
                        },
@@ -240,6 +246,7 @@ export default function Test() {
                          resultID: 2,
                          onAnswerSelection:()=> {
                              dict.set(9, "Hindi")
+                             navigate("/home");
                             },
                        },
                      ],
