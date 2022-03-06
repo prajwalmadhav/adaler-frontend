@@ -5,6 +5,7 @@ import { BuzzFeedQuiz } from "react-buzzfeed-quiz";
 //import "react-buzzfeed-quiz/lib/styles.css";
 import "./PreQuestions.min.css"
 import { useNavigate } from "react-router-dom"
+import { useToast } from '@chakra-ui/react';
 
 export default function Test() {
     const navigate = useNavigate();
@@ -13,6 +14,8 @@ export default function Test() {
     const FirstResultImage  = "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     const SecondResultImage =  "https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg";
     let showName = auth.currentUser?.displayName as string;
+    const user = firebase.auth().currentUser;  
+    const uid = user?.uid
     const ref = firebase.firestore().collection("person")
                   
     if(showName!==undefined){
@@ -20,10 +23,26 @@ export default function Test() {
     }
 
     let dict = new Map<string|number, string|number>();
+    const error = useToast({
+      title: 'Missing Answers',
+      description: "Answer all the questions",
+      status: 'error',
+      duration: 5000,
+      isClosable: true,
+      position: 'top-right',
+    })
+    const onComplete = () =>{
+     if (dict.size == 9){
+        const preferences = Object.fromEntries(dict);
+        ref.doc(uid).update({preferences})
+        navigate("/home");
+     }
+      else{
+        console.log(dict.size)
+        error()
+       }
+      }
 
-    
-    // const ref = firebase.firestore().collection("initialQuestions")
-    // ref.doc().set({employees})
              return (
                <><div>
                   
@@ -225,9 +244,7 @@ export default function Test() {
                          resultID: 0,
                          onAnswerSelection:()=> {
                              dict.set(9, "Kannada")
-                             console.log(dict)
-                             navigate("/home");
-
+                             onComplete()
                             },
                        },
                        {
@@ -235,8 +252,8 @@ export default function Test() {
                          // answer: "I know Basic Thoery",
                          resultID: 1,
                          onAnswerSelection:async ()=> {
-                             dict.set(9, "English")
-                              navigate("/home");
+                                dict.set(9, "English")
+                                onComplete()
                             },
 
                        },
@@ -245,8 +262,8 @@ export default function Test() {
                          //answer: "I can code Hello World",
                          resultID: 2,
                          onAnswerSelection:()=> {
-                             dict.set(9, "Hindi")
-                             navigate("/home");
+                               dict.set(9, "Hindi")
+                               onComplete()
                             },
                        },
                      ],
