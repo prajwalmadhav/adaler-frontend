@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import {
   IconButton,
   Avatar,
@@ -39,6 +39,7 @@ import { auth } from "../../firebaseSetup";
 import {signOut} from "firebase/auth";
 import { useNavigate } from "react-router-dom"
 import { link } from 'fs';
+import firebase from 'firebase/compat/app';
 
 interface LinkItemProps {
   name: string;
@@ -164,6 +165,15 @@ const SignOut = async () => {
 };
 const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
   const navigate = useNavigate()
+  const [currentUser, setCurrentUser] = useState<any | null>(null);
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((users) => {
+      if (users) {
+        setCurrentUser(users)
+      } 
+    });  
+  })
+  
   const pic = auth.currentUser?.photoURL as any
   return (
     <Flex
@@ -214,7 +224,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                   alignItems="flex-start"
                   spacing="1px"
                   ml="2">
-                  <Text fontSize="sm">{auth.currentUser?.displayName}</Text>
+                  <Text fontSize="sm">{currentUser?.displayName}</Text>
                   <Text fontSize="xs" color="gray.600">
                     Student
                   </Text>
@@ -243,3 +253,4 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     </Flex>
   );
 };
+
