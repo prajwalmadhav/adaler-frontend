@@ -48,11 +48,11 @@ interface LinkItemProps {
 }
 
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Home', icon: FiHome, link:'home'},
-  { name: 'Course', icon: FiTrendingUp, link:'home/courses' },
-  { name: 'Tests', icon: FiCompass, link:'home/courses/course1'},
-  { name: 'Profile', icon: FiStar },
-  { name: 'Settings', icon: FiSettings },
+  { name: 'Home', icon: FiHome, link:'/home'},
+  { name: 'Course', icon: FiTrendingUp, link:'/home/courses' },
+  { name: 'Tests', icon: FiCompass, link:'/home/courses/course1'},
+  { name: 'Profile', icon: FiStar , link:'/home/courses/course2'},
+  { name: 'Settings', icon: FiSettings , link:'/home/courses/course3' },
 ];
 
 
