@@ -9,6 +9,7 @@ import {
     Text,
     useBreakpointValue,
     useDisclosure,
+    useColorMode,
   } from '@chakra-ui/react';
   
   import SignUpModal from '../Modals/SignUpModal';
@@ -20,6 +21,7 @@ import {
     const { isOpen, onToggle } = useDisclosure();
     const signinModal = useDisclosure();
     const signupModal = useDisclosure(); 
+    const { toggleColorMode } = useColorMode()
 
     return (
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
@@ -42,7 +44,7 @@ import {
                   {/* Heading Text was here it has been removed  */}
               </Text>
               
-              <Text color={'#f13c3b'} as={'span'}>
+              <Text onDoubleClick={toggleColorMode} color={'#f13c3b'} as={'span'}>
               Personalized
               </Text>{' '}
               <br />{' '}
