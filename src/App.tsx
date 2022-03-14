@@ -3,8 +3,8 @@ import {
   ChakraProvider,
   theme,
 } from "@chakra-ui/react"
-
-import Homepage from "./pages/Homepage/Homepage"
+import {Suspense, lazy, Component} from "react"
+// import Homepage from "./pages/Homepage/Homepage"
 import { BrowserRouter as Router, Route,Link, Routes, Outlet } from 'react-router-dom'
 import Hero from './components/LandingPage/Hero/Hero';
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -27,15 +27,24 @@ import Courseinfo1 from './components/Dashboard/CourseInfo/Courseinfo1';
 import { auth } from "./firebaseSetup";
 import QuizOne from './components/Quiz/QuizOne';
 
+import "./App.css"
+
+
+const Homepage = lazy(() => import("./pages/Homepage/Homepage"))
 
 export const App = () => {
+  var Spinner = require('react-spinkit');
+
   return (
     <ChakraProvider theme={theme}>
       <Router>
         
         <Routes>
           {/* Pages without dashboard sidebar */}
-          <Route path="/" element={<Homepage/>}/>
+          <Route path="/" element={
+            <Suspense fallback={<Spinner className="spinner" name='double-bounce' />
+          }> <Homepage/></Suspense>
+          }/>
           <Route path='home' element={<Dashboard/>} />
           <Route path='smoke' element={<Test/>} />
           <Route path='pg' element={<Testpg/>} />

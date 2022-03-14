@@ -1,7 +1,9 @@
 import React from 'react'
+import "./Test.min.css"
 
 export default function Test() {
+
   return (
-    <div>Test</div>
+    <div>test</div>
   )
 }

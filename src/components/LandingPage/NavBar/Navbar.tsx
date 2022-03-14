@@ -26,12 +26,15 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    useColorMode,
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
+    MoonIcon,
+    SunIcon
   } from '@chakra-ui/icons';
 
   import React, { useState, useRef } from 'react'
@@ -48,6 +51,13 @@ import Logo from "../../../assets/Images/logoblack.png";
     const signinModal = useDisclosure();
     const signupModal = useDisclosure();
 
+    const { 
+      isOpen: isOpenColor,  
+      onOpen: onOpenColor, 
+      onToggle: onToggleColor
+  } = useDisclosure();
+
+    const { toggleColorMode } = useColorMode()
   
     return (
       <Box>
@@ -93,6 +103,25 @@ import Logo from "../../../assets/Images/logoblack.png";
             direction={'row'}
             spacing={6}>
             <Box>
+            
+            {/* Dark Mode Beta: Only for presentation
+            Uncomment first display*/}
+            <IconButton
+              display= "none"
+              //display={{ base: 'flex', md: 'none' }}
+               onClick={()=>{
+                 onToggleColor()
+                 toggleColorMode()
+               }}
+              icon={
+                isOpenColor ? <MoonIcon w={3} h={3} /> : <SunIcon w={5} h={5} />
+              }
+              variant={'ghost'}
+              aria-label={'Toggle Navigation'}
+            />
+
+            </Box>
+            <Box>
               {/* SIGN IN START */}
             <Button onClick={signinModal.onOpen} as={'a'} className='sign'>
               Sign In</Button>
@@ -100,7 +129,7 @@ import Logo from "../../../assets/Images/logoblack.png";
             </Box>
             <Box>
     
-            <Button onClick={signupModal.onOpen} display={{ base: 'none', md: 'inline-flex' }} colorScheme="red" className='sign'>Sign Up</Button>
+            <Button onClick={signupModal.onOpen} display={{ base: 'none', md: 'inline-flex' }} colorScheme={useColorModeValue('red', 'orange')} className='sign'>Sign Up</Button>
 
             <SignUpModal {...signupModal} signinModal={signinModal} />
             </Box>
