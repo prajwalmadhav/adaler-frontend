@@ -25,6 +25,7 @@ import Testpg from "./components/Dashboard/Test/Testpg";
 import PreQuestions from './components/WelcomePage/PreQuestions';
 import Courseinfo1 from './components/Dashboard/CourseInfo/Courseinfo1';
 import { auth } from "./firebaseSetup";
+import QuizOne from './components/Quiz/QuizOne';
 
 
 export const App = () => {
@@ -37,6 +38,7 @@ export const App = () => {
           <Route path="/" element={<Homepage/>}/>
           <Route path='home' element={<Dashboard/>} />
           <Route path='smoke' element={<Test/>} />
+          <Route path='pg' element={<Testpg/>} />
           <Route path='welcome' element={<PreQuestions/>} />
 
           <Route path="/" element={<LayoutsWithNavbar />}>
@@ -51,6 +53,9 @@ export const App = () => {
             <Route path='home/courses/course5' element={<Course5/>} />
             <Route path='home/courses/course6' element={<Course6/>} />
             <Route path='home/courses/courseinfo1' element={<Courseinfo1/>} />
+
+          <Route path='quiz' element={<QuizOne />} />
+
           </Route>
 
         </Routes>
