@@ -58,7 +58,7 @@ import Logo from "../../../assets/Images/logoblack.png";
   } = useDisclosure();
 
     const { toggleColorMode } = useColorMode()
-  
+
     return (
       <Box>
         <Flex
@@ -89,7 +89,7 @@ import Logo from "../../../assets/Images/logoblack.png";
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              <img alt='logo' style={{ width: 150 }} src={ Logo } />   {/* logo */}
+              <img alt='logo' style={{ width: 150 }} src={ Logo }  ref=""/>   {/* logo */}
             </Text>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -107,9 +107,8 @@ import Logo from "../../../assets/Images/logoblack.png";
             {/* Dark Mode Beta: Only for presentation
             Uncomment first display*/}
             <IconButton
-              display= "none"
-              //display={{ base: 'flex', md: 'none' }}
-               onClick={()=>{
+              display={{ base: 'none', md: 'none', lg:'none' }}  // Dark Mode Beta: Only for presentation change none to flex OR comment this whole line 
+                 onClick={()=>{
                  onToggleColor()
                  toggleColorMode()
                }}
