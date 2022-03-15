@@ -53,6 +53,8 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Tests', icon: FiCompass, link:'/home/courses/course1'},
   { name: 'Profile', icon: FiStar , link:'/home/courses/course2'},
   { name: 'Settings', icon: FiSettings , link:'/home/courses/course3' },
+  { name: 'Quiz', icon: FiSettings , link:'/quiz' },
+
 ];
 
 
