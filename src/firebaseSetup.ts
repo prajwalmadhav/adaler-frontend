@@ -4,13 +4,13 @@ import 'firebase/compat/firestore';
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBP3avv34HExit9IMtvLo2FrCXhcMoYrRo",
-    authDomain: "elearn-dfe88.firebaseapp.com",
-    projectId: "elearn-dfe88",
-    storageBucket: "elearn-dfe88.appspot.com",
-    messagingSenderId: "370909286054",
-    appId: "1:370909286054:web:ad7f2b2a17ba612b96ae67",
-    measurementId: "G-DSNXVDB2GQ"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId:process.env.REACT_APP_MEASUREMENT_ID
 }; //this is where your firebase app values you copied will go
 
 firebase.initializeApp(firebaseConfig);
