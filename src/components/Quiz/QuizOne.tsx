@@ -102,6 +102,7 @@ export default function Sj() {
             <Radio value='2'>We recommend passing the namCreate a component that consume e prop to the RadioGroup component,</Radio>
           </Box>
 
+
           <Box
             cursor='pointer'
             borderWidth='1px'
