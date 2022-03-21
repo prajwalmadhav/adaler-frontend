@@ -74,7 +74,7 @@ export default function Simple() {
 
           <Button
           className="Learning-button-mob"
-            rounded={'none'}
+            rounded={'lg'}
             // w={'full'}
             mt={8}
             size={'lg'}
@@ -93,7 +93,7 @@ export default function Simple() {
 
           <Button
           className="Learning-button-mob"
-            rounded={'none'}
+            rounded={'lg'}
             // w={'full'}
             mt={8}
             size={'lg'}
@@ -153,7 +153,7 @@ export default function Simple() {
 
               <Button
               className="Learning-button-pc"
-            rounded={'none'}
+            rounded={'lg'}
             // w={'full'}
             mt={8}
             size={'lg'}
@@ -172,7 +172,7 @@ export default function Simple() {
 
           <Button
           className="Learning-button-pc"
-            rounded={'none'}
+            rounded={'lg'}
             // w={'full'}
             mt={8}
             size={'lg'}

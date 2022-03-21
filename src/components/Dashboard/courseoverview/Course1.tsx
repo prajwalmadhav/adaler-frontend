@@ -1,29 +1,20 @@
 import {
   Box,
-  chakra,
   Container,
   Stack,
   Text,
   Image,
-  Flex,
   VStack,
   Button,
   Heading,
   SimpleGrid,
   StackDivider,
   useColorModeValue,
-  VisuallyHidden,
   List,
   ListItem,
   Divider,
-  AlertTitle,
-  Alert,
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
-import { MdLocalShipping } from 'react-icons/md';
 import './buttoncss.min.css';
-
-
 export default function Simple() {
   const courseTitle = 'Basics Of Programming'     //added editable variables
   const courseSubscript = 'Beginner | 2 weeks | 4 Tests'
@@ -86,7 +77,7 @@ export default function Simple() {
 
           <Button
           className="Learning-button-mob"
-            rounded={'none'}
+            rounded={'lg'}
             // w={'full'}
             mt={8}
             size={'lg'}
@@ -105,7 +96,7 @@ export default function Simple() {
 
           <Button
           className="Learning-button-mob"
-            rounded={'none'}
+            rounded={'lg'}
             // w={'full'}
             mt={8}
             size={'lg'}
@@ -165,7 +156,7 @@ export default function Simple() {
 
               <Button
               className="Learning-button-pc"
-            rounded={'none'}
+            rounded={'lg'}
             // w={'full'}
             mt={8}
             size={'lg'}
@@ -184,7 +175,7 @@ export default function Simple() {
 
           <Button
           className="Learning-button-pc"
-            rounded={'none'}
+            rounded={'lg'}
             // w={'full'}
             mt={8}
             size={'lg'}
@@ -267,7 +258,7 @@ export default function Simple() {
           </Stack>
 
           {/* <Button
-            rounded={'none'}
+            rounded={'lg'}
             // w={'full'}
             mt={8}
             size={'lg'}
