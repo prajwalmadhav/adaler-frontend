@@ -7,8 +7,8 @@ import {
     Text,
     Stack,
     StackDivider,
-    Icon,
     useColorModeValue,
+    Icon,
   } from '@chakra-ui/react';
   // import {
   //   IoAnalyticsSharp,
@@ -16,6 +16,7 @@ import {
   //   IoSearchSharp,
   // } from 'react-icons/io5';
   import { ReactElement } from 'react';
+import { IoLogoBitcoin } from 'react-icons/io';
   
   interface FeatureProps {
     text: string;
@@ -43,8 +44,21 @@ import {
   export default function SplitWithImage() {
     return (
       <Container maxW={'5xl'} py={12}>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-          <Stack spacing={4}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg:2 }} spacing={10}>
+        <Stack mt={{lg:0}} ml={{lg:-40}} mr={{lg:1}}>
+          <Flex >
+            <Image
+              rounded={'md'}
+              alt={'feature image'}
+              src={
+                'https://i.postimg.cc/hjDCv24M/Online-learning-amico.png'
+              }
+              objectFit={'cover'}
+            />
+          </Flex>   
+          </Stack>          
+          
+          <Stack spacing={6} mr={{base: 0, lg:-40}} mt={{base: 0, lg: 20}} ml={{base: 0, lg:20}}>
             <Text
               textTransform={'uppercase'}
               color={'blue.400'}
@@ -68,37 +82,12 @@ import {
                   borderColor={useColorModeValue('gray.100', 'gray.700')}
                 />
               }>
-              {/* <Feature
-              //   icon={
-              //     <Icon as={IoAnalyticsSharp} color={'yellow.500'} w={5} h={5} />
-              //   }
-              //   iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-              //   text={'Adaptive Tests'}
-              // />
-              // <Feature
-              //   icon={<Icon as={IoLogoBitcoin} color={'green.500'} w={5} h={5} />}
-              //   iconBg={useColorModeValue('green.100', 'green.900')}
-              //   text={'Self Paced Learning '}
-              // />
-              // <Feature
-              //   icon={
-              //     <Icon as={IoSearchSharp} color={'purple.500'} w={5} h={5} />
-              //   }
-              //   iconBg={useColorModeValue('purple.100', 'purple.900')}
-              //   text={'Simple Understanding language'}
-              /> */}
+               
             </Stack>
+            
           </Stack>
-          <Flex>
-            <Image
-              rounded={'md'}
-              alt={'feature image'}
-              src={
-                'https://i.postimg.cc/hjDCv24M/Online-learning-amico.png'
-              }
-              objectFit={'cover'}
-            />
-          </Flex>
+          
+          
         </SimpleGrid>
       </Container>
     );
