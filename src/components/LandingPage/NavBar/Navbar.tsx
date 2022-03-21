@@ -89,22 +89,22 @@ import Logo from "../../../assets/Images/logoblack.png";
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              <img alt='logo' style={{ width: 150 }} src={ Logo }  />   {/* logo */}
+              <img alt='logo' style={{ width: 150 }} src={ Logo } ref='/home' />   {/* logo */}
             </Text>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
             </Flex>
           </Flex>
-          
-            
+
+
           <Stack
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
             <Box>
-            
+
             {/* Dark Mode Beta: Only for presentation
             Uncomment first display*/}
             <IconButton
@@ -128,14 +128,14 @@ import Logo from "../../../assets/Images/logoblack.png";
             <SignInModal {...signinModal} signupModal={signupModal} />
             </Box>
             <Box>
-    
+
             <Button onClick={signupModal.onOpen} display={{ base: 'none', md: 'inline-flex' }} colorScheme={useColorModeValue('red', 'orange')} className='sign'>Sign Up</Button>
 
             <SignUpModal {...signupModal} signinModal={signinModal} />
             </Box>
           </Stack>
         </Flex>
-  
+
         <Collapse in={isOpen} animateOpacity>
           <MobileNav />
         </Collapse>
