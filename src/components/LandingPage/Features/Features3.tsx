@@ -91,7 +91,7 @@ export default function Fgl() {
           mt={6}
         >
           <Feature
-            color="#f04e23"
+            color="#ffb400"
             title="Personalized Learning"
             icon={
               <path
@@ -106,7 +106,7 @@ export default function Fgl() {
           </Feature>
 
           <Feature
-            color="#f04e23"
+            color="#ffb400"
             title="Adaptive Tests"
             icon={
               <path
@@ -121,7 +121,7 @@ export default function Fgl() {
           </Feature>
 
           <Feature
-            color="#f04e23"
+            color="#ffb400"
             title="Online Platform"
             icon={
               <path
@@ -136,7 +136,7 @@ export default function Fgl() {
           </Feature>
 
           <Feature
-            color="#f04e23"
+            color="#ffb400"
             title="Real-Time Feedback"
             icon={
               <>
@@ -162,7 +162,7 @@ export default function Fgl() {
             and plan for the future.
           </Feature>
           <Feature
-            color="#f04e23"
+            color="#ffb400"
             title="Performance Analysis"
             icon={
               <path
@@ -176,7 +176,7 @@ export default function Fgl() {
             the industry.
           </Feature>
           <Feature
-            color="#f04e23"
+            color="#ffb400"
             title="Mobile responsive"
             icon={
               <path
