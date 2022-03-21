@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import { BiMailSend } from 'react-icons/bi';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaGithub, FaGooglePlay, FaInstagram, FaApple, FaRedditAlien} from 'react-icons/fa';
 import Logo from "../../../assets/Images/logoblack.png";
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
@@ -96,13 +96,20 @@ export default function LargeWithLogoCentered() {
                 New
               </Tag>
             </Stack>
-            <Link href={'#'}>Testimonials</Link>
+            <Link href={'#'}>Background</Link>
             <Link href={'#'}>Home</Link>
             <Link href={'#'}>Contact Us</Link>
-
-
           </Stack>
-          
+              {/* Contributors  */}
+          {/* <Stack align={'flex-start'}>
+            <Stack align={'center'}>
+            <ListHeader>Contributers</ListHeader>
+            <Link href={'#'}>Pg</Link>          
+            <Link href={'#'}>Smoke</Link>
+            <Link href={'#'}>Ti</Link>
+            <Link href={'#'}>Kertz</Link>
+            </Stack>
+          </Stack> */}
           
           <Stack align={'flex-start'} >
             <ListHeader>Stay up to date</ListHeader>
@@ -134,14 +141,20 @@ export default function LargeWithLogoCentered() {
             
             <ListHeader>Follow Us</ListHeader>
             <Stack direction={'row'} spacing={6}>
-              <SocialButton label={'Twitter'} href={'#'}>
-                <FaTwitter />
+              <SocialButton label={'github'} href={'#'}>
+                <FaGithub />
               </SocialButton>
-              <SocialButton label={'YouTube'} href={'#'}>
-                <FaYoutube />
+              <SocialButton label={'PlayStore'} href={'#'}>
+                <FaGooglePlay />
+              </SocialButton>
+              <SocialButton label={'AppStore'} href={'#'}>
+                <FaApple />
               </SocialButton>
               <SocialButton label={'Instagram'} href={'#'}>
                 <FaInstagram />
+              </SocialButton>
+              <SocialButton label={'Reddit'} href={'#'}>
+                <FaRedditAlien />
               </SocialButton>
             </Stack>
           </Stack>
