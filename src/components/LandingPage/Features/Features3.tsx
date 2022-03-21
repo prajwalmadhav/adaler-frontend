@@ -18,11 +18,11 @@ export default function Fgl() {
           h={8}
           mb={4}
           rounded="full"
-          color={useColorModeValue(`${props.color}.600`, `${props.color}.100`)}
-          bg={useColorModeValue(`${props.color}.100`, `${props.color}.600`)}
+          color={useColorModeValue(`black`, `${props.color}.100`)}
+          bg={useColorModeValue(`${props.color}`, `${props.color}.600`)}
         >
           <Icon
-            boxSize={5}
+            boxSize={6}
             viewBox="0 0 20 20"
             fill="currentColor"
             aria-hidden="true"
@@ -91,8 +91,8 @@ export default function Fgl() {
           mt={6}
         >
           <Feature
-            color="red"
-            title="Personal Emails"
+            color="#f04e23"
+            title="Personalized Learning"
             icon={
               <path
                 fillRule="evenodd"
@@ -106,8 +106,8 @@ export default function Fgl() {
           </Feature>
 
           <Feature
-            color="pink"
-            title="Why a beaker icon?"
+            color="#f04e23"
+            title="Adaptive Tests"
             icon={
               <path
                 fillRule="evenodd"
@@ -121,8 +121,8 @@ export default function Fgl() {
           </Feature>
 
           <Feature
-            color="yellow"
-            title="Clickable"
+            color="#f04e23"
+            title="Online Platform"
             icon={
               <path
                 fillRule="evenodd"
@@ -136,8 +136,8 @@ export default function Fgl() {
           </Feature>
 
           <Feature
-            color="green"
-            title="Finger Printing"
+            color="#f04e23"
+            title="Real-Time Feedback"
             icon={
               <>
                 <path
@@ -162,8 +162,8 @@ export default function Fgl() {
             and plan for the future.
           </Feature>
           <Feature
-            color="purple"
-            title="Performance on Fire"
+            color="#f04e23"
+            title="Performance Analysis"
             icon={
               <path
                 fillRule="evenodd"
@@ -176,8 +176,8 @@ export default function Fgl() {
             the industry.
           </Feature>
           <Feature
-            color="blue"
-            title="Love is in the Air"
+            color="#f04e23"
+            title="Mobile responsive"
             icon={
               <path
                 fillRule="evenodd"
