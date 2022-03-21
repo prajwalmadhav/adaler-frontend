@@ -89,7 +89,7 @@ import Logo from "../../../assets/Images/logoblack.png";
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              <img alt='logo' style={{ width: 150 }} src={ Logo } ref='/home' />   {/* logo */}
+              <img alt='logo' style={{ width: 150 }} src={ Logo }  />   {/* logo */}
             </Text>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
