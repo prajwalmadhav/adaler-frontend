@@ -59,7 +59,7 @@ const SocialButton = ({
 export default function LargeWithLogoCentered() {
   return (
     <Box
-      bg={useColorModeValue('gray.50', 'gray.900')}
+      bg={useColorModeValue('gray.100', 'gray.900')}
       color={useColorModeValue('gray.700', 'gray.200')}>
       <Container as={Stack} maxW={'6xl'} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
@@ -90,7 +90,8 @@ export default function LargeWithLogoCentered() {
             <Link href={'#'}>Partners</Link>
           </Stack>
           
-          <Stack align={'flex-start'} direction={'column'}   spacing={6}>
+          <Stack align={'flex-start'} direction={'column'}   spacing={6}>  
+                <Stack  align={'center'} spacing={5}>
                 <ListHeader>Follow Us</ListHeader>
                 <SocialButton label={'Twitter'} href={'#'}>
                   <FaTwitter />
@@ -101,6 +102,7 @@ export default function LargeWithLogoCentered() {
                 <SocialButton label={'Instagram'} href={'#'}>
                   <FaInstagram />
                 </SocialButton>
+                </Stack>
             </Stack>    
                   
         
