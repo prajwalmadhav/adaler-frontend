@@ -21,7 +21,7 @@ export default function Sj() {
   return (
 
     <Stack >
-        <Progress 
+        <Progress
           mt={{ base: 0, md: "10%", lg: 10 }}
           mb={{ base: 0, md: "10%", lg: 5 }}
           ml={{ base: 0, md: "10%", lg: "30%" }}
@@ -29,7 +29,7 @@ export default function Sj() {
           value={10}
           size='md' 
           colorScheme='red' />
-        
+
         <Flex
           ml={{ base: 0, md: "10%", lg: 40 }}
           bg={useColorModeValue("white", "gray.800")}
@@ -83,7 +83,7 @@ export default function Sj() {
             py={3}
             >
             <Radio value='1'>Create a component that consumes the useRadio hook.</Radio>
-          </Box>     
+          </Box>   
 
           <Box
             cursor='pointer'
@@ -103,7 +103,6 @@ export default function Sj() {
             >
             <Radio value='2'>We recommend passing the namCreate a component that consume e prop to the RadioGroup component,</Radio>
           </Box>
-
 
           <Box
             cursor='pointer'
@@ -141,11 +140,9 @@ export default function Sj() {
             py={3}
             >
             <Radio value='4'>Create a component that consumes the useRadio hoo Create a component that consumeCreate a component that consumeCreate a component that consumek.</Radio>
-          </Box> 
-            {/* <Radio value='2'>In some cases, you might need to create components that work  components that</Radio>
-            <Radio value='3'>In some cases, you might need to create components that work like radios</Radio>
-            <Radio value='4'>In some cases, you might n some cases, you m eed to create components the radios</Radio> */}
-          </Stack> 
+          </Box>
+
+          </Stack>
          </RadioGroup>
          <Stack direction='row' spacing={4}
           >
@@ -153,7 +150,7 @@ export default function Sj() {
             Next
           </Button>
         </Stack>
-         
+
         </Stack>
     </Stack>
   );
