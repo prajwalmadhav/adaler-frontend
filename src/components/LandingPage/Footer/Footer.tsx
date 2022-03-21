@@ -63,21 +63,25 @@ export default function LargeWithLogoCentered() {
       color={useColorModeValue('gray.700', 'gray.200')}>
       <Container as={Stack} maxW={'6xl'} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
-          
-        <Stack align={'flex-start'} direction={'column'}   spacing={6}>  
-                <Stack  align={'center'} spacing={5}>
-                <ListHeader>Follow Us</ListHeader>
-                <SocialButton label={'Twitter'} href={'#'}>
-                  <FaTwitter />
-                </SocialButton>
-                <SocialButton label={'YouTube'} href={'#'}>
-                  <FaYoutube />
-                </SocialButton>
-                <SocialButton label={'Instagram'} href={'#'}>
-                  <FaInstagram />
-                </SocialButton>
-                </Stack>
-            </Stack>
+        
+        <Stack align={'flex-start'}>
+            <ListHeader>Technology</ListHeader>
+            <Link href={'#'}>Firebase</Link>
+            <Link href={'#'}>Netlify</Link>
+            <Link href={'#'}>Git</Link>
+            <Link href={'#'}>Node</Link>
+            <Link href={'#'}>VS Code</Link>
+          </Stack>
+        
+
+          <Stack align={'flex-start'}>
+            <ListHeader>Languages</ListHeader>
+            <Link href={'#'}>React</Link>
+            <Link href={'#'}>TypeScript</Link>
+            <Link href={'#'}>JavaScript</Link>
+            <Link href={'#'}>Python</Link>
+            <Link href={'#'}>CSS</Link>
+          </Stack>
 
           <Stack align={'flex-start'}>
             <ListHeader>Product</ListHeader>
@@ -92,18 +96,11 @@ export default function LargeWithLogoCentered() {
                 New
               </Tag>
             </Stack>
-            <Link href={'#'}>Tutorials</Link>
-            <Link href={'#'}>Pricing</Link>
-            <Link href={'#'}>Releases</Link>
-          </Stack>
-
-          <Stack align={'flex-start'}>
-            <ListHeader>Company</ListHeader>
-            <Link href={'#'}>About Us</Link>
-            <Link href={'#'}>Press</Link>
-            <Link href={'#'}>Careers</Link>
+            <Link href={'#'}>Testimonials</Link>
+            <Link href={'#'}>Home</Link>
             <Link href={'#'}>Contact Us</Link>
-            <Link href={'#'}>Partners</Link>
+
+
           </Stack>
           
           
@@ -134,9 +131,8 @@ export default function LargeWithLogoCentered() {
             <Box>
               
             </Box>
-            <Text fontSize={'sm'}>
-              © 2020 Chakra Templates. All rights reserved
-            </Text>
+            
+            <ListHeader>Follow Us</ListHeader>
             <Stack direction={'row'} spacing={6}>
               <SocialButton label={'Twitter'} href={'#'}>
                 <FaTwitter />
