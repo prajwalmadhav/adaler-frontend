@@ -63,6 +63,22 @@ export default function LargeWithLogoCentered() {
       color={useColorModeValue('gray.700', 'gray.200')}>
       <Container as={Stack} maxW={'6xl'} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
+          
+        <Stack align={'flex-start'} direction={'column'}   spacing={6}>  
+                <Stack  align={'center'} spacing={5}>
+                <ListHeader>Follow Us</ListHeader>
+                <SocialButton label={'Twitter'} href={'#'}>
+                  <FaTwitter />
+                </SocialButton>
+                <SocialButton label={'YouTube'} href={'#'}>
+                  <FaYoutube />
+                </SocialButton>
+                <SocialButton label={'Instagram'} href={'#'}>
+                  <FaInstagram />
+                </SocialButton>
+                </Stack>
+            </Stack>
+
           <Stack align={'flex-start'}>
             <ListHeader>Product</ListHeader>
             <Link href={'#'}>Overview</Link>
@@ -90,23 +106,7 @@ export default function LargeWithLogoCentered() {
             <Link href={'#'}>Partners</Link>
           </Stack>
           
-          <Stack align={'flex-start'} direction={'column'}   spacing={6}>  
-                <Stack  align={'center'} spacing={5}>
-                <ListHeader>Follow Us</ListHeader>
-                <SocialButton label={'Twitter'} href={'#'}>
-                  <FaTwitter />
-                </SocialButton>
-                <SocialButton label={'YouTube'} href={'#'}>
-                  <FaYoutube />
-                </SocialButton>
-                <SocialButton label={'Instagram'} href={'#'}>
-                  <FaInstagram />
-                </SocialButton>
-                </Stack>
-            </Stack>    
-                  
-        
-
+          
           <Stack align={'flex-start'} >
             <ListHeader>Stay up to date</ListHeader>
 
@@ -129,9 +129,29 @@ export default function LargeWithLogoCentered() {
                 icon={<BiMailSend />}
               />
             </Stack>
+
+            <Stack spacing={6}>
+            <Box>
+              
+            </Box>
+            <Text fontSize={'sm'}>
+              © 2020 Chakra Templates. All rights reserved
+            </Text>
+            <Stack direction={'row'} spacing={6}>
+              <SocialButton label={'Twitter'} href={'#'}>
+                <FaTwitter />
+              </SocialButton>
+              <SocialButton label={'YouTube'} href={'#'}>
+                <FaYoutube />
+              </SocialButton>
+              <SocialButton label={'Instagram'} href={'#'}>
+                <FaInstagram />
+              </SocialButton>
+            </Stack>
+          </Stack>
           </Stack>
           
-                  
+         
 
         </SimpleGrid>
       </Container>
@@ -141,14 +161,14 @@ export default function LargeWithLogoCentered() {
           _before={{
             content: '""',
             borderBottom: '2px solid',
-            borderColor: useColorModeValue('gray.200', 'gray.700'),
+            borderColor: useColorModeValue('gray.700', 'gray.700'),
             flexGrow: 1,
             mr: 8,
           }}
           _after={{
             content: '""',
             borderBottom: '2px solid',
-            borderColor: useColorModeValue('gray.200', 'gray.700'),
+            borderColor: useColorModeValue('gray.700', 'gray.700'),
             flexGrow: 1,
             ml: 8,
           }}>
