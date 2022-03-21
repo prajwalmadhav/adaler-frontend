@@ -10,7 +10,9 @@ import {
   Progress,
   Radio,
   RadioGroup,
+  Button,
 } from "@chakra-ui/react";
+import { ArrowForwardIcon, EmailIcon } from "@chakra-ui/icons";
 
 export default function Sj() {
 
@@ -20,7 +22,7 @@ export default function Sj() {
 
     <Stack >
         <Progress 
-          mt={{ base: 0, md: "10%", lg: 20 }}
+          mt={{ base: 0, md: "10%", lg: 10 }}
           mb={{ base: 0, md: "10%", lg: 5 }}
           ml={{ base: 0, md: "10%", lg: "30%" }}
           mr={{ base: 0, md: "10%", lg: "15%" }}
@@ -145,8 +147,14 @@ export default function Sj() {
             <Radio value='4'>In some cases, you might n some cases, you m eed to create components the radios</Radio> */}
           </Stack> 
          </RadioGroup>
+         <Stack direction='row' spacing={4}
+          >
+          <Button ml='82%' mt={3} rightIcon={<ArrowForwardIcon />} colorScheme='orange' variant='outline'>
+            Next
+          </Button>
         </Stack>
-
+         
+        </Stack>
     </Stack>
   );
 }
