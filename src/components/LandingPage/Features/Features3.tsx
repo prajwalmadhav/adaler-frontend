@@ -51,11 +51,11 @@ export default function Fgl() {
   return (
     <Flex
       bg={useColorModeValue("gray.600", "gray.600")}
-      p={20}
+      p={{base:1,lg:20}}
       w="auto"
       justifyContent="center"
       alignItems="center"
-      py={40}
+      py={{base:10,lg:40}}
       
     >
       <Box
@@ -90,7 +90,7 @@ export default function Fgl() {
         <SimpleGrid
           columns={{ base: 2, sm: 2, md: 3, lg: 3 }}
           // display={{ base: 'none' , lg: 'inline-block' }}
-          spacingX={{ base: 1, lg: 24 }}
+          spacingX={{ base: 3, lg: 24 }}
           spacingY={20}
           mt={6}
         >
