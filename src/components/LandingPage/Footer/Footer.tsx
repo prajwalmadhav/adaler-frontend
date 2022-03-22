@@ -17,6 +17,7 @@ import { ReactNode } from 'react';
 import { BiMailSend } from 'react-icons/bi';
 import { FaGithub, FaGooglePlay, FaInstagram, FaApple, FaRedditAlien} from 'react-icons/fa';
 import Logo from "../../../assets/Images/logoblack.png";
+import { GrAppleAppStore } from "react-icons/gr";
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
@@ -148,7 +149,7 @@ export default function LargeWithLogoCentered() {
                 <FaGooglePlay />
               </SocialButton>
               <SocialButton label={'AppStore'} href={'#'}>
-                <FaApple />
+                <GrAppleAppStore />
               </SocialButton>
               <SocialButton label={'Instagram'} href={'#'}>
                 <FaInstagram />
