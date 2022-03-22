@@ -66,86 +66,96 @@ export default function Sj() {
         <Stack >
         <RadioGroup defaultValue='1' >
           <Stack ml={'25%'} mr={'10%'} spacing={6} direction='column' >
-
-          <Box
-            cursor='pointer'
-            borderWidth='1px'
-            borderRadius='md'
-            boxShadow='md'
-            _checked={{
-              bg: 'teal.600',
-              color: 'white',
-              borderColor: 'teal.600',
-            }}
-            _focus={{
-              boxShadow: 'outline',
-            }}
-            px={5}
-            py={3}
-            >
-            <Radio value='1'>Create a component that consumes the useRadio hook.</Radio>
-          </Box>   
-
-          <Box
-            cursor='pointer'
-            borderWidth='1px'
-            borderRadius='md'
-            boxShadow='md'
-            _checked={{
-              bg: 'teal.600',
-              color: 'white',
-              borderColor: 'teal.600',
-            }}
-            _focus={{
-              boxShadow: 'outline',
-            }}
-            px={5}
-            py={3}
-            >
-            <Radio value='2'>We recommend passing the namCreate a component that consume e prop to the RadioGroup component,</Radio>
-
-          </Box>
-
-          <Box
-            cursor='pointer'
-            borderWidth='1px'
-            borderRadius='md'
-            boxShadow='md'
-            _checked={{
-              bg: 'grey.400',
-              color: 'white',
-              borderColor: 'teal.600',
-            }}
-            _focus={{
-              boxShadow: 'outline',
-            }}
-            px={5}
-            py={3}
-            >
-            <Radio value='3'>Refers to the id of the element that labels the radio element.</Radio>
-          </Box>
-
-          <Box
-            cursor='pointer'
-            borderWidth='1px'
-            borderRadius='md'
-            boxShadow='md'
-            _checked={{
-              bg: 'teal.600',
-              color: 'white',
-              borderColor: 'teal.600',
-            }}
-            _focus={{
-              boxShadow: 'outline',
-            }}
-            px={5}
-            py={3}
-            >
-            <Radio value='4'>Create a component that consumes the useRadio hoo Create a component that consumeCreate a component that consumeCreate a component that consumek.</Radio>
-          </Box>
-
           
+          <Radio value='1'>
+          <Box
+            cursor='pointer'
+            borderWidth='1px'
+            borderRadius='md'
+            boxShadow='md'
+            _checked={{
+              bg: 'teal.600',
+              color: 'white',
+              borderColor: 'teal.600',
+            }}
+            _focus={{
+              boxShadow: 'outline',
+            }}
+            px={5}
+            pr={20}
+            py={3}
+            >
+            We recommend passing the namCreate a component that consume e prop to the RadioGroup component,
 
+          </Box>
+          </Radio>
+          <Radio value='2'>
+          <Box
+            cursor='pointer'
+            borderWidth='1px'
+            borderRadius='md'
+            boxShadow='md'
+            _checked={{
+              bg: 'teal.600',
+              color: 'white',
+              borderColor: 'teal.600',
+            }}
+            _focus={{
+              boxShadow: 'outline',
+            }}
+            px={5}
+            pr={20}
+            py={3}
+            >
+            We recommend passing the namCreate a component that consume e prop to the RadioGroup component,
+
+          </Box>
+          </Radio>
+          <Radio value='3'>
+          <Box
+            cursor='pointer'
+            borderWidth='1px'
+            borderRadius='md'
+            boxShadow='md'
+            _checked={{
+              bg: 'teal.600',
+              color: 'white',
+              borderColor: 'teal.600',
+            }}
+            _focus={{
+              boxShadow: 'outline',
+            }}
+            px={5}
+            pr={20}
+            py={3}
+            >
+            We recommend passing the namCreate a component that consume e prop to the RadioGroup component,
+
+          </Box>
+          </Radio>
+          <Radio value='4'>
+          <Box
+            cursor='pointer'
+            borderWidth='1px'
+            borderRadius='md'
+            boxShadow='md'
+            _checked={{
+              bg: 'teal.600',
+              color: 'white',
+              borderColor: 'teal.600',
+            }}
+            _focus={{
+              boxShadow: 'outline',
+            }}
+            px={5}
+            pr={20}
+            py={3}
+            >
+            We recommend passing the namCreate a component that consume e prop to the RadioGroup component,
+
+          </Box>
+          </Radio>
+        
           </Stack>
          </RadioGroup>
          <Stack direction='row' spacing={4}
