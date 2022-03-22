@@ -35,12 +35,12 @@ export default function Fgl() {
           mb={2}
           fontWeight="semibold"
           lineHeight="shorter"
-          color={useColorModeValue("white","#000000")}
+          color={useColorModeValue("white","#fff")}
         >
           {props.title}
         </chakra.h3>
         <chakra.p
-          fontSize="sm"
+          fontSize={{base:"sm",lg:"xl"}}
           textAlign='justify'
           color={useColorModeValue("white", "gray.400")}
         >
@@ -51,7 +51,7 @@ export default function Fgl() {
   };
   return (
     <Flex
-      bg={useColorModeValue("gray.600", "gray.600")}
+      bg={useColorModeValue("powderblue", "gray.600")}
       p={{base:1,lg:20}}
       w="auto"
       justifyContent="center"
@@ -74,7 +74,7 @@ export default function Fgl() {
             lineHeight="8"
             fontWeight="extrabold"
             letterSpacing="tight"
-            color={useColorModeValue("white","#000000000")}
+            color={useColorModeValue("white","#fff")}
           >
             Features
           </chakra.p>
@@ -83,7 +83,7 @@ export default function Fgl() {
             maxW="2xl"
             fontSize="xl"
             mx={{ lg: "auto" }}
-            color={useColorModeValue("white", "gray.400")}
+            color={useColorModeValue("white", "gray")}
           >
             Get insights to dig down into what's powering your growth the most.
           </chakra.p>
@@ -91,7 +91,7 @@ export default function Fgl() {
         <SimpleGrid
           columns={{ base: 2, sm: 2, md: 3, lg: 3 }}
           // display={{ base: 'none' , lg: 'inline-block' }}
-          spacingX={{ base: 3, lg: 24 }}
+          spacingX={{ base: 5, lg: 24 }}
           spacingY={20}
           mt={6}
         >
@@ -102,8 +102,7 @@ export default function Fgl() {
               <FaChalkboardTeacher  />
             }
           >
-            Hand crafted dashboard for everything from Recurring Revenue to
-            Customer Churn.
+            A customized learning experience for every user, suitable for their specific learning needs. 
           </Feature>
 
           <Feature
@@ -113,8 +112,8 @@ export default function Fgl() {
               <FaFileInvoice/>
             }
           >
-            Your central hub that helps you see, and react to, absolutely
-            everything that’s happening.
+            A testing system using the latest technology to help you get the most accurate results. 
+
           </Feature>
 
           <Feature
@@ -124,8 +123,7 @@ export default function Fgl() {
               <FaLaptop/>
             }
           >
-            Stay informed with daily, weekly, or monthly reports on all your
-            insights data.
+            A dynamic online platform that is user-friendly and accessible on multiple devices. 
           </Feature>
 
           <Feature
@@ -135,8 +133,7 @@ export default function Fgl() {
               <FaClock/>
             }
           >
-            Our forecasting is your magical crystal ball that helps you predict
-            and plan for the future.
+            Provides accurate and real-time feedback to help learners understand concepts effectively. 
           </Feature>
           <Feature
             color="#ffb400"
@@ -145,8 +142,7 @@ export default function Fgl() {
               <FaChartPie/>
             }
           >
-            How does your company compare? Learn how your company stacks up in
-            the industry.
+            A quick performance report that allows learners ad their teachers to track progress effectively.
           </Feature>
           <Feature
             color="#ffb400"
@@ -155,8 +151,7 @@ export default function Fgl() {
               <FaMobileAlt/>
             }
           >
-            Organize your customers to bring meaningful and comparative insights
-            across your dashboards.
+            The system is responsive to many screen sizes allowing users more flexibility in learning.
           </Feature>
 
         </SimpleGrid>

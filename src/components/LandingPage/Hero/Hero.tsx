@@ -74,6 +74,7 @@ import {
           </Stack>
         </Flex>
         <Flex flex={1}>
+          
           <Image
             boxSize='650px'
             alt={'Login Image'}
@@ -84,6 +85,7 @@ import {
             
             }
           />
+          
         </Flex>
       </Stack>
     );
