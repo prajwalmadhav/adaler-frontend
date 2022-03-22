@@ -35,12 +35,13 @@ export default function Fgl() {
           mb={2}
           fontWeight="semibold"
           lineHeight="shorter"
-          color={useColorModeValue("white","#000000000")}
+          color={useColorModeValue("white","#000000")}
         >
           {props.title}
         </chakra.h3>
         <chakra.p
           fontSize="sm"
+          textAlign='justify'
           color={useColorModeValue("white", "gray.400")}
         >
           {props.children}
