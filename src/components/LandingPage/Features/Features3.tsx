@@ -102,7 +102,7 @@ export default function Fgl() {
               <FaChalkboardTeacher  />
             }
           >
-            Hand crafted dashboards for everything from Recurring Revenue to
+            Hand crafted dashboard for everything from Recurring Revenue to
             Customer Churn.
           </Feature>
 

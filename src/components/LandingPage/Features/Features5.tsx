@@ -75,7 +75,7 @@ const CTA = () => {
             w="full"
             rounded="md"
             color={useColorModeValue("black","black")}
-            bg={useColorModeValue("powderblue", "brand.500")}
+            bg={useColorModeValue("powderblue", "powderblue")}
             _hover={{
               bg: useColorModeValue("brand.700", "brand.600"),
             }}
