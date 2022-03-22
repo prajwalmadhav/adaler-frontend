@@ -98,7 +98,7 @@ export default function WithSpeechBubbles() {
           spacing={{ base: 10, md: 4, lg: 10 }}>
           <Testimonial>
             <TestimonialContent>
-              <TestimonialHeading> Amazing Initiative</TestimonialHeading>
+              <TestimonialHeading>Amazing Initiative</TestimonialHeading>
               <TestimonialText>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
                 neque sed imperdiet nibh lectus feugiat nunc sem.
@@ -130,7 +130,7 @@ export default function WithSpeechBubbles() {
           </Testimonial>
           <Testimonial>
             <TestimonialContent>
-              <TestimonialHeading>Mindblowing Methods of Teaching</TestimonialHeading>
+              <TestimonialHeading>Modern Methods of Teaching</TestimonialHeading>
               <TestimonialText>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
                 neque sed imperdiet nibh lectus feugiat nunc sem.

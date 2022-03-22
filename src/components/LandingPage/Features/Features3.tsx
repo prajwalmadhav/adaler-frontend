@@ -11,7 +11,7 @@ import { FaChalkboardTeacher, FaChartPie, FaClock, FaFileInvoice, FaLaptop, FaMo
 export default function Fgl() {
   const Feature = (props: { color: any; icon: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; title: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
     return (
-      <Box>
+      <Box >
         <Flex
           alignItems="center"
           justifyContent="center"
@@ -55,6 +55,7 @@ export default function Fgl() {
       w="auto"
       justifyContent="center"
       alignItems="center"
+      py={40}
       
     >
       <Box
@@ -89,7 +90,7 @@ export default function Fgl() {
         <SimpleGrid
           columns={{ base: 2, sm: 2, md: 3, lg: 3 }}
           // display={{ base: 'none' , lg: 'inline-block' }}
-          spacingX={{ base: 16, lg: 24 }}
+          spacingX={{ base: 1, lg: 24 }}
           spacingY={20}
           mt={6}
         >

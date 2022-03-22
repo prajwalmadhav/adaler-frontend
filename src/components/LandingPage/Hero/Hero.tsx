@@ -78,6 +78,7 @@ import {
             boxSize='650px'
             alt={'Login Image'}
             objectFit={'cover'}
+            display={{base: 'none',lg:'initial'}}
             src={
               'https://i.ibb.co/x2jtQXL/Flame-Space-Adventures-transparent-by-Icons8.gif'
             
