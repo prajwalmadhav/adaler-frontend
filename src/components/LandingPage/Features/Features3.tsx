@@ -33,7 +33,8 @@ export default function Fgl() {
         </Flex>
         <chakra.h3
           mb={2}
-          fontWeight="semibold"
+          fontWeight="extrabold"
+          fontSize={{base:"sm",lg:"xl"}}
           lineHeight="shorter"
           color={useColorModeValue("white","#fff")}
         >
