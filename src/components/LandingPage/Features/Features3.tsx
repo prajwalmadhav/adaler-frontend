@@ -50,11 +50,12 @@ export default function Fgl() {
   };
   return (
     <Flex
-      bg={useColorModeValue("#04294f", "gray.600")}
+      bg={useColorModeValue("gray.600", "gray.600")}
       p={20}
       w="auto"
       justifyContent="center"
       alignItems="center"
+      
     >
       <Box
         px={8}
@@ -62,6 +63,7 @@ export default function Fgl() {
         mx="auto"
         bg={useColorModeValue("#04294f", "gray.800")}
         shadow="2xl"
+        rounded={'lg'}
       >
         <Box textAlign={{ lg: "center" }}>
           <chakra.p

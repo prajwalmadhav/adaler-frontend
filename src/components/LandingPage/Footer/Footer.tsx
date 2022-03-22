@@ -63,7 +63,7 @@ export default function LargeWithLogoCentered() {
       bg={useColorModeValue('gray.200', 'gray.900')}  //#04294f
       color={useColorModeValue('gray.700', 'gray.200')}>
       <Container as={Stack} maxW={'6xl'} py={10}>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
+        <SimpleGrid columns={{ base: 2, sm: 2, md: 4 }} spacing={8}>
         
         <Stack align={'flex-start'}>
             <ListHeader>Technology</ListHeader>
@@ -141,7 +141,7 @@ export default function LargeWithLogoCentered() {
             </Box>
             
             <ListHeader>Follow Us</ListHeader>
-            <Stack direction={'row'} spacing={6}>
+            <Stack direction={{base:'column' ,lg:'row'}}spacing={6}>
               <SocialButton label={'github'} href={'#'}>
                 <FaGithub />
               </SocialButton>
