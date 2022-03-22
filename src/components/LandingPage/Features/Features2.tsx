@@ -45,7 +45,7 @@ import { IoLogoBitcoin } from 'react-icons/io';
     return (
       <Container maxW={'5xl'} py={12}>
         <SimpleGrid columns={{ base: 1, md: 2, lg:2 }} spacing={10}>
-        <Stack mt={{base:-550,lg:0}} ml={{lg:-40}} mr={{lg:1}}>
+        <Stack mt={{base:'-150%',lg:0}} ml={{base:5,lg:-40}} mr={{base:3,lg:1}}>
           <Flex >
             <Image
               rounded={'md'}
@@ -58,7 +58,7 @@ import { IoLogoBitcoin } from 'react-icons/io';
           </Flex>   
           </Stack>          
           
-          <Stack spacing={6} mr={{base: 0, lg:-40}} mt={{base: -170, lg: 20}} ml={{base: 0, lg:20}}>
+          <Stack spacing={6} mr={{base: 0, lg:-40}} mt={{base: '-40%', lg: 20}} ml={{base: 0, lg:20}}>
             <Text
               textTransform={'uppercase'}
               color={'blue.400'}

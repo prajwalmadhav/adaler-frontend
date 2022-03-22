@@ -91,7 +91,7 @@ export default function LargeWithLogoCentered() {
               <Link href={'#'}>Features</Link>
               <Tag
                 size={'sm'}
-                bg={useColorModeValue('#f04e23', 'green.800')}
+                bg={useColorModeValue('#f04e23', '#f04e23')}
                 ml={2}
                 color={'white'}>
                 New
@@ -125,7 +125,7 @@ export default function LargeWithLogoCentered() {
                 }}
               />
               <IconButton
-                bg={useColorModeValue('#f04e23', 'green.800')}
+                bg={useColorModeValue('#f04e23', '#f04e23')}
                 color={useColorModeValue('white', 'gray.800')}
                 _hover={{
                   bg: '#f04e2395',
