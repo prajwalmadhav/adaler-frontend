@@ -18,6 +18,7 @@ export default function Sj() {
 
   const question = 'This is a demo question which is asked for testing which is asked ?'     //added editable variables
   
+  
   return (
 
     <Stack >
@@ -102,6 +103,7 @@ export default function Sj() {
             py={3}
             >
             <Radio value='2'>We recommend passing the namCreate a component that consume e prop to the RadioGroup component,</Radio>
+
           </Box>
 
           <Box
@@ -142,6 +144,8 @@ export default function Sj() {
             <Radio value='4'>Create a component that consumes the useRadio hoo Create a component that consumeCreate a component that consumeCreate a component that consumek.</Radio>
           </Box>
 
+          
+
           </Stack>
          </RadioGroup>
          <Stack direction='row' spacing={4}
@@ -154,4 +158,13 @@ export default function Sj() {
         </Stack>
     </Stack>
   );
+}
+
+function useRadio(props: any): { getInputProps: any; getCheckboxProps: any; } {
+  throw new Error("Function not implemented.");
+}
+
+
+function props(props: any): { getInputProps: any; getCheckboxProps: any; } {
+  throw new Error("Function not implemented.");
 }
