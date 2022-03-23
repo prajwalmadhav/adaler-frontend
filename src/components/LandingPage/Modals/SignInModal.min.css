@@ -2,7 +2,7 @@
 
 
 .ModalContent2{
-    background-color: #d1d2f1 !important;
+    background-color: #F2F2F2 !important;
     font-family: 'Poppins', sans-serif;
     font-weight: 500 !important; 
     border-top-left-radius: 25px !important;
@@ -19,11 +19,11 @@
     font-weight: 900;
     font-style: bold;
     text-align: left;
-    background-color: #d1d2f1 !important;
+    background-color: #F2F2F2!important;
     border-top-left-radius: 25px !important;
     border-top-right-radius: 25px !important;
     border-bottom-style: solid !important;
-    border-color: #e6e7eb !important; 
+    border-color: #0000001e !important; 
     border-width: 2.5px !important;
     border-top: 0px !important;
     border-right: 0px !important;
@@ -39,20 +39,20 @@
 }
 
 .ModalBody2{
-    background-color: #d1d2f1 !important;
+    background-color: #F2F2F2 !important;
     color: #080F7B !important;
     justify-content: center !important;
 
 }
 
 .ModalFooter2{
-    background-color: #d1d2f1 !important;
+    background-color: #F2F2F2 !important;
     border-bottom-left-radius: 25px !important;
     border-bottom-right-radius: 25px !important;
     color: #080F7B !important;
     justify-content: center !important;
     border-bottom-style: solid !important;
-    border-color: #e6e7eb !important; 
+    border-color: #0000001e !important; 
     border-width: 2.5px !important;
     border-bottom: 0px !important;
     border-right: 0px !important;
@@ -64,7 +64,7 @@
 }
 
 .Checkbox2{
-    border-color: #e6e7eb !important; 
+    border-color: #00000046 !important; 
 }
 
 .Button2{
@@ -79,6 +79,7 @@
 .Link2{
     font-size: 15px;
     text-align: center;
+    color: #080F7B !important;
 
 }
 
@@ -89,4 +90,16 @@
     padding-right: 140px !important;
     margin-left: 1px !important;
     margin-right: 1px !important;
+    border-width: 2.5px !important;
+    border-color: #000000 !important;
+}
+.buttongoogle{
+    color: #080f7b !important;
+    background-color: #ffffff !important;
+    padding-left: 140px !important;
+    padding-right: 140px !important;
+    margin-left: 1px !important;
+    margin-right: 1px !important;
+    border-width: 0px !important;
+    border-color: #080f7b !important;
 }

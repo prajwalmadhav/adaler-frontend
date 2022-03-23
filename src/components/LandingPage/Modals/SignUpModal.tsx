@@ -186,6 +186,7 @@ export default function SignUpModal({signinModal,onClose,...props}: Omit<ModalPr
           <Button
             isLoading ={isLoadingGoogle}    
             w={'full'}
+            className='buttongoogle'
             maxW={'md'}
             marginTop={'10px'}
             spinner={<BeatLoader size={8} color='blue' />}

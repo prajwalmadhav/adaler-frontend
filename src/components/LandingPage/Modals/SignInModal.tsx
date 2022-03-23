@@ -119,6 +119,7 @@ export default function SignInModal({
                 }}>
                 Sign In </Button>
                 <Button
+                  className='buttongoogle'
                   isLoading = {isLoadingGoogle}   
                   w={'full'}
                   maxW={'md'}
