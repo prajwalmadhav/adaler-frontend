@@ -10,7 +10,6 @@ import Hero from './components/LandingPage/Hero/Hero';
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Alerts from './components/LandingPage/Modals/Alerts';
 import SignOut from './components/LandingPage/Modals/SignOut';
-import Test from './components/Test';
 import Courses from './pages/Dashboard/Courses';
 import Sidebar from './components/Dashboard/Sidebar';
 
@@ -21,13 +20,15 @@ import Course3 from './components/Dashboard/courseoverview/Course3';
 import Course4 from './components/Dashboard/courseoverview/Course4';
 import Course5 from './components/Dashboard/courseoverview/Course5';
 import Course6 from './components/Dashboard/courseoverview/Course6';
-import Testpg from "./components/Dashboard/Test/Testpg";
+import Testpg from "./components/Dashboard/Testing/Testpg";
 import PreQuestions from './components/WelcomePage/PreQuestions';
 import Courseinfo1 from './components/Dashboard/CourseInfo/Courseinfo1';
 import { auth } from "./firebaseSetup";
 import QuizOne from './components/Quiz/QuizOne';
 
 import "./App.css"
+import TestPage from "./components/TestPage/TestPage";
+import Testspage from "./components/TestPage/Testspage";
 
 
 const Homepage = lazy(() => import("./pages/Homepage/Homepage"))
@@ -46,7 +47,7 @@ export const App = () => {
           }> <Homepage/></Suspense>
           }/>
           <Route path='home' element={<Dashboard/>} />
-          <Route path='smoke' element={<Test/>} />
+          <Route path='smoke' element={<Testpg/>} />
           <Route path='pg' element={<Testpg/>} />
           <Route path='welcome' element={<PreQuestions/>} />
 
@@ -64,6 +65,8 @@ export const App = () => {
             <Route path='home/courses/courseinfo1' element={<Courseinfo1/>} />
 
           <Route path='quiz' element={<QuizOne />} />
+          <Route path='tests' element={<TestPage/>} />
+
 
           </Route>
 
