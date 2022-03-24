@@ -19,11 +19,13 @@ import {
   ];
   interface PackageTierProps {
     title: string;
+    image?: string;
     options: Array<{ id: number; desc: string }>;
     typePlan: string;
     checked?: boolean;
   }
   const PackageTier = ({
+    image,
     title,
     options,
     typePlan,
@@ -34,8 +36,12 @@ import {
   
     const colorTextDark = checked ? 'white' : 'white';
     const bgColorDark = checked ? '#f13c3b' : '#f13c3b';
+
+    const course1="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60"
   
     return (
+
+      <>
       <Stack
         p={3}
         py={3}
@@ -49,6 +55,7 @@ import {
           md: 'row',
         }}
         alignItems={{ md: 'center' }}>
+           
         <Heading size={'lg'}>{title}</Heading>
         <List spacing={3} textAlign="start">
           {options.map((desc, id) => (
@@ -68,6 +75,7 @@ import {
           </Button>
         </Stack>
       </Stack>
+      </>
     );
   };
   const ThreeTierPricingHorizontal = () => {
@@ -75,46 +83,17 @@ import {
       <Box py={6} px={5}  ml={{base:0,lg:'15%'}} min={'100vh'}>
         <Stack spacing={4} width={'100%'} direction={'column'}>
           <PackageTier
+          
            title={'Course 1'}
             typePlan="Tier 1"
              options={options}
               />
           <Divider />
-          <PackageTier
-            title={'Course 2'}
-            //checked={true}
-            typePlan="Tier 2"
-            options={options}
-          />
-          <Divider />
-          <PackageTier
-           title={'Course 4'}
-            typePlan="Tier 3"
-             options={options
-             } />
-
-          <Divider />
-          <PackageTier
-           title={'Course 5'}
-            typePlan="Tier 3"
-             options={options
-             } />
-
-            <Divider />
-          <PackageTier
-           title={'Course 6'}
-            typePlan="Tier 3"
-             options={options
-             } />
-
-          <Divider />
-          <PackageTier
-           title={'Course 7'}
-            typePlan="Tier 3"
-             options={options
-             } />
+          
         </Stack>
       </Box>
+
+    
     );
   };
   
