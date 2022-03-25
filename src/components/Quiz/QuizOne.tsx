@@ -65,7 +65,7 @@ export default function Sj() {
 
         <Stack >
         <RadioGroup defaultValue='1' >
-          <Stack ml={'25%'} mr={'10%'} spacing={6} direction='column' >
+          <Stack ml={{base: '5%' ,lg: '25%'}} mr={{base:'5%',lg:'10%'}} spacing={6} direction='column' >
           
           <Radio value='1'>
           <Box
@@ -158,9 +158,9 @@ export default function Sj() {
         
           </Stack>
          </RadioGroup>
-         <Stack direction='row' spacing={4}
+         <Stack  pb={10} direction='row' spacing={4}
           >
-          <Button ml='82%' mt={3} rightIcon={<ArrowForwardIcon />} colorScheme='orange' variant='outline'>
+          <Button  ml={{base: '70%',lg:'82%'}} mt={3} rightIcon={<ArrowForwardIcon />} colorScheme='orange' variant='outline'>
             Next
           </Button>
         </Stack>
