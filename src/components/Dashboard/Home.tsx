@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { MdHeadset, MdEmail, MdLocationOn } from "react-icons/md";
 import { BsFillBriefcaseFill } from "react-icons/bs";
-
+import { useNavigate } from "react-router-dom"
 
 const Home = () => {
   const CourseImage1 = "https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
@@ -31,7 +31,7 @@ const Home = () => {
   const TestImage4 = " https://img.freepik.com/free-vector/digital-designers-team-drawing-with-pen-computer-monitor_74855-10586.jpg?t=st=1648559309~exp=1648559909~hmac=e8c211e489d696b5ce33e048f3b8dd6e1c25557f0d291bcc5f2eb8523fd9d6d5&w=996"
   const TestImage5 = "https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?t=st=1648559233~exp=1648559833~hmac=4cc43979793175bbb32dc4370561743043be7f04d36517d281bba8847c8d9ce3&w=996"
   const TestImage6 = "https://img.freepik.com/free-vector/mobile-testing-concept-illustration_114360-2449.jpg?w=740 "
-  
+  const navigate = useNavigate()
   return (
     <>      
       {/* All cards */} 
@@ -58,6 +58,9 @@ const Home = () => {
         {/* box 1 */}
         
           <Box
+            onClick={()=>{
+              navigate("/home/courses/course1")
+            }}
             w="360px"
             h="410px"
             mr="50px"
