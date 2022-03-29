@@ -59,7 +59,7 @@ const Home = () => {
         
           <Box
             onClick={()=>{
-              navigate("/home/courses/course1")
+              navigate( "/home/courses/course1")
             }}
             w="360px"
             h="410px"
