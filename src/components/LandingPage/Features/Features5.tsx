@@ -75,7 +75,6 @@ const CTA = () => {
             border="solid transparent"
             fontWeight="bold"
             w="full"
-            link="#"
             rounded="md"
             color={useColorModeValue("black","black")}
             bg={useColorModeValue("powderblue", "powderblue")}
@@ -83,9 +82,10 @@ const CTA = () => {
               bg: useColorModeValue("brand.700", "brand.600"),
             }}
           >
-            Sign Up to Get Started 
-            <Icon as={FiExternalLink} ml={2} />
+             
             
+            <Link href={'#'}>Sign Up to Get Started</Link>
+            <Icon as={FiExternalLink} ml={2} />
           </chakra.a>
         </Box>
       </Flex>
