@@ -176,7 +176,10 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     });  
   })
   
-  const pic = auth.currentUser?.photoURL as any
+  var pic = auth.currentUser?.photoURL as any
+  if (pic == null || pic === undefined) {
+    pic = "https://joeschmoe.io/api/v1/random" as any
+  }
   return (
     <Flex
       ml={{ base: 0, md: 60 }}
