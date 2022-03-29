@@ -77,7 +77,7 @@ const TestimonialAvatar = ({
       <Avatar src={src} alt={name} mb={2} />
       <Stack spacing={0} align={'center'}>
         <Text fontWeight={600}>{name}</Text>
-        <Text fontSize={'sm'} color={useColorModeValue('gray.600', 'gray.400')}>
+        <Text fontSize={'sm'} textAlign='justify' color={useColorModeValue('gray.600', 'gray.400')}>
           {title}
         </Text>
       </Stack>
@@ -91,7 +91,7 @@ export default function WithSpeechBubbles() {
       <Container maxW={'7xl'} py={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={'center'}>
           <Heading>Our Teachers & Students Speak!</Heading>
-          <Text>We have been providing service around Rural and Urban India</Text>
+          <Text >We have been providing service around Rural and Urban India</Text>
         </Stack>
         <Stack
           direction={{ base: 'column', md: 'row' }}
@@ -100,8 +100,7 @@ export default function WithSpeechBubbles() {
             <TestimonialContent>
               <TestimonialHeading>Amazing Initiative</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+              An Innovative Idea that is executed very well. I like the clean and user-friendly design. It helped me get the individual attention I needed.
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
@@ -116,8 +115,7 @@ export default function WithSpeechBubbles() {
             <TestimonialContent>
               <TestimonialHeading>Great Learning Experience</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+              This System helped me learn a new programming language, very interactive and easy to use! Helped me understand a lot of concepts better.
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
@@ -132,8 +130,7 @@ export default function WithSpeechBubbles() {
             <TestimonialContent>
               <TestimonialHeading>Modern Methods of Teaching</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+              I loved the layout of the website and, the innovative technology used to help me learn. It simplified many concepts and the interactive sessions made me remember easily.
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
