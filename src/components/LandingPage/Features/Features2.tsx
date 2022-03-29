@@ -63,7 +63,7 @@ import { IoLogoBitcoin } from 'react-icons/io';
               textTransform={'uppercase'}
               color={'blue.400'}
               fontWeight={600}
-              fontSize={'sm'}
+              fontSize={'2xl'}
               bg={useColorModeValue('blue.50', 'blue.900')}
               p={2}
               alignSelf={'flex-start'}
