@@ -7,6 +7,7 @@ import {
   SimpleGrid,
   Icon,
   Image,
+  Link,
 } from "@chakra-ui/react";
 
 import { FiExternalLink } from "react-icons/fi";
@@ -21,6 +22,7 @@ const CTA = () => {
           fit="cover"
           w="full"
           h={{ base: 64, md: "full" }}
+          ml={{ base: 2, lg: 5 }}
           // bg="gray.100"
           loading="lazy"
           opacity={1}
@@ -73,6 +75,7 @@ const CTA = () => {
             border="solid transparent"
             fontWeight="bold"
             w="full"
+            link="#"
             rounded="md"
             color={useColorModeValue("black","black")}
             bg={useColorModeValue("powderblue", "powderblue")}
@@ -80,8 +83,9 @@ const CTA = () => {
               bg: useColorModeValue("brand.700", "brand.600"),
             }}
           >
-            Sign Up to Upskill 
+            Sign Up to Get Started 
             <Icon as={FiExternalLink} ml={2} />
+            
           </chakra.a>
         </Box>
       </Flex>
