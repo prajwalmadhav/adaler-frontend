@@ -14,9 +14,11 @@ import {
   Stack,
   Center,
 } from "@chakra-ui/react";
-import { MdHeadset, MdEmail, MdLocationOn } from "react-icons/md";
-import { BsFillBriefcaseFill } from "react-icons/bs";
+
+
 import { useNavigate } from "react-router-dom"
+import { FaRegBookmark, FaRegClock } from "react-icons/fa";
+import {BsFillAwardFill} from "react-icons/bs";
 
 const Home = () => {
   const CourseImage1 = "https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
@@ -88,10 +90,10 @@ const Home = () => {
             />
 
             <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              <Icon as={MdHeadset} h={6} w={6} color="white" />
+              <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Python 
+                Basics of Programming 
               </chakra.h1>
             </Flex>
 
@@ -116,7 +118,7 @@ const Home = () => {
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
                   <Icon
-                    as={BsFillBriefcaseFill}
+                    as={FaRegClock}
                     
                     h={6}
                     w={6}
@@ -133,7 +135,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+                  <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
                   difficulty level
@@ -144,11 +146,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-                  <chakra.h1 px={2} fontSize="sm">
-                  tests
-                  </chakra.h1>
+                  
                 </Flex>
               
             </Box>
@@ -174,6 +172,7 @@ const Home = () => {
             _hover={{
               transform: 'scale(1.09)',
             }}
+            
 
           >
             <Image
@@ -186,10 +185,10 @@ const Home = () => {
             />
 
             <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              <Icon as={MdHeadset} h={6} w={6} color="white" />
+              <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Python 
+                Course Title  
               </chakra.h1>
             </Flex>
 
@@ -214,7 +213,7 @@ const Home = () => {
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
                   <Icon
-                    as={BsFillBriefcaseFill}
+                    as={FaRegClock}
                     
                     h={6}
                     w={6}
@@ -231,7 +230,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+                  <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
                   difficulty level
@@ -242,11 +241,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-                  <chakra.h1 px={2} fontSize="sm">
-                  tests
-                  </chakra.h1>
+                  
                 </Flex>
               
             </Box>
@@ -285,10 +280,10 @@ const Home = () => {
             />
 
             <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              <Icon as={MdHeadset} h={6} w={6} color="white" />
+              <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Python 
+                Course Title  
               </chakra.h1>
             </Flex>
 
@@ -313,7 +308,7 @@ const Home = () => {
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
                   <Icon
-                    as={BsFillBriefcaseFill}
+                    as={FaRegClock}
                     
                     h={6}
                     w={6}
@@ -330,7 +325,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+                  <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
                   difficulty level
@@ -341,11 +336,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-                  <chakra.h1 px={2} fontSize="sm">
-                  tests
-                  </chakra.h1>
+                  
                 </Flex>
               
             </Box>
@@ -397,10 +388,10 @@ const Home = () => {
             />
 
             <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              <Icon as={MdHeadset} h={6} w={6} color="white" />
+              <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Python 
+                Course Title  
               </chakra.h1>
             </Flex>
 
@@ -425,7 +416,7 @@ const Home = () => {
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
                   <Icon
-                    as={BsFillBriefcaseFill}
+                    as={FaRegClock}
                     
                     h={6}
                     w={6}
@@ -442,7 +433,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+                  <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
                   difficulty level
@@ -453,11 +444,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-                  <chakra.h1 px={2} fontSize="sm">
-                  tests
-                  </chakra.h1>
+                  
                 </Flex>
               
             </Box>
@@ -495,10 +482,10 @@ const Home = () => {
             />
 
             <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              <Icon as={MdHeadset} h={6} w={6} color="white" />
+              <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Python 
+                Course Title  
               </chakra.h1>
             </Flex>
 
@@ -523,7 +510,7 @@ const Home = () => {
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
                   <Icon
-                    as={BsFillBriefcaseFill}
+                    as={FaRegClock}
                     
                     h={6}
                     w={6}
@@ -540,7 +527,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+                  <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
                   difficulty level
@@ -551,11 +538,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-                  <chakra.h1 px={2} fontSize="sm">
-                  tests
-                  </chakra.h1>
+                  
                 </Flex>
               
             </Box>
@@ -594,10 +577,10 @@ const Home = () => {
             />
 
             <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              <Icon as={MdHeadset} h={6} w={6} color="white" />
+              <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Python 
+                Course Title  
               </chakra.h1>
             </Flex>
 
@@ -622,7 +605,7 @@ const Home = () => {
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
                   <Icon
-                    as={BsFillBriefcaseFill}
+                    as={FaRegClock}
                     
                     h={6}
                     w={6}
@@ -639,7 +622,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+                  <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
                   difficulty level
@@ -650,11 +633,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-                  <chakra.h1 px={2} fontSize="sm">
-                  tests
-                  </chakra.h1>
+                  
                 </Flex>
               
             </Box>
@@ -713,10 +692,10 @@ const Home = () => {
             />
 
             <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              <Icon as={MdHeadset} h={6} w={6} color="white" />
+              <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Python 
+                Course Title  
               </chakra.h1>
             </Flex>
 
@@ -741,7 +720,7 @@ const Home = () => {
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
                   <Icon
-                    as={BsFillBriefcaseFill}
+                    as={FaRegClock}
                     
                     h={6}
                     w={6}
@@ -758,7 +737,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+                  <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
                   difficulty level
@@ -769,11 +748,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-                  <chakra.h1 px={2} fontSize="sm">
-                  tests
-                  </chakra.h1>
+                  
                 </Flex>
               
             </Box>
@@ -812,10 +787,10 @@ const Home = () => {
             />
 
             <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              <Icon as={MdHeadset} h={6} w={6} color="white" />
+              <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Python 
+                Course Title  
               </chakra.h1>
             </Flex>
 
@@ -840,7 +815,7 @@ const Home = () => {
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
                   <Icon
-                    as={BsFillBriefcaseFill}
+                    as={FaRegClock}
                     
                     h={6}
                     w={6}
@@ -857,7 +832,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+                  <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
                   difficulty level
@@ -868,11 +843,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-                  <chakra.h1 px={2} fontSize="sm">
-                  tests
-                  </chakra.h1>
+                  
                 </Flex>
               
             </Box>
@@ -911,10 +882,10 @@ const Home = () => {
             />
 
             <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              <Icon as={MdHeadset} h={6} w={6} color="white" />
+              <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Python 
+                Course Title  
               </chakra.h1>
             </Flex>
 
@@ -939,7 +910,7 @@ const Home = () => {
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
                   <Icon
-                    as={BsFillBriefcaseFill}
+                    as={FaRegClock}
                     
                     h={6}
                     w={6}
@@ -956,7 +927,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+                  <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
                   difficulty level
@@ -967,11 +938,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-                  <chakra.h1 px={2} fontSize="sm">
-                  tests
-                  </chakra.h1>
+                  
                 </Flex>
               
             </Box>
@@ -1023,10 +990,10 @@ const Home = () => {
             />
 
             <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              <Icon as={MdHeadset} h={6} w={6} color="white" />
+              <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Python 
+                Course Title  
               </chakra.h1>
             </Flex>
 
@@ -1051,7 +1018,7 @@ const Home = () => {
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
                   <Icon
-                    as={BsFillBriefcaseFill}
+                    as={FaRegClock}
                     
                     h={6}
                     w={6}
@@ -1068,7 +1035,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+                  <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
                   difficulty level
@@ -1079,11 +1046,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-                  <chakra.h1 px={2} fontSize="sm">
-                  tests
-                  </chakra.h1>
+                  
                 </Flex>
               
             </Box>
@@ -1121,10 +1084,10 @@ const Home = () => {
             />
 
             <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              <Icon as={MdHeadset} h={6} w={6} color="white" />
+              <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Python 
+                Course Title  
               </chakra.h1>
             </Flex>
 
@@ -1149,7 +1112,7 @@ const Home = () => {
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
                   <Icon
-                    as={BsFillBriefcaseFill}
+                    as={FaRegClock}
                     
                     h={6}
                     w={6}
@@ -1166,7 +1129,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+                  <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
                   difficulty level
@@ -1177,11 +1140,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-                  <chakra.h1 px={2} fontSize="sm">
-                  tests
-                  </chakra.h1>
+                  
                 </Flex>
               
             </Box>
@@ -1220,10 +1179,10 @@ const Home = () => {
             />
 
             <Flex alignItems="center" px={6} py={3} bg="gray.900">
-              <Icon as={MdHeadset} h={6} w={6} color="white" />
+              <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Basics Of Python 
+                Course Title  
               </chakra.h1>
             </Flex>
 
@@ -1248,7 +1207,7 @@ const Home = () => {
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
                   <Icon
-                    as={BsFillBriefcaseFill}
+                    as={FaRegClock}
                     
                     h={6}
                     w={6}
@@ -1265,7 +1224,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdLocationOn} h={6} w={6} mr={2} />
+                  <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
                   difficulty level
@@ -1276,11 +1235,7 @@ const Home = () => {
                   mt={4}
                   color={useColorModeValue("gray.700", "gray.200")}
                 >
-                  <Icon as={MdEmail} h={6} w={6} mr={2} />
-
-                  <chakra.h1 px={2} fontSize="sm">
-                  tests
-                  </chakra.h1>
+                  
                 </Flex>
               
             </Box>
