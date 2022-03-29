@@ -44,7 +44,7 @@ const Home = () => {
       </Heading> 
       <br/>
       
-    
+      
       
       
       {/* course cards row 1 */}
@@ -56,6 +56,7 @@ const Home = () => {
       px = {4}
       direction={{ base: "column", md: "column", lg: "row" }}
       py = {{ base: 4, md: 4, lg: 4 }}
+      
       >   
         {/* box 1 */}
         
