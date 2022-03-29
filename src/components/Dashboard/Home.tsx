@@ -19,6 +19,19 @@ import { BsFillBriefcaseFill } from "react-icons/bs";
 
 
 const Home = () => {
+  const CourseImage1 = "https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+  const CourseImage2 = " https://miro.medium.com/max/875/0*emfQ_cKXSeCdPgb9.jpg"
+  const CourseImage3 = " https://miro.medium.com/max/875/0*D9HAiv-jW-9kC76O.jpg"
+  const CourseImage4 = "https://miro.medium.com/max/875/0*lrHnHevmk9JPrH86.jpg"
+  const CourseImage5 = "https://miro.medium.com/max/875/0*OIp556t9Xtn3Sb7w.jpg"
+  const CourseImage6 = "https://miro.medium.com/max/875/0*iO57Y2-H8kwVqW4n.jpg"
+  const TestImage1 = "https://img.freepik.com/free-vector/recruit-agent-analyzing-candidates_74855-4565.jpg?t=st=1648559281~exp=1648559881~hmac=abfbe49f621ebbf67c5877aa964e89748991faea38bd8f954e23a6812c371d2e&w=1060 "
+  const TestImage2 = " https://img.freepik.com/free-vector/software-code-testing-concept-illustration_114360-8194.jpg?t=st=1648559431~exp=1648560031~hmac=6a0fa9210d2e34a6975fb61186aa671c8da9e9657df3e6b4890cbcf8205697fc&w=996"
+  const TestImage3 = "https://img.freepik.com/free-vector/software-tester-concept-application-website-code-testing_277904-17513.jpg?w=996"
+  const TestImage4 = " https://img.freepik.com/free-vector/digital-designers-team-drawing-with-pen-computer-monitor_74855-10586.jpg?t=st=1648559309~exp=1648559909~hmac=e8c211e489d696b5ce33e048f3b8dd6e1c25557f0d291bcc5f2eb8523fd9d6d5&w=996"
+  const TestImage5 = "https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?t=st=1648559233~exp=1648559833~hmac=4cc43979793175bbb32dc4370561743043be7f04d36517d281bba8847c8d9ce3&w=996"
+  const TestImage6 = "https://img.freepik.com/free-vector/mobile-testing-concept-illustration_114360-2449.jpg?w=740 "
+  
   return (
     <>      
       {/* All cards */} 
@@ -67,7 +80,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              src={CourseImage1}
               alt="avatar"
             />
 
@@ -162,7 +175,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              src={CourseImage2}
               alt="avatar"
             />
 
@@ -258,7 +271,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              src={CourseImage3}
               alt="avatar"
             />
 
@@ -367,7 +380,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              src={CourseImage4}
               alt="avatar"
             />
 
@@ -462,7 +475,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              src={CourseImage5}
               alt="avatar"
             />
 
@@ -558,7 +571,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              src={CourseImage6}
               alt="avatar"
             />
 
@@ -674,7 +687,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              src={TestImage1}
               alt="avatar"
             />
 
@@ -769,7 +782,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              src={TestImage2}
               alt="avatar"
             />
 
@@ -865,7 +878,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              src={TestImage3}
               alt="avatar"
             />
 
@@ -974,7 +987,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              src={TestImage4}
               alt="avatar"
             />
 
@@ -1069,7 +1082,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              src={TestImage5}
               alt="avatar"
             />
 
@@ -1165,7 +1178,7 @@ const Home = () => {
               h={40}
               fit="cover"
               objectPosition="center"
-              src="https://miro.medium.com/max/875/0*IkBprj2jlkh4H_qO.png"
+              src={TestImage6}
               alt="avatar"
             />
 
