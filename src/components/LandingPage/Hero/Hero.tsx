@@ -53,7 +53,7 @@ import {
               </Text>{' '}
             </Heading>
             <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-            Personalized learning, when done correctly, can finally give unconventionally students ownership of their own education.
+            An active learning environment to help students get the right attention at the right time and help them succeed.
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
               <Button
