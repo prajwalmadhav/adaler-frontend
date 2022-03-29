@@ -52,7 +52,7 @@ export default function Fgl() {
   };
   return (
     <Flex
-      bg={useColorModeValue("powderblue", "gray.600")}
+      bg={useColorModeValue("blue.100", "gray.600")}
       p={{base:1,lg:20}}
       w="auto"
       justifyContent="center"
