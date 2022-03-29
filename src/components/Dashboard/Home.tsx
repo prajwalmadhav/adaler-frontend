@@ -156,6 +156,9 @@ const Home = () => {
         
         {/* box 2 */}
         <Box
+        onClick={()=>{
+          navigate( "/home/courses/course2")
+        }}
             w="360px"
             h="410px"
             mr="50px"
@@ -252,6 +255,9 @@ const Home = () => {
 
           {/* box 3 */}
           <Box
+          onClick={()=>{
+            navigate( "/home/courses/course3")
+          }}
             w="360px"
             h="410px"
             mr="50px"
@@ -361,6 +367,9 @@ const Home = () => {
         {/* box 1 */}
             
           <Box
+          onClick={()=>{
+            navigate( "/home/courses/course4")
+          }}
             w="360px"
             h="410px"
             mr="50px"
@@ -456,6 +465,9 @@ const Home = () => {
         
         {/* box 2 */}
         <Box
+        onClick={()=>{
+          navigate( "/home/courses/course5")
+        }}
             w="360px"
             h="410px"
             mr="50px"
@@ -552,6 +564,9 @@ const Home = () => {
 
           {/* box 3 */}
           <Box
+          onClick={()=>{
+            navigate( "/home/courses/course6")
+          }}
             w="360px"
             h="410px"
             mr="50px"
