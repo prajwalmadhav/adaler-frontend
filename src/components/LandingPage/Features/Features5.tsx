@@ -50,7 +50,7 @@ const CTA = () => {
           lineHeight="shorter"
           textShadow="2px 0 currentcolor"
         >
-          We&apos;re here to help
+           AI In Education {/*//We&apos;re here to help */}
         </chakra.h1>
         <chakra.p
           pr={{ base: 0, lg: 16 }}
@@ -58,9 +58,9 @@ const CTA = () => {
           fontSize="lg"
           color={useColorModeValue("brand.600", "gray.400")}
           letterSpacing="wider"
+          textAlign='justify'
         >
-          Get the #1 Business Messenger and start delivering personalized
-          experiences at every stage of the customer journey.
+          We use an innovative model to help our students make the best of their time and energy. The introduction of AI in education has helped solve a lot of problems. It has made teaching more efficient and made it more desirable to students.
         </chakra.p>
         <Box display="inline-flex" rounded="md" shadow="md">
           <chakra.a
@@ -80,7 +80,7 @@ const CTA = () => {
               bg: useColorModeValue("brand.700", "brand.600"),
             }}
           >
-            Visit the Help Centre
+            Sign Up to Upskill 
             <Icon as={FiExternalLink} ml={2} />
           </chakra.a>
         </Box>

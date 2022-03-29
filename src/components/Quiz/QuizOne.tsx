@@ -16,7 +16,7 @@ import { ArrowForwardIcon, EmailIcon } from "@chakra-ui/icons";
 
 export default function Sj() {
 
-  const question = 'This is a demo question which is asked for testing which is asked ?'     //added editable variables
+  const question = 'This is a demo question which is asked for testing ?'     //added editable variables
   
   
   return (
@@ -85,7 +85,7 @@ export default function Sj() {
             pr={20}
             py={3}
             >
-            We recommend passing the namCreate a component that consume e prop to the RadioGroup component,
+            Lorem ipsum dolor sit amet. Ea consequuntur nihil est ipsum autem et ducimus voluptatem. Aut ipsum dolores est optio
 
           </Box>
           </Radio>
@@ -107,7 +107,7 @@ export default function Sj() {
             pr={20}
             py={3}
             >
-            We recommend passing the namCreate a component that consume e prop to the RadioGroup component,
+            Lorem ipsum dolor sit amet. Ea consequuntur nihil est ipsum autem et ducimus voluptatem. Aut ipsum dolores est optio
 
           </Box>
           </Radio>
@@ -129,7 +129,7 @@ export default function Sj() {
             pr={20}
             py={3}
             >
-            We recommend passing the namCreate a component that consume e prop to the RadioGroup component,
+            Lorem ipsum dolor sit amet. Ea consequuntur nihil est ipsum autem et ducimus voluptatem. Aut ipsum dolores est optio
 
           </Box>
           </Radio>
@@ -151,7 +151,7 @@ export default function Sj() {
             pr={20}
             py={3}
             >
-            We recommend passing the namCreate a component that consume e prop to the RadioGroup component,
+            Lorem ipsum dolor sit amet. Ea consequuntur nihil est ipsum autem et ducimus voluptatem. Aut ipsum dolores est optio
 
           </Box>
           </Radio>
