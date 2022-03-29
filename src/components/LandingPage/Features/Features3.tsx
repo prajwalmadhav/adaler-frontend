@@ -84,7 +84,7 @@ export default function Fgl() {
             maxW="2xl"
             fontSize="xl"
             mx={{ lg: "auto" }}
-            color={useColorModeValue("white", "gray")}
+            color={useColorModeValue("white", "gray.400")}
           >
             Get insights to dig down into what's powering your growth the most.
           </chakra.p>
@@ -107,7 +107,7 @@ export default function Fgl() {
           </Feature>
 
           <Feature
-            color="#ffb400"
+            color={useColorModeValue("#ffb400", "#ffb400")}
             title="Adaptive Tests"
             icon={
               <FaFileInvoice/>
