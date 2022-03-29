@@ -14,7 +14,7 @@ import {
   
   import SignUpModal from '../Modals/SignUpModal';
   import SignInModal from '../Modals/SignInModal';
-
+  import './Hero.min.css';
   
   export default function Hero() {
     
@@ -24,7 +24,7 @@ import {
     const { toggleColorMode } = useColorMode()
 
     return (
-      <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }} >
+      <Stack className='Hero' minH={'100vh'} direction={{ base: 'column', md: 'row' }} >
         <Flex p={8} mt={{base:'-40%', lg: 0}} flex={1} align={'center'} justify={'center'}>
           <Stack spacing={6} w={'full'} maxW={'lg'}>
             <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
@@ -84,6 +84,7 @@ import {
               'https://i.ibb.co/x2jtQXL/Flame-Space-Adventures-transparent-by-Icons8.gif'
             
             }
+            
           />
           
         </Flex>
