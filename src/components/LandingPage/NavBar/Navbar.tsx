@@ -336,12 +336,12 @@ import Logo from "../../../assets/Images/logoblack.png";
       },
       ],
     },
-    {
-      label: 'Contact Us',
-      href: '#',
-    },
-    {
-      label: '',
-      href: '',
-    },
+    // {
+    //   label: '',
+    //   href: '#',
+    // },
+    // {
+    //   label: '',
+    //   href: '',
+    // },
   ];
