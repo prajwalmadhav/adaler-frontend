@@ -25,9 +25,9 @@ import './buttoncss.min.css';
 
 
 export default function Simple() {
-  const courseTitle = 'Pro level Programming'     //added editable variables
-  const courseSubscript = 'Beginner | 2 weeks | 4 Tests'
-  const courseDescription = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore'
+  const courseTitle = 'Intermediate level of Python'     //added editable variables
+  const courseSubscript = 'Intermediate | 4 weeks | 6 Tests'
+  const courseDescription = 'This is a moderate level python course using the goal coding dialects. Students will sort out some way to code, fuse and execute programs while learning intermediate python thoughts and article organized programming plan thoughts and guidelines.'
   
   const courseObj1 = 'Python Data-Structures'
   const courseObj2 = 'Objective 1'
@@ -36,10 +36,10 @@ export default function Simple() {
   const courseObj5 = 'Objective 4'
   const courseObj6 = 'Objective 5'
 
-  const courseDetails1 = 'Detailed description of this detail lol 1'
-  const courseDetails2 = 'Less detailed desc lol'
-  const courseDetails3 = 'Detailed description of this detail lol 1'
-  const courseDetails4 = 'Less detailed desc lol'
+  const courseDetails1 = 'Introduction to Blocks and Statements'
+  const courseDetails2 = 'Conditional Operators'
+  const courseDetails3 = 'Defining a function'
+  const courseDetails4 = 'Introduction to Sequence Types'
   
   const courseImage = 'https://leverageedu.com/blog/wp-content/uploads/2019/11/Courses-after-MCA.jpg'
 
