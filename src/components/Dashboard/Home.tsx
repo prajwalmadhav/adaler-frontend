@@ -69,7 +69,7 @@ const Home = () => {
             mr="50px"
             mb="35px"
             bg={useColorModeValue("white", "gray.800")}
-            shadow="lg"
+            shadow="2xl"
             rounded="lg"
             overflow="hidden"
             
@@ -139,7 +139,7 @@ const Home = () => {
                   <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  difficulty level
+                  Beginner Level
                   </chakra.h1>
                 </Flex>
                 <Flex
@@ -163,7 +163,7 @@ const Home = () => {
             mr="50px"
             mb="35px"
             bg={useColorModeValue("white", "gray.800")}
-            shadow="lg"
+            shadow="2xl"
             rounded="lg"
             overflow="hidden"
             
@@ -234,7 +234,7 @@ const Home = () => {
                   <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  difficulty level
+                  Intermediate Level
                   </chakra.h1>
                 </Flex>
                 <Flex
@@ -259,7 +259,7 @@ const Home = () => {
             mr="50px"
             mb="35px"
             bg={useColorModeValue("white", "gray.800")}
-            shadow="lg"
+            shadow="2xl"
             rounded="lg"
             overflow="hidden"
             
@@ -329,7 +329,7 @@ const Home = () => {
                   <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  difficulty level
+                  Beginner Level
                   </chakra.h1>
                 </Flex>
                 <Flex
@@ -367,7 +367,7 @@ const Home = () => {
             mr="50px"
             mb="35px"
             bg={useColorModeValue("white", "gray.800")}
-            shadow="lg"
+            shadow="2xl"
             rounded="lg"
             overflow="hidden"
             
@@ -437,7 +437,7 @@ const Home = () => {
                   <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  difficulty level
+                  Intermediate Level
                   </chakra.h1>
                 </Flex>
                 <Flex
@@ -461,7 +461,7 @@ const Home = () => {
             mr="50px"
             mb="35px"
             bg={useColorModeValue("white", "gray.800")}
-            shadow="lg"
+            shadow="2xl"
             rounded="lg"
             overflow="hidden"
             
@@ -531,7 +531,7 @@ const Home = () => {
                   <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  difficulty level
+                  Advance Level
                   </chakra.h1>
                 </Flex>
                 <Flex
@@ -556,7 +556,7 @@ const Home = () => {
             mr="50px"
             mb="35px"
             bg={useColorModeValue("white", "gray.800")}
-            shadow="lg"
+            shadow="2xl"
             rounded="lg"
             overflow="hidden"
             
@@ -626,7 +626,7 @@ const Home = () => {
                   <Icon as={BsFillAwardFill} h={6} w={6} mr={2} />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  difficulty level
+                  Advance Level
                   </chakra.h1>
                 </Flex>
                 <Flex
@@ -671,7 +671,7 @@ const Home = () => {
             mr="50px"
             mb="35px"
             bg={useColorModeValue("white", "gray.800")}
-            shadow="lg"
+            shadow="2xl"
             rounded="lg"
             overflow="hidden"
             
@@ -696,7 +696,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Course Title  
+                Test Title  
               </chakra.h1>
             </Flex>
 
@@ -766,7 +766,7 @@ const Home = () => {
             mr="50px"
             mb="35px"
             bg={useColorModeValue("white", "gray.800")}
-            shadow="lg"
+            shadow="2xl"
             rounded="lg"
             overflow="hidden"
             
@@ -791,7 +791,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Course Title  
+                Test Title  
               </chakra.h1>
             </Flex>
 
@@ -861,7 +861,7 @@ const Home = () => {
             mr="50px"
             mb="35px"
             bg={useColorModeValue("white", "gray.800")}
-            shadow="lg"
+            shadow="2xl"
             rounded="lg"
             overflow="hidden"
             
@@ -886,7 +886,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Course Title  
+              Test Title  
               </chakra.h1>
             </Flex>
 
@@ -969,7 +969,7 @@ const Home = () => {
             mr="50px"
             mb="35px"
             bg={useColorModeValue("white", "gray.800")}
-            shadow="lg"
+            shadow="2xl"
             rounded="lg"
             overflow="hidden"
             
@@ -994,7 +994,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Course Title  
+              Test Title  
               </chakra.h1>
             </Flex>
 
@@ -1063,7 +1063,7 @@ const Home = () => {
             mr="50px"
             mb="35px"
             bg={useColorModeValue("white", "gray.800")}
-            shadow="lg"
+            shadow="2xl"
             rounded="lg"
             overflow="hidden"
             
@@ -1088,7 +1088,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Course Title  
+              Test Title  
               </chakra.h1>
             </Flex>
 
@@ -1158,7 +1158,7 @@ const Home = () => {
             mr="50px"
             mb="35px"
             bg={useColorModeValue("white", "gray.800")}
-            shadow="lg"
+            shadow="2xl"
             rounded="lg"
             overflow="hidden"
             
@@ -1183,7 +1183,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Course Title  
+              Test Title  
               </chakra.h1>
             </Flex>
 
