@@ -66,10 +66,10 @@ export default function CaptionCarousel() {
   return (
     <Box
       ml= {{ base:0, lg:'16%'}}
-      mb= {{ base:3, lg:'4%'}}
+      mb= {{ base:'10%', lg:'4%'}}
       position={'relative'}
       height={{ base:'400px', lg:'400px'}}
-      width={{ base:'full', lg:'82%'}}
+      width={{ base:'full', lg:'83%'}}
       overflow={'hidden'}>
       {/* CSS files for react-slick */}
       <link
