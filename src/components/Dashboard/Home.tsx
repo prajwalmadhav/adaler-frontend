@@ -36,6 +36,7 @@ const Home = () => {
   const navigate = useNavigate()
   return (
     <>      
+      
       {/* All cards */} 
       <Heading as='h2' size='xl' 
       ml = {{ base: '25px', md: 20, lg: '300px' }}
