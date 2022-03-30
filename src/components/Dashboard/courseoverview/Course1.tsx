@@ -18,7 +18,8 @@ import './buttoncss.min.css';
 export default function Simple() {
   const courseTitle = 'Basics Of Programming'     //added editable variables
   const courseSubscript = 'Beginner | 2 weeks | 4 Tests'
-  const courseDescription = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore'
+  const courseDescription = 'This course is an introduction to the basic concepts of programming languages, with a strong emphasis on functional programming. This course is an introduction to the Python programming language for students without prior programming experience.'
+
   
   const courseObj1 = 'Python Data-Structures'
   const courseObj2 = 'Objective 1'
@@ -146,6 +147,7 @@ export default function Simple() {
               <Text
                 color={useColorModeValue('gray.900', 'gray.400')}
                 fontSize={'2xl'}
+                textAlign='justify'
                 fontWeight={'300'}>
                 {courseDescription}
               </Text>
