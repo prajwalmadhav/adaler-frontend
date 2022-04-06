@@ -14,7 +14,7 @@ import { FiExternalLink } from "react-icons/fi";
 
 const CTA = () => {
   return (
-    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0} py={40}>
+    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0} py={{base:10,lg:40}}>
       <Flex bg="brand.400">
         <Image
           src="https://www.gurooproducer.com/hubfs/resources2.png"
