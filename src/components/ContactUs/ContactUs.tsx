@@ -60,7 +60,7 @@ import {
                   base: '4xl',
                   md: '5xl',
                 }}>
-                Get in Touch With Us
+                Get in Touch
               </Heading>
   
               <Stack
