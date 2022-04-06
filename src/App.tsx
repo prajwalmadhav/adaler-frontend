@@ -26,6 +26,7 @@ import "./App.css"
 import TestPage from "./components/TestPage/TestPage";
 import Settings from "./components/Settings/Settings";
 import ProfilePage from "./components/Profile/ProfilePage";
+import ContactUs from "./components/ContactUs/ContactUs";
 
 const Homepage = lazy(() => import("./pages/Homepage/Homepage"))
 
@@ -47,6 +48,7 @@ export const App = () => {
           <Route path='smoke' element={<Testpg/>} />
           <Route path='pg' element={<Testpg/>} />
           <Route path='welcome' element={<PreQuestions/>} />
+          <Route path='contactus' element={<ContactUs/>} />
           {/* <Route path='pres' element={<Introduction/>} /> */}
 
 
