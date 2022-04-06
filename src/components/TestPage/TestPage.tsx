@@ -37,7 +37,7 @@ import {
     const colorTextDark = checked ? 'white' : 'white';
     const bgColorDark = checked ? '#f13c3b' : '#f13c3b';
 
-    const course1="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60"
+    
   
     return (
 
@@ -82,20 +82,28 @@ import {
     return (
       <>
       <Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
+        <Heading as='h2' size='xl' 
+        ml = {{ base: '5px', md: 20, lg: '20px' }}
+        mt = {{ base: '15px', lg: '15px'}}
+        mb = {{ base: 5, md: 20, lg: '50px' }} >
+          |Tests Catalog
+        </Heading>
+        
         <Stack spacing={4} width={'100%'} direction={'column'}>
           <PackageTier
 
-            title={'Course 1'}
+            title={'Python test 1'}
             typePlan="Tier 1"
             options={options} />
           <Divider />
 
         </Stack>
-      </Box><Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
+      </Box>
+      <Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
           <Stack spacing={4} width={'100%'} direction={'column'}>
             <PackageTier
 
-              title={'Course 1'}
+              title={'Python test 1'}
               typePlan="Tier 2"
               options={options} />
             <Divider />
@@ -106,17 +114,18 @@ import {
         <Stack spacing={4} width={'100%'} direction={'column'}>
           <PackageTier
 
-            title={'Course 1'}
+            title={'Python test 1'}
             typePlan="Tier 3"
             options={options} />
           <Divider />
 
         </Stack>
-      </Box><Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
+      </Box>
+      <Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
           <Stack spacing={4} width={'100%'} direction={'column'}>
             <PackageTier
 
-              title={'Course 1'}
+              title={'Python test 1'}
               typePlan="Tier 1"
               options={options} />
             <Divider />
@@ -127,17 +136,18 @@ import {
         <Stack spacing={4} width={'100%'} direction={'column'}>
           <PackageTier
 
-            title={'Course 1'}
+            title={'Python test 1'}
             typePlan="Tier 2"
             options={options} />
           <Divider />
 
         </Stack>
-      </Box><Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
+      </Box>
+      <Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
           <Stack spacing={4} width={'100%'} direction={'column'}>
             <PackageTier
 
-              title={'Course 1'}
+              title={'Python test 1'}
               typePlan="Tier 3"
               options={options} />
             <Divider />
