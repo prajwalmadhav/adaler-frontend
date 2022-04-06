@@ -69,7 +69,7 @@ export default function LargeWithLogoCentered() {
             <ListHeader>Technology</ListHeader>
             <Link href={'#'}>Firebase</Link>
             <Link href={'#'}>Netlify</Link>
-            <Link href={'#'}>Git</Link>
+            <Link href={'//github.com/prajwalmadhav/adaler-frontend'}>Git</Link>
             <Link href={'#'}>Node</Link>
             <Link href={'#'}>VS Code</Link>
           </Stack>
@@ -99,7 +99,7 @@ export default function LargeWithLogoCentered() {
             </Stack>
             <Link href={'#'}>Background</Link>
             <Link href={'#'}>Home</Link>
-            <Link href={'#'}>Contact Us</Link>
+            <Link href={'contactus'}>Contact Us</Link>
           </Stack>
               {/* Contributors  */}
           {/* <Stack align={'flex-start'}>
@@ -142,7 +142,7 @@ export default function LargeWithLogoCentered() {
             
             <ListHeader>Follow Us</ListHeader>
             <Stack direction={{base:'column' ,lg:'row'}}spacing={6}>
-              <SocialButton label={'github'} href={'#'}>
+              <SocialButton label={'github'} href={'//github.com/prajwalmadhav/adaler-frontend'}>
                 <FaGithub />
               </SocialButton>
               <SocialButton label={'PlayStore'} href={'#'}>
