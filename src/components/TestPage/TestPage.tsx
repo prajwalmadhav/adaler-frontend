@@ -96,7 +96,7 @@ import {
             <PackageTier
 
               title={'Course 1'}
-              typePlan="Tier 1"
+              typePlan="Tier 2"
               options={options} />
             <Divider />
 
@@ -107,7 +107,7 @@ import {
           <PackageTier
 
             title={'Course 1'}
-            typePlan="Tier 1"
+            typePlan="Tier 3"
             options={options} />
           <Divider />
 
@@ -128,7 +128,7 @@ import {
           <PackageTier
 
             title={'Course 1'}
-            typePlan="Tier 1"
+            typePlan="Tier 2"
             options={options} />
           <Divider />
 
@@ -138,7 +138,7 @@ import {
             <PackageTier
 
               title={'Course 1'}
-              typePlan="Tier 1"
+              typePlan="Tier 3"
               options={options} />
             <Divider />
 
