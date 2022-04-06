@@ -80,18 +80,71 @@ import {
   };
   const ThreeTierPricingHorizontal = () => {
     return (
-      <Box py={6} px={5}  ml={{base:0,lg:'15%'}} min={'100vh'}>
+      <>
+      <Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
         <Stack spacing={4} width={'100%'} direction={'column'}>
           <PackageTier
-          
-           title={'Course 1'}
+
+            title={'Course 1'}
             typePlan="Tier 1"
-             options={options}
-              />
+            options={options} />
           <Divider />
-          
+
         </Stack>
-      </Box>
+      </Box><Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
+          <Stack spacing={4} width={'100%'} direction={'column'}>
+            <PackageTier
+
+              title={'Course 1'}
+              typePlan="Tier 1"
+              options={options} />
+            <Divider />
+
+          </Stack>
+        </Box>
+        <Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
+        <Stack spacing={4} width={'100%'} direction={'column'}>
+          <PackageTier
+
+            title={'Course 1'}
+            typePlan="Tier 1"
+            options={options} />
+          <Divider />
+
+        </Stack>
+      </Box><Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
+          <Stack spacing={4} width={'100%'} direction={'column'}>
+            <PackageTier
+
+              title={'Course 1'}
+              typePlan="Tier 1"
+              options={options} />
+            <Divider />
+
+          </Stack>
+        </Box>
+        <Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
+        <Stack spacing={4} width={'100%'} direction={'column'}>
+          <PackageTier
+
+            title={'Course 1'}
+            typePlan="Tier 1"
+            options={options} />
+          <Divider />
+
+        </Stack>
+      </Box><Box py={6} px={5} ml={{ base: 0, lg: '15%' }} min={'100vh'}>
+          <Stack spacing={4} width={'100%'} direction={'column'}>
+            <PackageTier
+
+              title={'Course 1'}
+              typePlan="Tier 1"
+              options={options} />
+            <Divider />
+
+          </Stack>
+        </Box>
+        </>
 
     
     );
