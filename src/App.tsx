@@ -23,15 +23,17 @@ import Course6 from './components/Dashboard/courseoverview/Course6';
 import Testpg from "./components/Dashboard/Trial/Testpg";
 import PreQuestions from './components/WelcomePage/PreQuestions';
 import Courseinfo1 from './components/Dashboard/CourseInfo/Courseinfo1';
-import { auth } from "./firebaseSetup";
+
+
 import QuizOne from './components/Quiz/QuizOne';
 
 import "./App.css"
 import TestPage from "./components/TestPage/TestPage";
 import Testspage from "./components/TestPage/Testspage";
-
+import Introduction from "./components/Presentations/Introduction"
 
 const Homepage = lazy(() => import("./pages/Homepage/Homepage"))
+
 
 export const App = () => {
   var Spinner = require('react-spinkit');
@@ -50,6 +52,8 @@ export const App = () => {
           <Route path='smoke' element={<Testpg/>} />
           <Route path='pg' element={<Testpg/>} />
           <Route path='welcome' element={<PreQuestions/>} />
+          {/* <Route path='pres' element={<Introduction/>} /> */}
+
 
           <Route path="/" element={<LayoutsWithNavbar />}>
             {/* Pages with dashboard sidebar */}
