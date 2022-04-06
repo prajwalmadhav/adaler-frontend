@@ -1,19 +1,14 @@
-import * as React from "react"
 import {
   ChakraProvider,
   theme,
 } from "@chakra-ui/react"
-import {Suspense, lazy, Component} from "react"
+import {Suspense, lazy} from "react"
 // import Homepage from "./pages/Homepage/Homepage"
-import { BrowserRouter as Router, Route,Link, Routes, Outlet } from 'react-router-dom'
-import Hero from './components/LandingPage/Hero/Hero';
+import { BrowserRouter as Router, Route,Routes, Outlet } from 'react-router-dom'
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Alerts from './components/LandingPage/Modals/Alerts';
-import SignOut from './components/LandingPage/Modals/SignOut';
 import Courses from './pages/Dashboard/Courses';
 import Sidebar from './components/Dashboard/Sidebar';
 
-import SignUp from './components/LandingPage/Modals/SignUpModal';
 import Course1 from './components/Dashboard/courseoverview/Course1';
 import Course2 from './components/Dashboard/courseoverview/Course2';
 import Course3 from './components/Dashboard/courseoverview/Course3';
@@ -29,8 +24,6 @@ import QuizOne from './components/Quiz/QuizOne';
 
 import "./App.css"
 import TestPage from "./components/TestPage/TestPage";
-import Testspage from "./components/TestPage/Testspage";
-import Introduction from "./components/Presentations/Introduction"
 
 const Homepage = lazy(() => import("./pages/Homepage/Homepage"))
 
