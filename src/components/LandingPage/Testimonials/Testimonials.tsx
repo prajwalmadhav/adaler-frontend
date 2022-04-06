@@ -122,8 +122,8 @@ export default function WithSpeechBubbles() {
               src={
                 'https://joeschmoe.io/api/v1/male/random'
               }
-              name={'Prajwal Madhav'}
-              title={'CEO at Pg.Inc Corporation'}
+              name={'Harshavardhan Tiwari'}
+              title={'HOD ISE Department, JIT'}
             />
           </Testimonial>
           <Testimonial>
@@ -137,8 +137,8 @@ export default function WithSpeechBubbles() {
               src={
                 'https://joeschmoe.io/api/v1/joe'
               }
-              name={'Sumukh Jadhav'}
-              title={'Clerk at PG Corporation'}
+              name={'Adithya Krishna'}
+              title={'Alumni JIT '}
             />
           </Testimonial>
         </Stack>
