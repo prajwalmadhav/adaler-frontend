@@ -23,6 +23,7 @@
     "react-buzzfeed-quiz": "^2.0.5",
     "react-dom": "^17.0.2",
     "react-icons": "^3.11.0",
+    "react-impressjs": "^1.1.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "react-slick": "^0.28.1",
