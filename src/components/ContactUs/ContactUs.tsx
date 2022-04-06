@@ -52,6 +52,7 @@ import {
         <Box
           borderRadius="lg"
           m={{ base: 5, md: 16, lg: 0 }}
+          mt={{lg:4}}
           p={{ base: 5, lg: 10 }}>
           <Box>
             <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
@@ -60,7 +61,7 @@ import {
                   base: '4xl',
                   md: '5xl',
                 }}>
-                Get in Touch
+                Get in Touch with Us 
               </Heading>
   
               <Stack
