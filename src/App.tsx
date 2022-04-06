@@ -24,6 +24,8 @@ import QuizOne from './components/Quiz/QuizOne';
 
 import "./App.css"
 import TestPage from "./components/TestPage/TestPage";
+import Settings from "./components/Settings/Settings";
+import ProfilePage from "./components/Profile/ProfilePage";
 
 const Homepage = lazy(() => import("./pages/Homepage/Homepage"))
 
@@ -63,6 +65,8 @@ export const App = () => {
 
           <Route path='quiz' element={<QuizOne />} />
           <Route path='tests' element={<TestPage/>} />
+          <Route path='profile' element={<ProfilePage/>} />
+          <Route path='settings' element={<Settings/>} />
 
 
           </Route>
