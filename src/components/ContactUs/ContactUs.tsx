@@ -28,8 +28,8 @@ import {
     },
   
     light: {
-      primary: '4299E1', // blue.900
-      secondary: 'BEE3F8', // blue.800
+      primary: 'ffffff75', // blue.900
+      secondary: 'ffffff75', // blue.800
     },
   };
   
@@ -41,7 +41,7 @@ import {
   
     return (
       <Flex
-        bg={useColorModeValue('gray.200', 'gray.900')}
+        bg={useColorModeValue('gray.300', 'gray.900')}
         align="center"
         justify="center"
         css={{
@@ -175,7 +175,7 @@ import {
   
                     <Button
                       colorScheme="blue"
-                      bg="blue.400"
+                      bg="#f04e23" //#04294f
                       color="white"
                       _hover={{
                         bg: 'blue.500',
