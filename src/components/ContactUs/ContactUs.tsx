@@ -17,20 +17,19 @@ import {
     useColorModeValue,
     VStack,
   } from '@chakra-ui/react';
-  import React from 'react';
   import {  BsPerson,  } from 'react-icons/bs';
   import { MdEmail } from 'react-icons/md';
   import { FaGithub,FaLinkedin,FaTwitter,FaEnvelope} from "react-icons/fa";
   
   const confetti = {
-    light: {
+    dark: {
       primary: '4299E1', // blue.400
       secondary: 'BEE3F8', // blue.100
     },
   
-    dark: {
-      primary: '1A365D', // blue.900
-      secondary: '2A4365', // blue.800
+    light: {
+      primary: '4299E1', // blue.900
+      secondary: 'BEE3F8', // blue.800
     },
   };
   
@@ -42,7 +41,7 @@ import {
   
     return (
       <Flex
-        bg={useColorModeValue('gray.100', 'gray.900')}
+        bg={useColorModeValue('gray.200', 'gray.900')}
         align="center"
         justify="center"
         css={{
@@ -52,8 +51,8 @@ import {
         id="contact">
         <Box
           borderRadius="lg"
-          m={{ base: 5, md: 16, lg: 10 }}
-          p={{ base: 5, lg: 16 }}>
+          m={{ base: 5, md: 16, lg: 0 }}
+          p={{ base: 5, lg: 10 }}>
           <Box>
             <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
               <Heading
@@ -90,7 +89,7 @@ import {
                     />
                   </Tooltip>
   
-                  <Link href="#">
+                  <Link href="https://github.com/prajwalmadhav/adaler-frontend">
                     <IconButton
                       aria-label="github"
                       variant="ghost"
