@@ -646,7 +646,7 @@ const Home = () => {
 
       
       <Heading as='h2' size='xl' ml =  {{base:'25px', md: 20, lg: '300px' }} >
-          |My Test
+          |My Tests
       </Heading> 
       <br/>
       {/* <Divider orientation='horizontal' ml='280px'/> */}
