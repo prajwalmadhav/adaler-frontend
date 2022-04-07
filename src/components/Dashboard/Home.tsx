@@ -105,12 +105,11 @@ const Home = () => {
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
-                Patterson johnson
+                
               </chakra.h1>
 
-              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
-                Full Stack maker & UI / UX Designer , love hip hop music Author of
-                Building UI.
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
+              Gives an overview of the vast world of programming, and explains the key concepts in detail.
               </chakra.p>
 
               
@@ -190,7 +189,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Course Title  
+              Programming Language Implementation  
               </chakra.h1>
             </Flex>
 
@@ -200,12 +199,11 @@ const Home = () => {
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
-                Patterson johnson
+                
               </chakra.h1>
 
-              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
-                Full Stack maker & UI / UX Designer , love hip hop music Author of
-                Building UI.
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
+              Programming Language Implementation
               </chakra.p>
 
               
@@ -295,7 +293,7 @@ const Home = () => {
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
-                Patterson johnson
+                
               </chakra.h1>
 
               <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
@@ -403,7 +401,7 @@ const Home = () => {
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
-                Patterson johnson
+                
               </chakra.h1>
 
               <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
@@ -497,7 +495,7 @@ const Home = () => {
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
-                Patterson johnson
+                
               </chakra.h1>
 
               <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
@@ -592,7 +590,7 @@ const Home = () => {
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
-                Patterson johnson
+                
               </chakra.h1>
 
               <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
@@ -707,7 +705,7 @@ const Home = () => {
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
-                Patterson johnson
+                
               </chakra.h1>
 
               <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
@@ -802,7 +800,7 @@ const Home = () => {
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
-                Patterson johnson
+                
               </chakra.h1>
 
               <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
@@ -897,7 +895,7 @@ const Home = () => {
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
-                Patterson johnson
+                
               </chakra.h1>
 
               <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
@@ -1005,7 +1003,7 @@ const Home = () => {
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
-                Patterson johnson
+                
               </chakra.h1>
 
               <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
@@ -1099,7 +1097,7 @@ const Home = () => {
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
-                Patterson johnson
+                
               </chakra.h1>
 
               <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
@@ -1194,7 +1192,7 @@ const Home = () => {
                 fontWeight="bold"
                 color={useColorModeValue("gray.800", "white")}
               >
-                Patterson johnson
+                
               </chakra.h1>
 
               <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>

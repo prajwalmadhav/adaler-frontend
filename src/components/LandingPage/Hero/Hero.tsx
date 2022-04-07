@@ -10,6 +10,7 @@ import {
     useBreakpointValue,
     useDisclosure,
     useColorMode,
+    useColorModeValue,
   } from '@chakra-ui/react';
   
   import SignUpModal from '../Modals/SignUpModal';
@@ -48,7 +49,9 @@ import {
               Personalized
               </Text>{' '}
               <br />{' '}
-              <Text color={'#080f7b'} as={'span'}>
+              <Text 
+              color={useColorModeValue('#080f7b', 'gray.200')} 
+              as={'span'}>
                 Learning Systems
               </Text>{' '}
             </Heading>
