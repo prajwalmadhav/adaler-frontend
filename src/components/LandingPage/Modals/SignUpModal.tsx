@@ -135,7 +135,7 @@ export default function SignUpModal({signinModal,onClose,...props}: Omit<ModalPr
 
         
   return (
-    <Modal initialFocusRef={nameRef} onClose={onClose} {...props} size="sm" isCentered motionPreset='slideInBottom' >
+    <Modal onClose={onClose} {...props} size="sm" isCentered motionPreset='slideInBottom' >
     <ModalOverlay backdropFilter='blur(3px)'/>                                                                              
     <ModalContent className='ModalContent1'>
     <ModalHeader className='ModalHeader1'> Sign Up </ModalHeader>
