@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+/build
+/android
+capacitor.config.ts
 /.pnp
 .pnp.js
 .env
