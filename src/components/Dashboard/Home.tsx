@@ -127,7 +127,7 @@ const Home = () => {
                   />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  Time taken 
+                  4 Weeks 
                   </chakra.h1>
                 </Flex>
 
@@ -203,7 +203,7 @@ const Home = () => {
               </chakra.h1>
 
               <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
-              Programming Language Implementation
+              Key concepts regarding Implementation are discussed along with useful examples to start your programming journey!
               </chakra.p>
 
               
@@ -221,7 +221,7 @@ const Home = () => {
                   />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  Time taken 
+                  4 Weeks 
                   </chakra.h1>
                 </Flex>
 
@@ -283,7 +283,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Course Title  
+              Exception handling  
               </chakra.h1>
             </Flex>
 
@@ -296,9 +296,8 @@ const Home = () => {
                 
               </chakra.h1>
 
-              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
-                Full Stack maker & UI / UX Designer , love hip hop music Author of
-                Building UI.
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
+              The module explains the process of handling exceptions and the methods used for this purpose.
               </chakra.p>
 
               
@@ -316,7 +315,7 @@ const Home = () => {
                   />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  Time taken 
+                  4 Weeks 
                   </chakra.h1>
                 </Flex>
 
@@ -391,7 +390,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Course Title  
+              Introduction to User-Defined Functions  
               </chakra.h1>
             </Flex>
 
@@ -404,9 +403,8 @@ const Home = () => {
                 
               </chakra.h1>
 
-              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
-                Full Stack maker & UI / UX Designer , love hip hop music Author of
-                Building UI.
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
+              The module is designed to understand user-defined functions and their usage.
               </chakra.p>
 
               
@@ -424,7 +422,7 @@ const Home = () => {
                   />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  Time taken 
+                  4 Weeks 
                   </chakra.h1>
                 </Flex>
 
@@ -485,7 +483,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Course Title  
+              Object-Oriented Programming  
               </chakra.h1>
             </Flex>
 
@@ -498,9 +496,8 @@ const Home = () => {
                 
               </chakra.h1>
 
-              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
-                Full Stack maker & UI / UX Designer , love hip hop music Author of
-                Building UI.
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
+              This module introduces objects, classes, and other important structures of object-oriented programming.
               </chakra.p>
 
               
@@ -518,7 +515,7 @@ const Home = () => {
                   />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  Time taken 
+                  4 Weeks 
                   </chakra.h1>
                 </Flex>
 
@@ -580,7 +577,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Course Title  
+              Constructors & Destructors  
               </chakra.h1>
             </Flex>
 
@@ -593,9 +590,8 @@ const Home = () => {
                 
               </chakra.h1>
 
-              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
-                Full Stack maker & UI / UX Designer , love hip hop music Author of
-                Building UI.
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
+              Describes the different types of constructors, and destructors, and shows how they are to be implemented.
               </chakra.p>
 
               
@@ -613,7 +609,7 @@ const Home = () => {
                   />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  Time taken 
+                  4 Weeks 
                   </chakra.h1>
                 </Flex>
 
@@ -695,7 +691,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Test Title  
+              Class Functions 
               </chakra.h1>
             </Flex>
 
@@ -708,9 +704,8 @@ const Home = () => {
                 
               </chakra.h1>
 
-              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
-                Full Stack maker & UI / UX Designer , love hip hop music Author of
-                Building UI.
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
+              Tests the knowledge of Constructors & Destructors, their types, and applications. 
               </chakra.p>
 
               
@@ -728,7 +723,7 @@ const Home = () => {
                   />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  Time taken 
+                  4 Weeks 
                   </chakra.h1>
                 </Flex>
 
@@ -790,7 +785,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-                Test Title  
+              Exception handling 
               </chakra.h1>
             </Flex>
 
@@ -803,9 +798,8 @@ const Home = () => {
                 
               </chakra.h1>
 
-              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
-                Full Stack maker & UI / UX Designer , love hip hop music Author of
-                Building UI.
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
+              Code snippets are used to test the understanding of Exception handling.
               </chakra.p>
 
               
@@ -823,7 +817,7 @@ const Home = () => {
                   />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  Time taken 
+                  4 Weeks 
                   </chakra.h1>
                 </Flex>
 
@@ -885,7 +879,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-              Test Title  
+              Object-Oriented Programming 
               </chakra.h1>
             </Flex>
 
@@ -898,9 +892,8 @@ const Home = () => {
                 
               </chakra.h1>
 
-              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
-                Full Stack maker & UI / UX Designer , love hip hop music Author of
-                Building UI.
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
+              Tests the understanding of key OOPS concepts and their implementation.
               </chakra.p>
 
               
@@ -918,7 +911,7 @@ const Home = () => {
                   />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  Time taken 
+                  4 Weeks 
                   </chakra.h1>
                 </Flex>
 
@@ -993,7 +986,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-              Test Title  
+              User-Defined Functions  
               </chakra.h1>
             </Flex>
 
@@ -1006,9 +999,8 @@ const Home = () => {
                 
               </chakra.h1>
 
-              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
-                Full Stack maker & UI / UX Designer , love hip hop music Author of
-                Building UI.
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
+              Tests the knowledge of writing user-defined functions and the error detection in said functions. 
               </chakra.p>
 
               
@@ -1026,7 +1018,7 @@ const Home = () => {
                   />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  Time taken 
+                  4 Weeks 
                   </chakra.h1>
                 </Flex>
 
@@ -1087,7 +1079,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-              Test Title  
+              Implementation of Basic Codes  
               </chakra.h1>
             </Flex>
 
@@ -1100,9 +1092,8 @@ const Home = () => {
                 
               </chakra.h1>
 
-              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
-                Full Stack maker & UI / UX Designer , love hip hop music Author of
-                Building UI.
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
+              Tests the application of correct syntax and the application of the theory of programming.
               </chakra.p>
 
               
@@ -1120,7 +1111,7 @@ const Home = () => {
                   />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  Time taken 
+                  4 Weeks 
                   </chakra.h1>
                 </Flex>
 
@@ -1182,7 +1173,7 @@ const Home = () => {
               <Icon as={FaRegBookmark} h={6} w={6} color="white" />
 
               <chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
-              Test Title  
+              Programming Basics   
               </chakra.h1>
             </Flex>
 
@@ -1195,9 +1186,8 @@ const Home = () => {
                 
               </chakra.h1>
 
-              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")}>
-                Full Stack maker & UI / UX Designer , love hip hop music Author of
-                Building UI.
+              <chakra.p py={2} color={useColorModeValue("gray.700", "gray.400")} textAlign='justify'>
+              Tests the usage of data types, variables, and other key concepts of programming. 
               </chakra.p>
 
               
@@ -1215,7 +1205,7 @@ const Home = () => {
                   />
 
                   <chakra.h1 px={2} fontSize="sm">
-                  Time taken 
+                  4 Weeks 
                   </chakra.h1>
                 </Flex>
 
