@@ -137,8 +137,8 @@ export default function WithSpeechBubbles() {
               src={
                 'https://joeschmoe.io/api/v1/joe'
               }
-              name={'Adithya Krishna'}
-              title={'Alumni JIT '}
+              name={'Vinay Bharadwaj'}
+              title={'Student ISE department, JIT'}
             />
           </Testimonial>
         </Stack>
