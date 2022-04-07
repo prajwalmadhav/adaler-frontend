@@ -72,7 +72,7 @@ import { IoLogoBitcoin } from 'react-icons/io';
             </Text>
             <Heading>Digital Education Platform For Rural India</Heading>
             <Text color={'gray.500'} textAlign='justify' fontSize={{base:'md',lg:'lg'}}>
-            India is undergoing a digital transition, and the only way for the economy and society to evolve digitally is via digital education. The notion of digital learning is not new, and it has been in various forms for many years, but its relevance grew exponentially when the COVID-19 epidemic halted face-to-face instruction. Digital education is being viewed as a viable alternative to the conventional chalk-and-talk method of teaching. Our system proves as an excellent example of an AI-based E-learning system.
+            India is undergoing a digital transition, and the only way for the economy and society to evolve digitally is via digital education. The notion of digital learning is not new, and it has been in various forms for many years, but its relevance grew exponentially when the COVID-19 epidemic halted face-to-face instruction. Our system proves as an excellent example of an AI-based E-learning system.
             </Text>
             <Stack
               spacing={4}
