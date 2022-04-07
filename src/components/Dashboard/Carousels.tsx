@@ -41,25 +41,25 @@ export default function CaptionCarousel() {
   // This can be static or loaded from a server
   const cards = [
     {
-      title: '',
+      title: 'Happy Learning!',
       text:
-        "",
+        "Learning just made for you.",
       image:
-        'https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+        'https://i.postimg.cc/sgRsNM84/car1.png',
     },
     {
-      title: '',
+      title: 'Start Today',
       text:
-        "",
+        "Its never too late for learning.",
       image:
-        'https://images.unsplash.com/photo-1438183972690-6d4658e3290e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2274&q=80',
+        'https://i.postimg.cc/KzRY2R2p/car4.png',
     },
     {
-      title: '',
+      title: 'Self-Paced Learning',
       text:
-        "",
+        "At your Own time.",
       image:
-        'https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+        'https://i.postimg.cc/sgRsNM84/car1.png',
     },
   ];
 
@@ -70,7 +70,8 @@ export default function CaptionCarousel() {
       position={'relative'}
       height={{ base:'400px', lg:'400px'}}
       width={{ base:'full', lg:'83%'}}
-      overflow={'hidden'}>
+      overflow={'hidden'}
+      resizeMode='cover'>
       {/* CSS files for react-slick */}
       <link
         rel="stylesheet"
@@ -119,18 +120,18 @@ export default function CaptionCarousel() {
             backgroundSize="cover"
             backgroundImage={`url(${card.image})`}>
             {/* This is the block you need to change, to customize the caption */}
-            <Container size="container.lg" height="600px" position="relative">
+            <Container size="container.lg" height="600px" w="400"position="relative">
               <Stack
                 spacing={6}
                 w={'full'}
-                maxW={'lg'}
+                maxW={'2xl'}
                 position="absolute"
-                top="50%"
+                top="30%"
                 transform="translate(0, -50%)">
-                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '85px' }} color="gray.200">
                   {card.title}
                 </Heading>
-                <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
+                <Text fontSize={{ base: 'md', lg: '3xl' }} color="gray.300" >
                   {card.text}
                 </Text>
               </Stack>
