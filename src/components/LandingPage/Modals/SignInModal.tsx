@@ -93,7 +93,7 @@ export default function SignInModal({
 
 
   return (
-    <Modal initialFocusRef={emailRef}onClose={onClose} {...props} size="sm" isCentered motionPreset="slideInBottom">
+    <Modal onClose={onClose} {...props} size="sm" isCentered motionPreset="slideInBottom">
     <ModalOverlay backdropFilter='blur(3px)'/>
     <ModalContent className='ModalContent2' >
               <ModalHeader className='ModalHeader2'> Sign In </ModalHeader>

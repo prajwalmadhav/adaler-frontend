@@ -13,12 +13,53 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon, EmailIcon } from "@chakra-ui/icons";
-
+var counter = 0
 export default function Sj() {
 
-  const question = 'This is a demo question which is asked for testing ?'     //added editable variables
+  const [question,setQuestion] = useState("What is a variable?");
+  const[option, setOption] = useState("Loreum Epsum")
   
-  
+  var questions = [
+        "What is a function?",
+        "How manu Values can Bool Accept?",
+        "What are Primitive Data types",
+        "How do you declare a variable in python?",
+        ]
+  var options = [
+      ["Variable is value that can change",
+        "Variables can't be changed",
+        "Variables are block of code",
+        "I don't know"
+      ],
+      ["It is an Independent Block of Code",
+        "It is a different Program",
+        "Used to initialize Variables",
+        "I don't know"
+      ],
+      ["0",
+        "3",
+        "2",
+        "1"
+      ],
+      ["Data types of collections",
+        "Pre-defined by the program",
+        "Customizable Data types",
+        "I don't know",
+      ],
+      ["X + 3 = Z",
+        "var b = 2",
+        "X = 3",
+        "I don't know",
+      ]
+    ]
+  function nextHandler(){
+    console.log(counter);
+    setQuestion(questions[counter]);
+    if (counter ==4){
+      counter = 0
+    }
+    counter = counter + 1;
+  }
   return (
 
     <Stack >
@@ -27,7 +68,8 @@ export default function Sj() {
           mb={{ base: 0, md: "10%", lg: 5 }}
           ml={{ base: 0, md: "10%", lg: "30%" }}
           mr={{ base: 0, md: "10%", lg: "15%" }}
-          value={10}
+          value={counter * 2 * 10}
+          sx = {{'>[role="progressbar"]':{transition: "width 200ms ease-out"}}}
           size='md' 
           colorScheme='red' />
 
@@ -85,8 +127,8 @@ export default function Sj() {
             pr={20}
             py={3}
             >
-            Lorem ipsum dolor sit amet. Ea consequuntur nihil est ipsum autem et ducimus voluptatem. Aut ipsum dolores est optio
-
+            {/* Lorem ipsum dolor sit amet. Ea consequuntur nihil est ipsum autem et ducimus voluptatem. Aut ipsum dolores est optio */}
+            {options[counter][0]}
           </Box>
           </Radio>
           <Radio value='2'>
@@ -107,8 +149,9 @@ export default function Sj() {
             pr={20}
             py={3}
             >
-            Lorem ipsum dolor sit amet. Ea consequuntur nihil est ipsum autem et ducimus voluptatem. Aut ipsum dolores est optio
-
+            {/* Lorem ipsum dolor sit amet. Ea consequuntur nihil est ipsum autem et ducimus voluptatem. Aut ipsum dolores est optio */}
+            {options[counter][1]}
+            
           </Box>
           </Radio>
           <Radio value='3'>
@@ -129,7 +172,8 @@ export default function Sj() {
             pr={20}
             py={3}
             >
-            Lorem ipsum dolor sit amet. Ea consequuntur nihil est ipsum autem et ducimus voluptatem. Aut ipsum dolores est optio
+            {/* Lorem ipsum dolor sit amet. Ea consequuntur nihil est ipsum autem et ducimus voluptatem. Aut ipsum dolores est optio */}
+            {options[counter][2]}
 
           </Box>
           </Radio>
@@ -151,7 +195,8 @@ export default function Sj() {
             pr={20}
             py={3}
             >
-            Lorem ipsum dolor sit amet. Ea consequuntur nihil est ipsum autem et ducimus voluptatem. Aut ipsum dolores est optio
+            {/* Lorem ipsum dolor sit amet. Ea consequuntur nihil est ipsum autem et ducimus voluptatem. Aut ipsum dolores est optio */}
+            {options[counter][3]}
 
           </Box>
           </Radio>
@@ -160,7 +205,9 @@ export default function Sj() {
          </RadioGroup>
          <Stack  pb={10} direction='row' spacing={4}
           >
-          <Button  ml={{base: '70%',lg:'82%'}} mt={3} rightIcon={<ArrowForwardIcon />} colorScheme='orange' variant='outline'>
+          <Button  ml={{base: '70%',lg:'82%'}} mt={3} rightIcon={<ArrowForwardIcon />} colorScheme='orange' variant='outline'
+            onClick={nextHandler}
+          >
             Next
           </Button>
         </Stack>
