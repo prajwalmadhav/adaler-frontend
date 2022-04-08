@@ -64,8 +64,8 @@ export default function SignUpModal({signinModal,onClose,...props}: Omit<ModalPr
       position: position,
     })
     const ExistToast = useToast({
-      title: 'Email Error',
-      description: "Email already in use",
+      title: 'Invalid Credentials',
+      description: "Please Enter valid Credentials",
       status: 'error',
       duration: 5000,
       isClosable: true,
