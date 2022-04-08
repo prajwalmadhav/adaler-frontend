@@ -110,7 +110,7 @@ import Logo from "../../../assets/Images/logoblack.png";
             {/* Dark Mode Beta: Only for presentation
             Uncomment first display*/}
             <IconButton
-              display={{ base: 'none', md: 'none', lg:'none' }}  // Dark Mode Beta: Only for presentation change none to flex OR comment this whole line 
+               display={{ base: 'none', md: 'none', lg:'none' }}  // Dark Mode Beta: Only for presentation change none to flex OR comment this whole line 
                  onClick={()=>{
                  onToggleColor()
                  toggleColorMode()
@@ -304,14 +304,14 @@ import Logo from "../../../assets/Images/logoblack.png";
       label: 'About Us',
       children: [
         {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
+          label: 'How it works',
+          subLabel: 'See how it works',
           href: '#',
         },
         {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
-          href: '#',
+          label: 'Github',
+          subLabel: 'Contribute to Open Source',
+          href: 'https://github.com/prajwalmadhav/adaler-frontend',
         },
       ],
      
@@ -330,8 +330,8 @@ import Logo from "../../../assets/Images/logoblack.png";
           href: '/Home/Courses',
         },
         { 
-          label: 'Testing [PG]',
-          subLabel: 'Testing only for PG',
+          label: 'Python Course',
+          subLabel: 'Checkout Python Course',
           href: '/Home/Courses/Courseinfo1',
       },
       ],
