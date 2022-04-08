@@ -27,6 +27,7 @@ import TestPage from "./components/TestPage/TestPage";
 import Settings from "./components/Settings/Settings";
 import ProfilePage from "./components/Profile/ProfilePage";
 import ContactUs from "./components/ContactUs/ContactUs";
+import Introduction from "./components/Presentations/Introduction";
 
 const Homepage = lazy(() => import("./pages/Homepage/Homepage"))
 
@@ -49,7 +50,7 @@ export const App = () => {
           <Route path='pg' element={<Testpg/>} />
           <Route path='welcome' element={<PreQuestions/>} />
           <Route path='contactus' element={<ContactUs/>} />
-          {/* <Route path='pres' element={<Introduction/>} /> */}
+          {/* <Route path='python' element={<Introduction/>} /> */}
 
 
           <Route path="/" element={<LayoutsWithNavbar />}>
