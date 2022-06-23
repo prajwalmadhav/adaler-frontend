@@ -71,7 +71,7 @@ export default function Simple() {
             h={{ base: '100%', sm: '400px', lg: '450px' }}
             mb={{ base: 2, sm: 2, lg: '65px' }}
           />
-
+        <a href="/pres2">
           <Button
           className="Learning-button-mob"
             rounded={'lg'}
@@ -90,7 +90,8 @@ export default function Simple() {
             }}>
            Start Learning
           </Button>
-
+          </a>
+          <a href="/tests">
           <Button
           className="Learning-button-mob"
             rounded={'lg'}
@@ -111,7 +112,7 @@ export default function Simple() {
             }}>
            Take Test
           </Button>
-
+          </a>
         </Stack>
 
         <Stack spacing={{ base: 6, md: 10 }}>

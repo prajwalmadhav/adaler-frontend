@@ -84,6 +84,7 @@ import {
         </List>
         <Heading size={'lg'}>{typePlan}</Heading>
         <Stack>
+        <a href="/quiz1">
           <Button
             size="md"
             
@@ -91,6 +92,7 @@ import {
             bgColor={useColorModeValue(bgColorLight, bgColorDark)}>
             Start Test
           </Button>
+          </a>
         </Stack>
       </Stack>
       </>

@@ -75,7 +75,7 @@ export default function Simple() {
             h={{ base: '100%', sm: '400px', lg: '450px' }}
             mb={{ base: 2, sm: 2, lg: '65px' }}
           />
-
+        <a href="/pres1">
           <Button
           className="Learning-button-mob"
             rounded={'lg'}
@@ -94,29 +94,30 @@ export default function Simple() {
             }}>
            Start Learning
           </Button>
-
-          <Button
-          className="Learning-button-mob"
-            rounded={'lg'}
-            // w={'full'}
-            mt={8}
-            size={'lg'}
-            py={'7'}
-            w={{ base: 0, sm: 0, lg: '100%' }}
-            h={{ base: -5, sm: 0, lg: 0 }}
-            bg={useColorModeValue('gray.100', 'gray.50')}
-            color={useColorModeValue('black', 'gray.900')}
+          </a>  
+          <a href="/tests">
+            <Button
+            className="Learning-button-mob"
+              rounded={'lg'}
+              // w={'full'}
+              mt={8}
+              size={'lg'}
+              py={'7'}
+              w={{ base: 0, sm: 0, lg: '100%' }}
+              h={{ base: -5, sm: 0, lg: 0 }}
+              bg={useColorModeValue('gray.100', 'gray.50')}
+              color={useColorModeValue('black', 'gray.900')}
+              
+              borderColor={useColorModeValue('black', 'gray.900')}
+              textTransform={'uppercase'}
+              _hover={{
+                transform: 'translateY(3px)',
+                boxShadow: 'lg',
+              }}>
+            Take Test
             
-            borderColor={useColorModeValue('black', 'gray.900')}
-            textTransform={'uppercase'}
-            _hover={{
-              transform: 'translateY(3px)',
-              boxShadow: 'lg',
-            }}>
-           Take Test
-           
-          </Button>
-
+            </Button>
+          </a>
         </Stack>
 
         <Stack spacing={{ base: 6, md: 10 }}>
