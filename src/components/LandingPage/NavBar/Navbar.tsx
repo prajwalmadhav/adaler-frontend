@@ -322,17 +322,17 @@ import Logo from "../../../assets/Images/logoblack.png";
         {
           label: 'Homepage',
           subLabel: 'Dashboard-view Courses and Tests',
-          href: '/Home',
+          href: '',
         },
         {
           label: 'Course Overview',
           subLabel: 'View all courses in detail',
-          href: '/Home/Courses',
+          href: '',
         },
         { 
           label: 'Python Course',
           subLabel: 'Checkout Python Course',
-          href: '/Home/Courses/Courseinfo1',
+          href: '',
       },
       ],
     },
