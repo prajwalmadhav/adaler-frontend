@@ -28,7 +28,8 @@ import Settings from "./components/Settings/Settings";
 import ProfilePage from "./components/Profile/ProfilePage";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Introduction from "./components/Presentations/Introduction";
-
+import Slide1 from "./components/Presentations/Slide1";
+import Slide2 from "./components/Presentations/Slide2";
 const Homepage = lazy(() => import("./pages/Homepage/Homepage"))
 
 
@@ -50,8 +51,9 @@ export const App = () => {
           <Route path='pg' element={<Testpg/>} />
           <Route path='welcome' element={<PreQuestions/>} />
           <Route path='contactus' element={<ContactUs/>} />
-          {/* <Route path='python' element={<Introduction/>} /> */}
-
+          <Route path='python' element={<Introduction/>} /> 
+          <Route path='pres1' element={<Slide1/>} /> 
+          <Route path='pres2' element={<Slide2/>} /> 
 
           <Route path="/" element={<LayoutsWithNavbar />}>
             {/* Pages with dashboard sidebar */}
