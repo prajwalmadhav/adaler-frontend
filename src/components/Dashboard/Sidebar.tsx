@@ -53,7 +53,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Tests', icon: FiCompass, link:'/tests'},
   { name: 'Profile', icon: FiStar , link:'/profile'},
   { name: 'Settings', icon: FiSettings , link:'/settings' },
-  { name: 'Quiz', icon: FiStar , link:'/quiz' },
+  
 
 ];
 

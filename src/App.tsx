@@ -51,9 +51,9 @@ export const App = () => {
           <Route path='pg' element={<Testpg/>} />
           <Route path='welcome' element={<PreQuestions/>} />
           <Route path='contactus' element={<ContactUs/>} />
-          <Route path='python' element={<Introduction/>} /> 
-          <Route path='pres1' element={<Slide1/>} /> 
-          <Route path='pres2' element={<Slide2/>} /> 
+          {/* <Route path='python' element={<Introduction/>} />  */}
+          {/* <Route path='pres1' element={<Slide1/>} /> 
+          <Route path='pres2' element={<Slide2/>} />  */}
 
           <Route path="/" element={<LayoutsWithNavbar />}>
             {/* Pages with dashboard sidebar */}

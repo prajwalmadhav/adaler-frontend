@@ -11,11 +11,28 @@ import {
     useColorModeValue,
   } from '@chakra-ui/react';
   import { FaCheckCircle } from 'react-icons/fa';
-  
-  const options = [
-    { id: 1, desc: '1 lorem ipsum' },
-    { id: 2, desc: 'Lorem, ipsum dolor.' },
-    { id: 3, desc: 'Monthly Updates' },
+  import { link } from 'fs';
+
+  const options1 = [
+    { id: 1, desc: 'Variables' },
+    { id: 2, desc: 'Datatypes' },
+    { id: 3, desc: 'Complex No' },
+
+    
+  ];
+  const options2 = [
+    { id: 1, desc: 'Functions' },
+    { id: 2, desc: 'Recursion' },
+    { id: 3, desc: 'Tuples' },
+
+    
+  ];
+  const options3 = [
+    { id: 1, desc: 'List' },
+    { id: 2, desc: 'Dictionary' },
+    { id: 3, desc: 'Sets' },
+
+    
   ];
   interface PackageTierProps {
     title: string;
@@ -29,7 +46,7 @@ import {
     title,
     options,
     typePlan,
-    checked = false,
+    checked = false
   }: PackageTierProps) => {
     const colorTextLight = checked ? 'white' : 'white';
     const bgColorLight = checked ? '#f13c3b' : '#f13c3b';
@@ -69,6 +86,7 @@ import {
         <Stack>
           <Button
             size="md"
+            
             color={useColorModeValue(colorTextLight, colorTextDark)}
             bgColor={useColorModeValue(bgColorLight, bgColorDark)}>
             Start Test
@@ -92,9 +110,9 @@ import {
         <Stack spacing={4} width={'100%'} direction={'column'}>
           <PackageTier
 
-            title={'Python test 1'}
+            title={'Python Beginner'}
             typePlan="Tier 1"
-            options={options} />
+            options={options1}  />
           <Divider />
 
         </Stack>
@@ -103,9 +121,9 @@ import {
           <Stack spacing={4} width={'100%'} direction={'column'}>
             <PackageTier
 
-              title={'Python test 1'}
+              title={'Python Medium'}
               typePlan="Tier 2"
-              options={options} />
+              options={options2} />
             <Divider />
 
           </Stack>
@@ -114,9 +132,9 @@ import {
         <Stack spacing={4} width={'100%'} direction={'column'}>
           <PackageTier
 
-            title={'Python test 1'}
+            title={'Python Advance'}
             typePlan="Tier 3"
-            options={options} />
+            options={options3} />
           <Divider />
 
         </Stack>
@@ -125,9 +143,9 @@ import {
           <Stack spacing={4} width={'100%'} direction={'column'}>
             <PackageTier
 
-              title={'Python test 1'}
+              title={'Python test 4'}
               typePlan="Tier 1"
-              options={options} />
+              options={options1} />
             <Divider />
 
           </Stack>
@@ -136,9 +154,9 @@ import {
         <Stack spacing={4} width={'100%'} direction={'column'}>
           <PackageTier
 
-            title={'Python test 1'}
+            title={'Python test 5'}
             typePlan="Tier 2"
-            options={options} />
+            options={options2} />
           <Divider />
 
         </Stack>
@@ -147,9 +165,9 @@ import {
           <Stack spacing={4} width={'100%'} direction={'column'}>
             <PackageTier
 
-              title={'Python test 1'}
+              title={'Python test 6'}
               typePlan="Tier 3"
-              options={options} />
+              options={options3} />
             <Divider />
 
           </Stack>
