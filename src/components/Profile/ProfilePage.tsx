@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -10,7 +10,8 @@ import {
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
 import  './ProfilePage.min.css';
-
+import firebase from 'firebase/compat/app';
+import { auth } from "../../firebaseSetup";
 import {
   Heading,
   Avatar,
@@ -48,6 +49,25 @@ export const data = {
 };
 
 export default function ProfilePage() {
+  const [currentUser, setCurrentUser] = useState<any | null>(null);
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((users) => {
+      if (users) {
+        setCurrentUser(users)
+      } 
+    });  
+  })
+    var pic = auth.currentUser?.photoURL as any
+    if (pic == null || pic === undefined) {
+      pic = "https://joeschmoe.io/api/v1/random" as any
+    }
+    let showName = auth.currentUser?.displayName as string;
+    const user = firebase.auth().currentUser;  
+    const uid = user?.uid
+    const ref = firebase.firestore().collection("person")
+    if(showName!==undefined){
+      showName = showName.split(' ')[0];
+    }
   return( 
   <><Flex ml={{ base: 0, lg: '20%' }}>
       <Center py={6}>
@@ -62,7 +82,7 @@ export default function ProfilePage() {
           textAlign={'center'}>
           <Avatar
             size={'3xl'}
-            src={'https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'}
+            src={pic}
             alt={'Avatar Alt'}
             mb={4}
             pos={'relative'}
@@ -78,7 +98,7 @@ export default function ProfilePage() {
               right: 3,
             }} />
           <Heading fontSize={'2xl'} fontFamily={'body'}>
-            Name comes here
+            {currentUser?.displayName}
           </Heading>
           <Text fontWeight={600} color={'gray.500'} mb={4}>
 
