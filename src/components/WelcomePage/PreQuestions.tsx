@@ -139,12 +139,12 @@ export default function Test() {
                      answerArrangement: "row",
                      answers: [
                        {
-                         answer: "Loreum EPSUM Loreum EPSUM Loreum EPSUM",
+                         answer: "Just numbers",
                          resultID: 0,
                          onAnswerSelection:()=> dict.set(5, "null"),
                        },
                        {
-                         answer: "Loreum EPSUMLoreum EPSUMLoreum EPSUM",
+                         answer: "Says TRUE or FALSE",
                          resultID: 1,
                          onAnswerSelection:()=> dict.set(5, "null"),
                        },
@@ -165,7 +165,7 @@ export default function Test() {
                      answerArrangement: "row",
                      answers: [
                        {
-                         answer: "Loreum EPSUM Loreum EPSUM Loreum EPSUM",
+                         answer: "Internet development Environment",
                          resultID: 0,
                          onAnswerSelection:()=> dict.set(6, "null"),
                        },
@@ -175,7 +175,7 @@ export default function Test() {
                          onAnswerSelection:()=> dict.set(6, "correct"),
                        },
                        {
-                         answer: "Loreum EPSUM Loreum EPSUM Loreum EPSUM",
+                         answer: "International decoding environment",
                          resultID: 2,
                          onAnswerSelection:()=> dict.set(6, "null"),
                        },
@@ -239,7 +239,7 @@ export default function Test() {
                      answerArrangement: "tile",
                      answers: [
                        {
-                         backgroundImageSrc: "https://liberalarts.utexas.edu/southasia/_files/images/kannada.png",
+                         backgroundImageSrc: "https://www.smartinfo.in/wp-content/uploads/2020/07/Kannada-total-Letters.png",
                          //answer: "I'm new to Programming",
                          resultID: 0,
                          onAnswerSelection:()=> {
