@@ -110,7 +110,7 @@ import Logo from "../../../assets/Images/logoblack.png";
             {/* Dark Mode Beta: Only for presentation
             Uncomment first display*/}
             <IconButton
-               display={{ base: 'none', md: 'none', lg:'none' }}  // Dark Mode Beta: Only for presentation change none to flex OR comment this whole line 
+              //  display={{ base: 'none', md: 'none', lg:'none' }}  // Dark Mode Beta: Only for presentation change none to flex OR comment this whole line 
                  onClick={()=>{
                  onToggleColor()
                  toggleColorMode()
