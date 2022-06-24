@@ -19,7 +19,7 @@ export default [
       },
       content:[
           <q> <strong>What do you mean by data types? </strong> <br/>
-          A data type, in programming, is a classification that specifies which type of value a variable has and what type of mathematical,relational or logical operations can be applied to it without causing an error.</q>
+          A data type, just specifies what type of data is it</q>
       ] 
   },
   {
@@ -39,7 +39,7 @@ export default [
       },
       content:[
           <span className="try"></span>,
-          <h2>“Type()” function is used to know the class of a value or variable.</h2>,
+          <h2>Functions are just a block of code</h2>,
           
           <span className="footnote"><sup>*</sup> 
           p= [2, 3]<br></br>
