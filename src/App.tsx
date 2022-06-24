@@ -21,6 +21,8 @@ import Courseinfo1 from './components/Dashboard/CourseInfo/Courseinfo1';
 
 
 import QuizOne from './components/Quiz/QuizOne';
+import QuizTwo from './components/Quiz/QuizTwo';
+
 
 import "./App.css"
 import TestPage from "./components/TestPage/TestPage";
@@ -69,6 +71,8 @@ export const App = () => {
             <Route path='home/courses/courseinfo1' element={<Courseinfo1/>} />
 
           <Route path='quiz1' element={<QuizOne />} />
+          <Route path='quiz2' element={<QuizTwo />} />
+
           <Route path='tests' element={<TestPage/>} />
           <Route path='profile' element={<ProfilePage/>} />
           <Route path='settings' element={<Settings/>} />
