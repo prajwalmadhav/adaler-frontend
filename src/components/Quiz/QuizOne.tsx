@@ -33,8 +33,8 @@ export default function Sj() {
     [
     
     "What is meant by data types?",
-    " Why are local variable names beginning with an underscore discouraged",
-    "Which are the different Numeric data types?",
+    "How many values can a boolean hold",
+    "Which among is the Numeric data types?",
     ],
     ["What is the maximum length of an identifier in python?",
     "Which of the following statement is False?",
@@ -65,16 +65,7 @@ export default function Sj() {
     "A variable is any characteristics, number, or quantity that can not be measured or counted.",
     "A variable is any characteristics, number, or quantity that can be measured or counted."
     ],
-    ["they confuse the interpreter",
-    "they are used to indicate a private variables of a class",
-    "they are used to indicate global variables",
-    "they slow down execution",
-    "they are used to indicate a private variables of a class"],
-    ["True",
-    "False",
-    "None",
-    "None",
-    "True"],
+    ["2","3","4","5","2"],
     ["Complex",
     "Bool",
     "Tuple",
